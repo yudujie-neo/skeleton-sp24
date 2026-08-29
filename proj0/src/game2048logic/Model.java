@@ -85,6 +85,7 @@ public class Model {
      * */
     public boolean emptySpaceExists() {
         // TODO: Task 2. Fill in this function.
+        // 中文：任务 2：补全此函数。
         return false;
     }
 
@@ -95,6 +96,7 @@ public class Model {
      */
     public boolean maxTileExists() {
         // TODO: Task 3. Fill in this function.
+        // 中文：任务 3：补全此函数。
         return false;
     }
 
@@ -106,6 +108,7 @@ public class Model {
      */
     public boolean atLeastOneMoveExists() {
         // TODO: Fill in this function.
+        // 中文：补全此函数。
         return false;
     }
 
@@ -129,6 +132,7 @@ public class Model {
         int targetY = y;
 
         // TODO: Tasks 5, 6, and 10. Fill in this function.
+        // 中文：任务 5、6 和 10：补全此函数。
     }
 
     /** Handles the movements of the tilt in column x of the board
@@ -138,10 +142,12 @@ public class Model {
      * */
     public void tiltColumn(int x) {
         // TODO: Task 7. Fill in this function.
+        // 中文：任务 7：补全此函数。
     }
 
     public void tilt(Side side) {
         // TODO: Tasks 8 and 9. Fill in this function.
+        // 中文：任务 8 和 9：补全此函数。
     }
 
     /** Tilts every column of the board toward SIDE.

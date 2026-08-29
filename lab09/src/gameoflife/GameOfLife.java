@@ -238,13 +238,17 @@ public class GameOfLife {
         fillWithNothing(nextGen);
 
         // TODO: Implement this method so that the described transitions occur.
+        // 中文：实现此方法，使上述状态转换能够发生。
         // TODO: The current state is represented by TETiles[][] tiles and the next
+        // 中文：当前状态由 TETile[][] tiles 表示，而下一
         // TODO: state/evolution should be returned in TETile[][] nextGen.
+        // 中文：状态（演化结果）应通过 TETile[][] nextGen 返回。
 
 
 
 
         // TODO: Returns the next evolution in TETile[][] nextGen.
+        // 中文：返回 TETile[][] nextGen 中的下一代演化结果。
         return null;
     }
 
@@ -267,14 +271,20 @@ public class GameOfLife {
      */
     public void saveBoard() {
         // TODO: Save the dimensions of the board into the first line of the file.
+        // 中文：将棋盘尺寸保存到文件的第一行。
         // TODO: The width and height should be separated by a space, and end with "\n".
+        // 中文：宽度和高度之间应以空格分隔，并以 "\n" 结尾。
 
 
 
         // TODO: Save the current state of the board into save.txt. You should
+        // 中文：将棋盘的当前状态保存到 save.txt。你应该
         // TODO: use the provided FileUtils functions to help you. Make sure
+        // 中文：使用提供的 FileUtils 函数来辅助完成。请确保
         // TODO: the orientation is correct! Each line in the board should
+        // 中文：方向正确！棋盘中的每一行都应该
         // TODO: end with a new line character.
+        // 中文：以换行符结尾。
 
 
 
@@ -288,23 +298,32 @@ public class GameOfLife {
      */
     public TETile[][] loadBoard(String filename) {
         // TODO: Read in the file.
+        // 中文：读入文件。
 
         // TODO: Split the file based on the new line character.
+        // 中文：按换行符拆分文件内容。
 
         // TODO: Grab and set the dimensions from the first line.
+        // 中文：从第一行获取并设置棋盘尺寸。
 
         // TODO: Create a TETile[][] to load the board from the file into
+        // 中文：创建一个 TETile[][]，用于载入文件中的棋盘，
         // TODO: and any additional variables that you think might help.
+        // 中文：并创建你认为可能有帮助的其他变量。
 
 
         // TODO: Load the state of the board from the given filename. You can
+        // 中文：从给定文件名所指的文件中载入棋盘状态。你可以
         // TODO: use the provided builder variable to help you and FileUtils
+        // 中文：使用提供的 builder 变量以及 FileUtils
         // TODO: functions. Make sure the orientation is correct!
+        // 中文：函数来辅助完成。请确保方向正确！
 
 
 
 
         // TODO: Return the board you loaded. Replace/delete this line.
+        // 中文：返回你载入的棋盘。替换或删除此行。
         return null;
     }
 

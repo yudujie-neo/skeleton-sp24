@@ -91,7 +91,9 @@ public class Tetris {
         }
 
         // TODO: Implement interactivity, so the user is able to input the keystrokes to move
+        // 中文：实现交互功能，使用户能够通过按键移动
         //  the tile and rotate the tile. You'll want to use some provided helper methods here.
+        // 中文：方块并旋转方块。这里可以使用一些已提供的辅助方法。
 
 
         Tetromino.draw(t, board, t.pos.x, t.pos.y);
@@ -104,6 +106,7 @@ public class Tetris {
      */
     private void incrementScore(int linesCleared) {
         // TODO: Increment the score based on the number of lines cleared.
+        // 中文：根据消除的行数增加分数。
 
     }
 
@@ -117,8 +120,10 @@ public class Tetris {
         int linesCleared = 0;
 
         // TODO: Check how many lines have been completed and clear it the rows if completed.
+        // 中文：检查有多少行已经填满，并清除所有已填满的行。
 
         // TODO: Increment the score based on the number of lines cleared.
+        // 中文：根据消除的行数增加分数。
 
         fillAux();
     }
@@ -131,7 +136,9 @@ public class Tetris {
         resetActionTimer();
 
         // TODO: Set up your game loop. The game should keep running until the game is over.
+        // 中文：设置游戏循环。游戏应持续运行，直到游戏结束。
         // Use helper methods inside your game loop, according to the spec description.
+        // 中文：按照项目说明，在游戏循环中使用辅助方法。
 
 
     }
@@ -141,6 +148,7 @@ public class Tetris {
      */
     private void renderScore() {
         // TODO: Use the StdDraw library to draw out the score.
+        // 中文：使用 StdDraw 库绘制分数。
 
     }
 

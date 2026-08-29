@@ -51,6 +51,7 @@ public class RedBlackTree<T extends Comparable<T>> {
      */
     void flipColors(RBTreeNode<T> node) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
     }
 
     /**
@@ -62,6 +63,7 @@ public class RedBlackTree<T extends Comparable<T>> {
      */
     RBTreeNode<T> rotateRight(RBTreeNode<T> node) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
         return null;
     }
 
@@ -74,6 +76,7 @@ public class RedBlackTree<T extends Comparable<T>> {
      */
     RBTreeNode<T> rotateLeft(RBTreeNode<T> node) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
         return null;
     }
 
@@ -106,14 +109,19 @@ public class RedBlackTree<T extends Comparable<T>> {
      */
     private RBTreeNode<T> insert(RBTreeNode<T> node, T item) {
         // TODO: Insert (return) new red leaf node.
+        // 中文：插入（并返回）新的红色叶节点。
 
         // TODO: Handle normal binary search tree insertion.
+        // 中文：处理普通二叉搜索树的插入操作。
 
         // TODO: Rotate left operation
+        // 中文：执行左旋操作。
 
         // TODO: Rotate right operation
+        // 中文：执行右旋操作。
 
         // TODO: Color flip
+        // 中文：执行颜色翻转。
 
         return null; //fix this return statement
     }

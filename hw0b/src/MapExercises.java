@@ -9,6 +9,7 @@ public class MapExercises {
      */
     public static Map<Character, Integer> letterToNum() {
         // TODO: Fill in this function.
+        // 中文：补全此函数。
         Map<Character, Integer> map = new TreeMap<>();
         for (int i = 0; i < 26; i++) {
             map.put((char) (i + 'a'), i+1);
@@ -21,6 +22,7 @@ public class MapExercises {
      */
     public static Map<Integer, Integer> squares(List<Integer> nums) {
         // TODO: Fill in this function.
+        // 中文：补全此函数。
         Map<Integer, Integer> map = new TreeMap<>();
         for (int i = 0; i < nums.size(); i++) {
             int num = nums.get(i);
@@ -32,6 +34,7 @@ public class MapExercises {
     /** Returns a map of the counts of all words that appear in a list of words. */
     public static Map<String, Integer> countWords(List<String> words) {
         // TODO: Fill in this function.
+        // 中文：补全此函数。
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < words.size(); i++) {
             String word = words.get(i);

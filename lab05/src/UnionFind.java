@@ -1,15 +1,18 @@
 public class UnionFind {
     // TODO: Instance variables
+    // 中文：实例变量。
 
     /* Creates a UnionFind data structure holding N items. Initially, all
        items are in disjoint sets. */
     public UnionFind(int N) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
     }
 
     /* Returns the size of the set V belongs to. */
     public int sizeOf(int v) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
         return -1;
     }
 
@@ -17,12 +20,14 @@ public class UnionFind {
        negative size of the tree for which V is the root. */
     public int parent(int v) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
         return -1;
     }
 
     /* Returns true if nodes/vertices V1 and V2 are connected. */
     public boolean connected(int v1, int v2) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
         return false;
     }
 
@@ -31,6 +36,7 @@ public class UnionFind {
        function, throw an IllegalArgumentException. */
     public int find(int v) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
         return -1;
     }
 
@@ -41,6 +47,7 @@ public class UnionFind {
        already connected should not change the structure. */
     public void union(int v1, int v2) {
         // TODO: YOUR CODE HERE
+        // 中文：在此处编写你的代码。
     }
 
 }

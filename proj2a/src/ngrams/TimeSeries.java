@@ -31,6 +31,7 @@ public class TimeSeries extends TreeMap<Integer, Double> {
     public TimeSeries(TimeSeries ts, int startYear, int endYear) {
         super();
         // TODO: Fill in this constructor.
+        // 中文：补全此构造函数。
     }
 
     /**
@@ -38,6 +39,7 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      */
     public List<Integer> years() {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -47,6 +49,7 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      */
     public List<Double> data() {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -61,6 +64,7 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      */
     public TimeSeries plus(TimeSeries ts) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -75,9 +79,12 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      */
     public TimeSeries dividedBy(TimeSeries ts) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
     // TODO: Add any private helper methods.
+    // 中文：添加所需的私有辅助方法。
     // TODO: Remove all TODO comments before submitting.
+    // 中文：提交前删除所有 TODO 注释。
 }

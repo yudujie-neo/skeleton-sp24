@@ -9,6 +9,7 @@ public class BombMain {
             phase = Integer.parseInt(args[0]);
         }
         // TODO: Find the correct inputs (passwords) to each phase using debugging techniques
+        // 中文：使用调试技巧找出每个阶段的正确输入（密码）。
         Bomb b = new Bomb();
         if (phase >= 0) {
             b.phase0("Figure this out. I wonder where the phases are defined...");

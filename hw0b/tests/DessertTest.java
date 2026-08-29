@@ -18,7 +18,9 @@ public class DessertTest {
     @DisplayName("Test Dessert class")
     public void testDessert() {
         // TODO: Uncomment this test when you've created and completed Dessert.java!
+        // 中文：创建并完成 Dessert.java 后，取消此测试的注释！
         // TODO: Delete lines 24 and 60 of this file to uncomment.
+        // 中文：删除本文件的第 24 行和第 60 行以取消注释。
         boolean completed = false;
 
         /*

@@ -18,12 +18,14 @@ import static ngrams.TimeSeries.MIN_YEAR;
 public class NGramMap {
 
     // TODO: Add any necessary static/instance variables.
+    // 中文：添加所有必要的静态变量或实例变量。
 
     /**
      * Constructs an NGramMap from WORDSFILENAME and COUNTSFILENAME.
      */
     public NGramMap(String wordsFilename, String countsFilename) {
         // TODO: Fill in this constructor. See the "NGramMap Tips" section of the spec for help.
+        // 中文：补全此构造函数。可参阅项目说明中的“NGramMap Tips”部分获取帮助。
     }
 
     /**
@@ -35,6 +37,7 @@ public class NGramMap {
      */
     public TimeSeries countHistory(String word, int startYear, int endYear) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -46,6 +49,7 @@ public class NGramMap {
      */
     public TimeSeries countHistory(String word) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -54,6 +58,7 @@ public class NGramMap {
      */
     public TimeSeries totalCountHistory() {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -64,6 +69,7 @@ public class NGramMap {
      */
     public TimeSeries weightHistory(String word, int startYear, int endYear) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -74,6 +80,7 @@ public class NGramMap {
      */
     public TimeSeries weightHistory(String word) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -85,6 +92,7 @@ public class NGramMap {
     public TimeSeries summedWeightHistory(Collection<String> words,
                                           int startYear, int endYear) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
@@ -94,9 +102,12 @@ public class NGramMap {
      */
     public TimeSeries summedWeightHistory(Collection<String> words) {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
     // TODO: Add any private helper methods.
+    // 中文：添加所需的私有辅助方法。
     // TODO: Remove all TODO comments before submitting.
+    // 中文：提交前删除所有 TODO 注释。
 }

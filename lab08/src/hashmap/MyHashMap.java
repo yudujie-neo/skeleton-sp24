@@ -64,10 +64,12 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
      */
     protected Collection<Node> createBucket() {
         // TODO: Fill in this method.
+        // 中文：补全此方法。
         return null;
     }
 
     // TODO: Implement the methods of the Map61B Interface below
+    // 中文：实现下面 Map61B 接口中的方法。
     // Your code won't compile until you do so!
 
 }

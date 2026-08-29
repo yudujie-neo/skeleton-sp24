@@ -79,7 +79,9 @@ public class PercolationTest {
     }
 
     // TODO: Using the given tests above as a template,
+    // 中文：以上面给出的测试为模板，
     //       write some more tests and delete the fail() line
+    // 中文：再编写一些测试，并删除 fail() 所在的行。
     @Test
     public void yourFirstTestHere() {
         fail("Did you write your own tests?");

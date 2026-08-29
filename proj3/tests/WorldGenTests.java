@@ -19,10 +19,12 @@ public class WorldGenTests {
     @Test
     public void basicInteractivityTest() {
         // TODO: write a test that uses an input like "n123swasdwasd"
+        // 中文：编写一个使用类似 "n123swasdwasd" 输入的测试。
     }
 
     @Test
     public void basicSaveTest() {
         // TODO: write a test that calls getWorldFromInput twice, with "n123swasd:q" and with "lwasd"
+        // 中文：编写一个测试，分别以 "n123swasd:q" 和 "lwasd" 为参数调用两次 getWorldFromInput。
     }
 }
