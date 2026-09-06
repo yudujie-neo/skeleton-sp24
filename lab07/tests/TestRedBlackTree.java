@@ -15,12 +15,17 @@ public class TestRedBlackTree {
      *
      * Black Nodes are represented with () and red nodes are represented with ()*
      * Left children are listed before right children.
+     * 中文：这是 RedBlackTree.java 的测试类。文件在每次操作后都用注释
+     * 给出了 LLRB 树的结构，便于调试。黑节点用 () 表示，红节点用 ()* 表示；
+     * 每个节点先列出左子节点，再列出右子节点。
      */
 
     /*
     Tests for a very basic case of rotating right. This does not check for color flips, but only if the nodes are in the proper
     place after rotating right. Note that we have not provided any basic tests for rotate left, but implementation details for
     rotate right and rotate left should be symmetrical.
+    中文：测试最基本的右旋情况。它不检查颜色翻转，只检查右旋后的节点位置。
+    未提供左旋的基本测试，但左旋和右旋的实现细节应该对称。
      */
     @Test
     public void testBasicRotateRight() {
@@ -239,6 +244,7 @@ public class TestRedBlackTree {
         assertThat(rbtree.root.right.right).isNull();
 
         // Not possible to test rotate right without calling color flip in the same insert, if implemented correctly
+        // 中文：如果实现正确，无法在同一次插入中只测右旋而不同时调用颜色翻转。
         assertWithMessage("Number of Calls to Flip Colors after inserting (5, 3, 10) in order").that(callsToFlipColors).isEqualTo(1);
         assertWithMessage("Number of Calls to Rotate Left after inserting (5, 3, 10) in order").that(callsToRotateLeft).isEqualTo(0);
         assertWithMessage("Number of Calls to Rotate Right after inserting (5, 3, 10) in order").that(callsToRotateRight).isEqualTo(1);
@@ -363,6 +369,7 @@ public class TestRedBlackTree {
     /*
      * Just super neat class to test the number of times your LLRB Tree implementation makes calls to it's
      * "fixing" operations.
+     * 中文：该辅助类用于统计 LLRB 树实现调用各种“修复”操作的次数。
      */
     class TestableRedBlackTree extends RedBlackTree<Integer> {
 
