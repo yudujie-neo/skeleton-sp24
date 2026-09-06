@@ -24,7 +24,8 @@ public class AdventureGameTests {
     static final Class<?> MACHINE_CLASS = MachineStage.class;
     static final Class<?> GAME_CLASS = AdventureGame.class;
 
-    /** Returns a game starting at the given stage class for the given input file. */
+    /** Returns a game starting at the given stage class for the given input file.
+     * 中文：针对给定输入文件，返回一局从指定关卡类开始的游戏。 */
     private AdventureGame getGameStartingAt(Class<?> stageClass) {
         In in = new In(new File(DATA_PATH + stageClass.getSimpleName() + "/input.txt"));
         StdRandom.setSeed(1337);

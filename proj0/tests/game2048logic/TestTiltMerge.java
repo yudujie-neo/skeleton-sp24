@@ -19,9 +19,11 @@ public class TestTiltMerge {
      * <p>
      * The following tests determine the correctness of your `tilt`
      * method.
+     * 中文：以下测试用于判断你的 `tilt` 方法是否正确。
      */
 
-    /** Checks that the right two pieces merge when 3 adjacent pieces have same value. */
+    /** Checks that the right two pieces merge when 3 adjacent pieces have same value.
+     * 中文：三个相邻方块数值相同时，检查移动方向上正确的两个方块是否合并。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("3 tile merge")
@@ -42,7 +44,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.NORTH);
     }
 
-    /** Checks that the right two pieces merge when 3 adjacent pieces have same value. */
+    /** Checks that the right two pieces merge when 3 adjacent pieces have same value.
+     * 中文：三个相邻方块数值相同时，检查移动方向上正确的两个方块是否合并。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("3 tile merge")
@@ -63,7 +66,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** Checks two adjacent merges work. */
+    /** Checks two adjacent merges work.
+     * 中文：检查同一行或列中两组相邻方块能否分别完成合并。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("adjacent merge")
@@ -84,7 +88,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 8), Side.NORTH);
     }
 
-    /** Checks that a tile only merges once per tilt. */
+    /** Checks that a tile only merges once per tilt.
+     * 中文：检查每个方块在一次倾斜中最多只合并一次。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("One merge per North tilt")
@@ -105,7 +110,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.NORTH);
     }
 
-    /** Checks that a tile only merges once per tilt. */
+    /** Checks that a tile only merges once per tilt.
+     * 中文：检查每个方块在一次倾斜中最多只合并一次。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("One merge per South tilt")
@@ -126,7 +132,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** Checks that a tile only merges once per tilt. */
+    /** Checks that a tile only merges once per tilt.
+     * 中文：检查每个方块在一次倾斜中最多只合并一次。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("One merge per East tilt")
@@ -147,7 +154,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.EAST);
     }
 
-    /** Checks that a tile only merges once per tilt. */
+    /** Checks that a tile only merges once per tilt.
+     * 中文：检查每个方块在一次倾斜中最多只合并一次。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("One merge per West tilt")
@@ -169,7 +177,8 @@ public class TestTiltMerge {
     }
 
 
-    /** Merge adjacent tiles up. */
+    /** Merge adjacent tiles up.
+     * 中文：向上合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Up tilt with merge")
@@ -190,7 +199,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.NORTH);
     }
 
-    /** Merge non-adjacent tiles up. */
+    /** Merge non-adjacent tiles up.
+     * 中文：向上合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Up tilt with gap and merge")
@@ -211,7 +221,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.NORTH);
     }
 
-    /** Move and merge adjacent tiles up. */
+    /** Move and merge adjacent tiles up.
+     * 中文：向上移动并合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Up tilt with gaps and merge")
@@ -232,7 +243,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.NORTH);
     }
 
-    /** Merge adjacent tiles right. */
+    /** Merge adjacent tiles right.
+     * 中文：向右合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Adjacent right merge")
@@ -253,7 +265,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.EAST);
     }
 
-    /** Merge non-adjacent tiles right. */
+    /** Merge non-adjacent tiles right.
+     * 中文：向右合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Right merge with gap")
@@ -274,7 +287,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.EAST);
     }
 
-    /** Move and merge adjacent tiles right. */
+    /** Move and merge adjacent tiles right.
+     * 中文：向右移动并合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Adjacent merge with gaps")
@@ -295,7 +309,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.EAST);
     }
 
-    /** Move and merge non-adjacent tiles right. */
+    /** Move and merge non-adjacent tiles right.
+     * 中文：向右移动并合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Right merge with gaps")
@@ -316,7 +331,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.EAST);
     }
 
-    /** Merge adjacent tiles down. */
+    /** Merge adjacent tiles down.
+     * 中文：向下合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Adjacent down merge")
@@ -337,7 +353,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** Merge non-adjacent tiles down. */
+    /** Merge non-adjacent tiles down.
+     * 中文：向下合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Down merge")
@@ -358,7 +375,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** Move and merge adjacent tiles down. */
+    /** Move and merge adjacent tiles down.
+     * 中文：向下移动并合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Adjacent down move and merge")
@@ -379,7 +397,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** Move and merge non-adjacent tiles down. */
+    /** Move and merge non-adjacent tiles down.
+     * 中文：向下移动并合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Down move and merge")
@@ -400,7 +419,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** Merge adjacent tiles left. */
+    /** Merge adjacent tiles left.
+     * 中文：向左合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Left adjacent merge")
@@ -421,7 +441,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.WEST);
     }
 
-    /** Merge non-adjacent tiles left. */
+    /** Merge non-adjacent tiles left.
+     * 中文：向左合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Left merge")
@@ -442,7 +463,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.WEST);
     }
 
-    /** Move and merge adjacent tiles left. */
+    /** Move and merge adjacent tiles left.
+     * 中文：向左移动并合并相邻方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Adjacent merge and move")
@@ -463,7 +485,8 @@ public class TestTiltMerge {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.WEST);
     }
 
-    /** Move and merge non-adjacent tiles left. */
+    /** Move and merge non-adjacent tiles left.
+     * 中文：向左移动并合并原本不相邻的方块。 */
     @Test
     @Tag("tilt-merge")
     @DisplayName("Merge and move with gaps")

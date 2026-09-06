@@ -22,6 +22,8 @@ public class BeeCountingStage implements AdventureStage {
      * Gives prompt for number of bees and prints out 3 sets of bees that the user
      * counts and inputs If wrong answer is given for number of bees, repeat with 3
      * new sets of bees.
+     * 中文：显示蜜蜂计数提示，并打印三组蜜蜂供用户分别计数和输入。如果总数
+     * 不正确，则换三组新的蜜蜂并重新计数。
      */
     @Override
     public void playStage() {
@@ -80,6 +82,8 @@ public class BeeCountingStage implements AdventureStage {
      * this.input.
      *
      * @return sum of elements in this.input.
+     * 中文：使用 this.input（用户输入的数字）计算其中所有元素的总和。
+     * @return this.input 中所有元素的总和。
      */
     private int sumInput() {
         int sum = 0;

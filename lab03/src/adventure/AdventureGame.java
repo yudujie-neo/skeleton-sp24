@@ -26,6 +26,7 @@ public class AdventureGame {
 
     /**
      * runs the stage and its puzzles.
+     * 中文：运行当前关卡及其中的谜题。
      */
     void handleStage() {
         this.currentStage.playStage();
@@ -48,16 +49,19 @@ public class AdventureGame {
 
     private AdventureStage parseResponse(String response) {
         // If empty then prompt again
+        // 中文：输入为空时重新提示。
         if (response == null || response.isEmpty()) {
             return null;
         }
 
         // First attempt exact match
+        // 中文：首先尝试精确匹配。
         if (this.currentStage.getResponses().containsKey(response.toLowerCase())) {
             return this.currentStage.getResponses().get(response.toLowerCase());
         }
 
         // Then, look for contained matches
+        // 中文：随后查找包含关系的匹配项。
         Map<String, AdventureStage> responses = this.currentStage.getResponses();
         for (Map.Entry<String, AdventureStage> other : responses.entrySet()) {
             if (other.getKey().toLowerCase().contains(response.toLowerCase())) {
@@ -70,6 +74,7 @@ public class AdventureGame {
     /**
      * driving function of game.
      * Plays until the current stage has no responses, then ends.
+     * 中文：游戏的驱动方法。持续运行，直到当前关卡没有可选回应时结束。
      */
     public void play() {
         while (this.currentStage != null) {

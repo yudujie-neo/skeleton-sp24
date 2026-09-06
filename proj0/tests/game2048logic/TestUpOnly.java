@@ -10,13 +10,15 @@ import static com.google.common.truth.Truth.assertWithMessage;
 import static game2048logic.TestUtils.checkTilt;
 
 /** Tests the tilt() method in the up (Side.NORTH) direction only.
+ * 中文：仅测试 tilt() 方法向上（Side.NORTH）倾斜的情况。
  *
  * @author Omar Khan
  */
 @Timeout(value = 60, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
 public class TestUpOnly {
 
-    /** Move tiles up (no merging). */
+    /** Move tiles up (no merging).
+     * 中文：向上移动方块，不发生合并。 */
     @Test
     @Tag("up")
     @DisplayName("Up Tilt")
@@ -37,7 +39,8 @@ public class TestUpOnly {
         checkTilt(new Model(before, 0), new Model(after, 0), Side.NORTH);
     }
 
-    /** A basic merge. */
+    /** A basic merge.
+     * 中文：一次基本的合并。 */
     @Test
     @Tag("up")
     @DisplayName("Up merge")
@@ -58,7 +61,8 @@ public class TestUpOnly {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.NORTH);
     }
 
-    /** A triple merge. Only the leading 2 tiles should merge. */
+    /** A triple merge. Only the leading 2 tiles should merge.
+     * 中文：三个相同方块的合并情形；只有移动方向上最靠前的两个方块应合并。 */
     @Test
     @Tag("up")
     @DisplayName("Triple merge")
@@ -85,6 +89,10 @@ public class TestUpOnly {
      * merge with the newly created 4 tile on the top row. If you're failing
      * this test, try seeing how you can ensure that the bottom 4 tile doesn't
      * merge with the newly created 4 tile on top.
+     *
+     * 中文：这是一个容易出错的合并情形。底行的 4 不应与顶行刚由两个 2
+     * 合成的新 4 再次合并。如果此测试失败，请思考如何保证一次倾斜中，
+     * 已由合并生成的方块不会再次参与合并。
      */
     @Test
     @Tag("up")

@@ -12,6 +12,8 @@ import static com.google.common.truth.Truth.assertWithMessage;
  *
  * You shouldn't expect to pass these tests until you're passing all the tests
  * in TestEmptySpace.
+ * 中文：测试 Model 的 atLeastOneMoveExists() 方法。在通过 TestEmptySpace
+ * 的全部测试之前，不应期待这些测试能够通过。
  *
  * @author Omar Khan
  */
@@ -22,6 +24,8 @@ public class TestAtLeastOneMoveExists {
      *
      *  Note that this isn't a comprehensive test for empty space. For that,
      * see the TestEmptySpace class.
+     * 中文：测试含有一些空格的棋盘。注意，这并不是对空格情况的完整测试；
+     * 完整测试请参见 TestEmptySpace 类。
      */
     @Test
     @Tag("at-least-one-move-exists")
@@ -40,7 +44,8 @@ public class TestAtLeastOneMoveExists {
                         + "(there is empty space on the board)\n" + m.getBoard()).that(m.atLeastOneMoveExists()).isTrue();
     }
 
-    /** Tests a board where a tilt in any direction would cause a change. */
+    /** Tests a board where a tilt in any direction would cause a change.
+     * 中文：测试朝任意方向倾斜都会发生变化的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("Valid Tilt Exists")
@@ -58,7 +63,8 @@ public class TestAtLeastOneMoveExists {
                 + m.getBoard()).that(m.atLeastOneMoveExists()).isTrue();
     }
 
-    /** Tests a board where a tilt left or right would cause a change. */
+    /** Tests a board where a tilt left or right would cause a change.
+     * 中文：测试向左或向右倾斜会发生变化的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("Valid Left/Right Tilt")
@@ -75,7 +81,8 @@ public class TestAtLeastOneMoveExists {
         assertWithMessage("A tilt left or right will change the board\n" + m.getBoard()).that(m.atLeastOneMoveExists()).isTrue();
     }
 
-    /** Tests a board where a tilt up or down would cause a change. */
+    /** Tests a board where a tilt up or down would cause a change.
+     * 中文：测试向上或向下倾斜会发生变化的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("Valid Up/Down Tilt")
@@ -96,6 +103,8 @@ public class TestAtLeastOneMoveExists {
      *
      * While having the max tile on the board does mean the game is over, it
      * should not be handled in this method.
+     * 中文：测试仍有合法移动、但棋盘上已经有最大方块的情况。虽然最大方块
+     * 的出现意味着游戏结束，但这个条件不应由本方法处理。
      */
     @Test
     @Tag("at-least-one-move-exists")
@@ -114,7 +123,8 @@ public class TestAtLeastOneMoveExists {
                 + m.getBoard()).that(m.atLeastOneMoveExists()).isTrue();
     }
 
-    /** Tests a board where no move exists. */
+    /** Tests a board where no move exists.
+     * 中文：测试不存在合法移动的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("No Valid Move")
@@ -131,7 +141,8 @@ public class TestAtLeastOneMoveExists {
         assertWithMessage("No move exists\n" + m.getBoard()).that(m.atLeastOneMoveExists()).isFalse();
     }
 
-    /** Tests a board where no move exists. */
+    /** Tests a board where no move exists.
+     * 中文：测试不存在合法移动的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("No Valid Move")
@@ -148,7 +159,8 @@ public class TestAtLeastOneMoveExists {
         assertWithMessage("No move exists\n" + m.getBoard()).that(m.atLeastOneMoveExists()).isFalse();
     }
 
-    /** Tests a board where no move exists. */
+    /** Tests a board where no move exists.
+     * 中文：测试不存在合法移动的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("No Valid Move")
@@ -165,7 +177,8 @@ public class TestAtLeastOneMoveExists {
         assertWithMessage("No move exists\n" + m.getBoard()).that(m.atLeastOneMoveExists()).isFalse();
     }
 
-    /** Tests a board where no move exists. */
+    /** Tests a board where no move exists.
+     * 中文：测试不存在合法移动的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("No Valid Move")
@@ -182,7 +195,8 @@ public class TestAtLeastOneMoveExists {
         assertWithMessage("No move exists\n" + m.getBoard()).that(m.atLeastOneMoveExists()).isFalse();
     }
 
-    /** Tests a board where no move exists. */
+    /** Tests a board where no move exists.
+     * 中文：测试不存在合法移动的棋盘。 */
     @Test
     @Tag("at-least-one-move-exists")
     @DisplayName("No Valid Move")

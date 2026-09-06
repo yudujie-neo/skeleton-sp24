@@ -10,6 +10,7 @@ import java.util.Map;
 public class SpeciesListStage implements AdventureStage {
 
     // Honestly I just find O'Reilly's animals to be really cool
+    // 中文：说实话，我只是觉得 O'Reilly 书籍封面上的动物非常酷。
     private static final List<String> REFERENCE_1 = List.of(
             "leopards",     // Reactive Systems in Java
             "bison"         // Java EXTREME Programming Cookbook
@@ -66,6 +67,8 @@ public class SpeciesListStage implements AdventureStage {
      * Handles user input and drives the arraySimilarity helper.
      *
      * @param reference a reference list of animals.
+     * 中文：处理用户输入并调用 arraySimilarity 辅助方法。
+     * @param reference 作为答案基准的动物列表。
      */
     private void handleResponses(List<String> reference) {
         while (true) {
@@ -89,6 +92,7 @@ public class SpeciesListStage implements AdventureStage {
     /**
      * Computes the similarity of two lists. If there is similarity, return 1.
      * If there is no similarity, it should return 0.
+     * 中文：计算两个列表的相似度。如果匹配则返回 1；如果完全不匹配则返回 0。
      */
     public static int arraySimilarity(List<String> listOne, List<String> listTwo) {
         List<String> copy = new ArrayList<>(listOne);

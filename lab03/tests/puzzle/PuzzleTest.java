@@ -23,7 +23,8 @@ public class PuzzleTest {
                 .that(readAllLines(PUZZLE_REFERENCE)).isEqualTo(readAllLines(PUZZLE_FILE));
     }
 
-    /** Read all lines of a file into a string list, trimming whitespace. */
+    /** Read all lines of a file into a string list, trimming whitespace.
+     * 中文：读取文件的所有行、去除首尾空白，并保存到字符串列表中。 */
     private List<String> readAllLines(File f) {
         Scanner s;
         try {

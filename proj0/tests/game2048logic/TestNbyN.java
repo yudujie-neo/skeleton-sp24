@@ -11,12 +11,14 @@ import static com.google.common.truth.Truth.assertWithMessage;
 import static game2048logic.TestUtils.checkTilt;
 
 /** Tests methods on N by N (not 4 by 4) models
+ * 中文：测试 N x N（而非固定 4 x 4）棋盘上的各个方法。
  *
  * @author Samuel Berkun, Ergun Acikoz
  */
 @Timeout(value = 60, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
 public class TestNbyN {
-    /** Tilting an empty 1 by 1 */
+    /** Tilting an empty 1 by 1
+     * 中文：倾斜一个空的 1 x 1 棋盘。 */
     @Test
     @Tag("NxN")
     @DisplayName("The ants go marching")
@@ -114,7 +116,8 @@ public class TestNbyN {
     }
 
 
-    /** Tilts for N = 1, 2, 3 */
+    /** Tilts for N = 1, 2, 3
+     * 中文：测试 N 为 1、2、3 时的倾斜操作。 */
     @Test
     @Tag("NxN")
     @DisplayName("Tilts for N = 1, 2, 3")
@@ -154,7 +157,8 @@ public class TestNbyN {
         checkTilt(new Model(before, 0), new Model(after, 4), Side.SOUTH);
     }
 
-    /** gameOver for N = 1, 2, 3 */
+    /** gameOver for N = 1, 2, 3
+     * 中文：测试 N 为 1、2、3 时的 gameOver。 */
     @Test
     @Tag("NxN")
     @DisplayName("Tilts for N = 1, 2, 3")
@@ -208,7 +212,8 @@ public class TestNbyN {
     }
 
 
-    /** Tilt and gameOver for N = 20 */
+    /** Tilt and gameOver for N = 20
+     * 中文：测试 N 为 20 时的倾斜操作和 gameOver。 */
     @Test
     @GradedTest(name = "TestNbyN: Large", number = "5.6")
     public void testLarge() {

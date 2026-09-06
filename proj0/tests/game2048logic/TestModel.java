@@ -18,9 +18,11 @@ public class TestModel {
      * <p>
      * The following tests determine the correctness of your `checkGameOver`
      * method.
+     * 中文：以下测试用于判断你的 `checkGameOver` 方法是否正确。
      */
 
-    /** No tilt can cause a change. */
+    /** No tilt can cause a change.
+     * 中文：向任何方向倾斜都不会使棋盘发生变化。 */
     @Test
     @Tag("model")
     @DisplayName("No valid moves")
@@ -37,7 +39,8 @@ public class TestModel {
                 + model).that(model.gameOver()).isTrue();
     }
 
-    /** The MAX_PIECE (2048) tile is on the board. */
+    /** The MAX_PIECE (2048) tile is on the board.
+     * 中文：棋盘上存在 MAX_PIECE（2048）方块。 */
     @Test
     @Tag("model")
     @DisplayName("Max tile present")
@@ -54,7 +57,8 @@ public class TestModel {
                 + model).that(model.gameOver()).isTrue();
     }
 
-    /** No tilt can cause a change. */
+    /** No tilt can cause a change.
+     * 中文：向任何方向倾斜都不会使棋盘发生变化。 */
     @Test
     @Tag("model")
     @DisplayName("No valid moves 2")
@@ -71,7 +75,8 @@ public class TestModel {
                 + model).that(model.gameOver()).isTrue();
     }
 
-    /** Any tilt will change the board. */
+    /** Any tilt will change the board.
+     * 中文：向任何方向倾斜都会使棋盘发生变化。 */
     @Test
     @Tag("model")
     @DisplayName("Valid moves present")
@@ -88,7 +93,8 @@ public class TestModel {
                 + model).that(model.gameOver()).isFalse();
     }
 
-    /** A tilt right or down will change the board. */
+    /** A tilt right or down will change the board.
+     * 中文：向右或向下倾斜会使棋盘发生变化。 */
     @Test
     @Tag("model")
     @DisplayName("Valid Right and Down moves")

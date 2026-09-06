@@ -54,6 +54,7 @@ public class MachineStage implements AdventureStage {
                 if (!isInt(listOne[i]) || !isInt(listTwo[i])) {
                     System.out.println("Hmm, are you sure you typed a sequence of integers?");
                     continue outer; // This is to continue from the while loop rather than the for loop.
+                                    // 中文：这里继续的是外层 while 循环，而不是当前 for 循环。
                 }
                 arrOne[i] = Integer.parseInt(listOne[i]);
                 arrTwo[i] = Integer.parseInt(listTwo[i]);
@@ -104,6 +105,8 @@ public class MachineStage implements AdventureStage {
      * Returns a new array where entry i is the max of
      * a[i] and b[i]. For example, if a = {1, -10, 3}
      * and b = {0, 20, 5}, this function will return {1, 20, 5}.
+     * 中文：返回一个新数组，其中第 i 项是 a[i] 和 b[i] 中的较大值。
+     * 例如 a = {1, -10, 3}、b = {0, 20, 5} 时，返回 {1, 20, 5}。
      */
     public static int[] arrayMax(int[] a, int[] b) {
         if (a.length != b.length) {
@@ -121,6 +124,7 @@ public class MachineStage implements AdventureStage {
 
     /**
      * Returns the sum of all elements in x.
+     * 中文：返回 x 中所有元素的总和。
      */
     public static int arraySum(int[] x) {
         int i = 0;
@@ -136,6 +140,8 @@ public class MachineStage implements AdventureStage {
      * Returns the sum of the element-wise max of a and b.
      * For example if a = {1, -10, 3} and b = {0, 20, 5},
      * the elementwise max is {1, 20, 5}, which sums to 26.
+     * 中文：返回 a 和 b 逐项最大值的总和。例如 a = {1, -10, 3}、
+     * b = {0, 20, 5} 时，逐项最大值为 {1, 20, 5}，总和为 26。
      */
     public static int sumOfElementwiseMax(int[] a, int[] b) {
         int[] maxes = arrayMax(a, b);

@@ -9,7 +9,8 @@ public class IntList {
         rest = r;
     }
 
-    /** Returns the ith item of this IntList. */
+    /** Returns the ith item of this IntList.
+     * 中文：返回此 IntList 的第 i 个元素。 */
     public int get(int i) {
         if (i == 0) {
             return first;
@@ -27,6 +28,10 @@ public class IntList {
      * <p>
      * You can pass in any number of arguments to IntList.of and it will work:
      * IntList mySmallerList = IntList.of(1, 4, 9);
+     *
+     * 中文：根据参数列表创建 IntList。你不需要理解这段代码；保留它是为了
+     * 方便测试。IntList.of(1, 2, 3, 4, 5) 会创建链表
+     * 1 -> 2 -> 3 -> 4 -> 5 -> null。of 方法可接收任意数量的参数。
      */
     public static IntList of(int... argList) {
         if (argList.length == 0)
@@ -54,6 +59,7 @@ public class IntList {
     public String print() {
         if (rest == null) {
             // Converts an Integer to a String!
+            // 中文：把整数转换为字符串！
             return String.valueOf(first);
         } else {
             return first + " -> " + rest.print();

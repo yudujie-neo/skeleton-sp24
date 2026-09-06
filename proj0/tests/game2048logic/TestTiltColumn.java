@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Timeout;
 import static com.google.common.truth.Truth.assertWithMessage;
 
 /** Tests the tiltColumn() method of Model.
+ * 中文：测试 Model 的 tiltColumn() 方法。
  *
  *
  * @author Erik Kizior
@@ -15,7 +16,8 @@ import static com.google.common.truth.Truth.assertWithMessage;
 @Timeout(value = 60, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
 public class TestTiltColumn {
 
-    /** No merging required. */
+    /** No merging required.
+     * 中文：无需合并。 */
     @Test
     @Tag("tiltColumn")
     @DisplayName("No merge")
@@ -41,7 +43,8 @@ public class TestTiltColumn {
         assertWithMessage("Boards should match:").that(before.toString()).isEqualTo(after.toString());
     }
 
-    /** One merge required. Not dependent on score being implemented. */
+    /** One merge required. Not dependent on score being implemented.
+     * 中文：需要发生一次合并；此测试不依赖分数功能是否实现。 */
     @Test
     @Tag("tiltColumn")
     @DisplayName("Merge, no score")
@@ -67,7 +70,8 @@ public class TestTiltColumn {
         assertWithMessage("Boards should match:").that(before.toString()).isEqualTo(after.toString());
     }
 
-    /** One merge required. Requires that score is implemented. */
+    /** One merge required. Requires that score is implemented.
+     * 中文：需要发生一次合并，并要求分数功能已经实现。 */
     @Test
     @Tag("tiltColumn")
     @DisplayName("Merge and score")

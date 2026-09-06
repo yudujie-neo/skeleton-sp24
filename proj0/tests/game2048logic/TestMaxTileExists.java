@@ -9,12 +9,14 @@ import org.junit.jupiter.api.Timeout;
 import static com.google.common.truth.Truth.assertWithMessage;
 
 /** Tests the maxTileExists() method of Model.
+ * 中文：测试 Model 的 maxTileExists() 方法。
  *
  * @author Omar Khan
  */
 @Timeout(value = 60, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
 public class TestMaxTileExists {
-    /** Note that this isn't a possible board state. */
+    /** Note that this isn't a possible board state.
+     * 中文：注意，这不是游戏中实际可能出现的棋盘状态。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test empty board")
@@ -31,7 +33,8 @@ public class TestMaxTileExists {
         assertWithMessage("Board is empty\n" + m.getBoard()).that(m.maxTileExists()).isFalse();
     }
 
-    /** Tests a full board with no max piece. */
+    /** Tests a full board with no max piece.
+     * 中文：测试已填满、但没有最大值方块的棋盘。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test no max piece")
@@ -48,7 +51,8 @@ public class TestMaxTileExists {
         assertWithMessage("No 2048 tile on board\n" + m.getBoard()).that(m.maxTileExists()).isFalse();
     }
 
-    /** Tests a full board with the max piece. */
+    /** Tests a full board with the max piece.
+     * 中文：测试已填满且包含最大值方块的棋盘。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test board with max piece")
@@ -65,7 +69,8 @@ public class TestMaxTileExists {
         assertWithMessage("One 2048 tile on board\n" + m.getBoard()).that(m.maxTileExists()).isTrue();
     }
 
-    /** Tests multiple max pieces. */
+    /** Tests multiple max pieces.
+     * 中文：测试包含多个最大值方块的情况。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test board with multiple max pieces")
@@ -83,7 +88,8 @@ public class TestMaxTileExists {
 
     }
 
-    /** Tests when the max piece is in the top right corner. */
+    /** Tests when the max piece is in the top right corner.
+     * 中文：测试最大值方块位于右上角的情况。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test board with max piece in top right corner")
@@ -100,7 +106,8 @@ public class TestMaxTileExists {
         assertWithMessage("One 2048 tile on board\n" + m.getBoard()).that(m.maxTileExists()).isTrue();
     }
 
-    /** Tests when the max piece is in the top left corner. */
+    /** Tests when the max piece is in the top left corner.
+     * 中文：测试最大值方块位于左上角的情况。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test board with max piece in top left corner")
@@ -117,7 +124,8 @@ public class TestMaxTileExists {
         assertWithMessage("One 2048 tile on board\n" + m.getBoard()).that(m.maxTileExists()).isTrue();
     }
 
-    /** Tests when the max piece is in the bottom left corner. */
+    /** Tests when the max piece is in the bottom left corner.
+     * 中文：测试最大值方块位于左下角的情况。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test board with max piece in the bottom left corner")
@@ -135,7 +143,8 @@ public class TestMaxTileExists {
         assertWithMessage("One 2048 tile on board\n" + m.getBoard()).that(m.maxTileExists()).isTrue();
     }
 
-    /** Tests when the max piece is in the bottom right corner. */
+    /** Tests when the max piece is in the bottom right corner.
+     * 中文：测试最大值方块位于右下角的情况。 */
     @Test
     @Tag("max-tile")
     @DisplayName("Test board with max piece in the bottom right corner")

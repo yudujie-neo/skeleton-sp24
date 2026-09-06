@@ -61,7 +61,8 @@ public class PalindromeStage implements AdventureStage {
         return responses;
     }
 
-    /** Returns a new IntList with the contents of the original IntList in reverse order.*/
+    /** Returns a new IntList with the contents of the original IntList in reverse order.
+     * 中文：返回一个新的 IntList，其内容顺序与原 IntList 相反。 */
     private static IntList reverseList(IntList l) {
         IntList reversed = null;
         while (l.rest != null) {
@@ -74,6 +75,8 @@ public class PalindromeStage implements AdventureStage {
     /**
      * Given an input string of digits, converts it into an IntList of single-digit ints.
      * For example, the string "606" is converted to 6 -> 0 -> 6.
+     * 中文：给定一个只包含数字的字符串，将它转换为由单个数字组成的 IntList。
+     * 例如，字符串 "606" 会转换为 6 -> 0 -> 6。
      */
     private static IntList digitsToIntList(String s) {
         int[] a = new int[s.length()];
