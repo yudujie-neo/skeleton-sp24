@@ -57,7 +57,8 @@ public enum Tetromino {
 
     Tetromino(Color color, boolean[][] s) {
         this.tile = new TETile('█', color, Color.BLACK, "", 0);
-        // need to convert from ij to xy coords because tile renderer coordinates are mismatched
+    // need to convert from ij to xy coords because tile renderer coordinates are mismatched
+    // 中文：因为图块渲染器的坐标方向不一致，需将 ij 坐标转换为 xy 坐标。
         this.shape = ijToXY(s);
         this.width = shape[0].length;
         this.height = shape.length;
@@ -67,6 +68,8 @@ public enum Tetromino {
     /** Converts from ij coordinates to xy coordinates. This is specifically for converting
      * the 2D boolean array representation of a piece to the tile rendering coordinates, since
      * orientation is not aligned.
+     * 中文：将 ij 坐标转换为 xy 坐标，专用于把方块的二维布尔数组表示
+     * 转换为图块渲染坐标，因为两者的方向不对齐。
      */
     private static boolean[][] ijToXY(boolean[][] ijArr) {
         int numRows = ijArr.length;
@@ -84,6 +87,8 @@ public enum Tetromino {
     /**
      * Draws the piece at the given coordinates of the given board. (x,y) = 0,0 is bottom-left.
      * Does not do bounds-checking.
+     * 中文：在给定棋盘的指定坐标处绘制方块，(0, 0) 位于左下角。
+     * 本方法不执行边界检查。
      */
     public static void draw(Tetromino t, TETile[][] board, int bx, int by) {
         for (int tx = 0; tx < t.width; tx++) {
@@ -97,6 +102,7 @@ public enum Tetromino {
 
     /**
      * Sets the point of a Tetromino to (3, 20), specifically for spawning.
+     * 中文：为生成方块，将其位置设为 (3, 20)。
      */
     public void reset() {
         this.pos = new Point(3, 20);

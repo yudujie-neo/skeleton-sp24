@@ -9,6 +9,7 @@ import java.util.*;
 
 /**
  *  Provides the logic for Tetris.
+ *  中文：提供俄罗斯方块的主要游戏逻辑。
  *
  *  @author Erik Nelson, Omar Yu, Noah Adhikari, Jasmine Lin
  */
@@ -20,25 +21,32 @@ public class Tetris {
 
     // Tetrominoes spawn above the area we display, so we'll have our Tetris board have a
     // greater height than what is displayed.
+    // 中文：七巧板方块会在可见区域上方生成，因此棋盘的实际高度大于显示高度。
     private static int GAME_HEIGHT = 25;
 
     // Contains the tiles for the board.
+    // 中文：保存棋盘图块。
     private TETile[][] board;
 
     // Helps handle movement of pieces.
+    // 中文：辅助处理方块移动。
     private Movement movement;
 
     // Checks for if the game is over.
+    // 中文：记录游戏是否结束。
     private boolean isGameOver;
 
     // The current Tetromino that can be controlled by the player.
+    // 中文：玩家当前可控制的方块。
     private Tetromino currentTetromino;
 
     // The current game's score.
+    // 中文：当前游戏分数。
     private int score;
 
     /**
      * Checks for if the game is over based on the isGameOver parameter.
+     * 中文：根据 isGameOver 字段返回游戏是否结束。
      * @return boolean representing whether the game is over or not
      */
     private boolean isGameOver() {
@@ -47,6 +55,7 @@ public class Tetris {
 
     /**
      * Renders the game board and score to the screen.
+     * 中文：将棋盘和分数渲染到屏幕上。
      */
     private void renderBoard() {
         ter.drawTiles(board);
@@ -64,14 +73,18 @@ public class Tetris {
      * Creates a new Tetromino and updates the instance variable
      * accordingly. Flags the game to end if the top of the board
      * is filled and the new piece cannot be spawned.
+     * 中文：创建新方块并更新实例变量。如果棋盘顶部已被占用，
+     * 新方块无法生成，则标记游戏结束。
      */
     private void spawnPiece() {
         // The game ends if this tile is filled
+        // 中文：如果此位置已被占用，游戏结束。
         if (board[4][19] != Tileset.NOTHING) {
             isGameOver = true;
         }
 
         // Otherwise, spawn a new piece and set its position to the spawn point
+        // 中文：否则生成新方块，并将其位置设为出生点。
         currentTetromino = Tetromino.values()[bagRandom.getValue()];
         currentTetromino.reset();
     }
@@ -79,9 +92,11 @@ public class Tetris {
     /**
      * Updates the board based on the user input. Makes the appropriate moves
      * depending on the user's input.
+     * 中文：根据用户输入更新棋盘，并执行对应的移动。
      */
     private void updateBoard() {
         // Grabs the current piece.
+        // 中文：获取当前方块。
         Tetromino t = currentTetromino;
         if (actionDeltaTime() > 1000) {
             movement.dropDown();
@@ -101,6 +116,7 @@ public class Tetris {
 
     /**
      * Increments the score based on the number of lines that are cleared.
+     * 中文：根据消除的行数增加分数。
      *
      * @param linesCleared
      */
@@ -113,10 +129,13 @@ public class Tetris {
     /**
      * Clears lines/rows on the provided tiles/board that are horizontally filled.
      * Repeats this process for cascading effects and updates score accordingly.
+     * 中文：清除给定棋盘中水平方向已填满的行。为处理连锁效果，
+     * 需重复此过程，并相应地更新分数。
      * @param tiles
      */
     public void clearLines(TETile[][] tiles) {
         // Keeps track of the current number lines cleared
+        // 中文：记录本次消除的行数。
         int linesCleared = 0;
 
         // TODO: Check how many lines have been completed and clear it the rows if completed.
@@ -131,6 +150,7 @@ public class Tetris {
     /**
      * Where the game logic takes place. The game should continue as long as the game isn't
      * over.
+     * 中文：游戏主逻辑所在之处。只要游戏尚未结束，就应继续运行。
      */
     public void runGame() {
         resetActionTimer();
@@ -145,6 +165,7 @@ public class Tetris {
 
     /**
      * Renders the score using the StdDraw library.
+     * 中文：使用 StdDraw 库渲染分数。
      */
     private void renderScore() {
         // TODO: Use the StdDraw library to draw out the score.
@@ -154,6 +175,7 @@ public class Tetris {
 
     /**
      * Use this method to run Tetris.
+     * 中文：使用此方法运行俄罗斯方块。
      * @param args
      */
     public static void main(String[] args) {
@@ -164,6 +186,7 @@ public class Tetris {
 
     /**
      * Everything below here you don't need to touch.
+     * 中文：下方的所有内容都不需要修改。
      */
 
     // This is our tile rendering engine.

@@ -10,6 +10,9 @@ import java.awt.Font;
  * to, but be careful. We strongly recommend getting everything else working before
  * messing with this renderer, unless you're trying to do something fancy like
  * allowing scrolling of the screen or tracking the avatar or something similar.
+ * 中文：用于渲染图块的工具类。你不需要修改此文件；虽然可以修改，
+ * 但请谨慎。除非要实现屏幕滚动或跟踪角色等高级功能，强烈建议
+ * 先让其他所有部分正常工作，再调整渲染器。
  */
 public class TERenderer {
     private static final int TILE_SIZE = 16;
@@ -109,6 +112,8 @@ public class TERenderer {
     /**
      * Resets the font to default settings. You should call this method before drawing any tiles
      * if you changed the pen settings.
+     * 中文：将字体恢复为默认设置。如果修改了画笔设置，
+     * 应在绘制任何图块之前调用此方法。
      */
     public void resetFont() {
         Font font = new Font("Monaco", Font.BOLD, TILE_SIZE - 2);
