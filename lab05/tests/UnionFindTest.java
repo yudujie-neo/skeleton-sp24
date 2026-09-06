@@ -9,6 +9,8 @@ public class UnionFindTest {
     /**
      * Checks that the initial state of the disjoint sets are correct (this will pass with the skeleton
      * code, but ensure it still passes after all parts are implemented).
+     * 中文：检查并查集的初始状态是否正确（骨架代码也能通过本测试，
+     * 但实现所有部分后仍应确保它通过）。
      */
     @Test
     public void initialStateTest() {
@@ -23,6 +25,7 @@ public class UnionFindTest {
 
     /**
      * Checks that invalid inputs are handled correctly.
+     * 中文：检查是否正确处理无效输入。
      */
     @Test
     public void illegalFindTest() {
@@ -43,6 +46,7 @@ public class UnionFindTest {
 
     /**
      * Checks that union is done correctly (including the tie-breaking scheme).
+     * 中文：检查 union 是否正确完成，包括集合大小相等时的平局规则。
      */
     @Test
     public void basicUnionTest() {
@@ -70,6 +74,7 @@ public class UnionFindTest {
 
     /**
      * Unions the same item with itself. Calls on find and checks that the outputs are correct.
+     * 中文：将同一元素与自身合并，然后调用 find 并检查输出是否正确。
      */
     @Test
     public void sameUnionTest() {
@@ -84,6 +89,8 @@ public class UnionFindTest {
      * Write your own tests below here to verify for correctness. The given tests are not comprehensive.
      * Specifically, you may want to write a test for path compression and to check for the correctness
      * of all methods in your implementation.
+     * 中文：请在下方编写自己的测试来验证正确性，已给测试并不全面。
+     * 建议特别为路径压缩编写测试，并检查你实现的每个方法是否正确。
      */
 
 }
