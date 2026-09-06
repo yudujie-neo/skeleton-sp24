@@ -27,6 +27,7 @@ public class GameOfLifeTests {
 
     /**
      * Compares the two states, if orientation is aligned.
+     * 中文：在方向已对齐的前提下比较两个状态。
      * @param student
      * @param expected
      */
@@ -41,6 +42,7 @@ public class GameOfLifeTests {
     /**
      * Checks for the state of the world before and after a single generation,
      * with dimensions of 3 by 3.
+     * 中文：在 3×3 棋盘上检查演化一代前后的世界状态。
      */
     @Test
     public void oneGeneration() {
@@ -63,6 +65,7 @@ public class GameOfLifeTests {
         TETile[][] nextState = student.nextGeneration(testInput);
 
         // Height and width need to stay the same before and after the generation.
+        // 中文：演化前后的宽度和高度必须保持不变。
         assertThat(testInput.length).isEqualTo(nextState.length);
         assertThat(testInput[0].length).isEqualTo(nextState[0].length);
 
@@ -72,6 +75,7 @@ public class GameOfLifeTests {
 
     /**
      * Checks the state of the world after multiple generations.
+     * 中文：检查经过多代演化后的世界状态。
      */
     @Test
     public void multipleGenerations() {
@@ -137,6 +141,7 @@ public class GameOfLifeTests {
     /**
      * Check for the save format, without generation of the next state, using a random seed
      * as the initial state.
+     * 中文：以随机种子产生的状态为初始状态，在不演化下一代的情况下检查保存格式。
      * @throws IOException
      */
     @Test
@@ -144,6 +149,7 @@ public class GameOfLifeTests {
         checkIfPatternFilesAreModified();
         /**
          * Should expect the board to be saved like in the following (not including dimensions):
+         * 中文：棋盘应按下列格式保存（此处不包括尺寸行）：
          * 010
          * 011
          * 100
@@ -168,6 +174,7 @@ public class GameOfLifeTests {
 
     /**
      * Check that loading works and matches expected output.
+     * 中文：检查载入是否正常，且是否与期望输出匹配。
      * @throws IOException
      */
     @Test
@@ -188,6 +195,8 @@ public class GameOfLifeTests {
      * This checks if any of the pattern files have been modified. Modifications include
      * adding a newline, deleting/replacing characters, adding characters, etc.
      * DO NOT MODIFY ANYTHING IN THE FILE (otherwise testing will be harder).
+     * 中文：此测试检查任何模式文件是否被修改，包括添加换行、删除或替换字符、
+     * 添加字符等。请不要修改这些文件中的任何内容，否则测试会更困难。
      */
     private static void checkIfPatternFilesAreModified() {
         if (hashFile("boba", BLANK) % 404 != -172) {

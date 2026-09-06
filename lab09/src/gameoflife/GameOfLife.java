@@ -13,6 +13,7 @@ import java.util.Random;
  * Am implementation of Conway's Game of Life using StdDraw.
  * Credits to Erik Nelson, Jasmine Lin and Elana Ho for
  * creating the assignment.
+ * 中文：使用 StdDraw 实现康威生命游戏。
  */
 public class GameOfLife {
 
@@ -28,6 +29,7 @@ public class GameOfLife {
 
     /**
      * Initializes our world.
+     * 中文：使用指定随机种子初始化世界。
      * @param seed
      */
     public GameOfLife(long seed) {
@@ -44,6 +46,7 @@ public class GameOfLife {
     /**
      * Constructor for loading in the state of the game from the
      * given filename and initializing it.
+     * 中文：从指定文件名载入游戏状态并进行初始化。
      * @param filename
      */
     public GameOfLife(String filename) {
@@ -56,6 +59,7 @@ public class GameOfLife {
      * Constructor for loading in the state of the game from the
      * given filename and initializing it. For testing purposes only, so
      * do not modify.
+     * 中文：从指定文件载入状态的测试专用构造方法；请勿修改。
      * @param filename
      */
     public GameOfLife(String filename, boolean test) {
@@ -65,6 +69,7 @@ public class GameOfLife {
     /**
      * Initializes our world without using StdDraw. For testing purposes only,
      * so do not modify.
+     * 中文：不使用 StdDraw 初始化世界，仅供测试；请勿修改。
      * @param seed
      */
     public GameOfLife(long seed, boolean test) {
@@ -79,6 +84,8 @@ public class GameOfLife {
     /**
      * Initializes our world with a given TETile[][] without using StdDraw.
      * For testing purposes only, so do not modify.
+     * 中文：用给定的 TETile[][] 且不使用 StdDraw 初始化世界，
+     * 仅供测试；请勿修改。
      * @param tiles
      * @param test
      */
@@ -91,6 +98,7 @@ public class GameOfLife {
 
     /**
      * Flips the matrix along the x-axis.
+     * 中文：沿 x 轴翻转矩阵。
      * @param tiles
      * @return
      */
@@ -111,6 +119,7 @@ public class GameOfLife {
 
     /**
      * Transposes the tiles.
+     * 中文：转置 tiles 矩阵。
      * @param tiles
      * @return
      */
@@ -130,6 +139,7 @@ public class GameOfLife {
     /**
      * Runs the game. You don't have to worry about how this method works.
      * DO NOT MODIFY THIS METHOD!
+     * 中文：运行游戏。不需要理解此方法的工作原理，也不要修改它！
      */
     public void runGame() {
         boolean paused = false;
@@ -175,6 +185,7 @@ public class GameOfLife {
 
     /**
      * Fills the given 2D array of tiles with RANDOM tiles.
+     * 中文：使用随机图块填充给定的二维数组。
      * @param tiles
      */
     public void fillWithRandomTiles(TETile[][] tiles) {
@@ -189,6 +200,7 @@ public class GameOfLife {
 
     /**
      * Fills the 2D array of tiles with NOTHING tiles.
+     * 中文：使用 NOTHING 图块填充二维数组。
      * @param tiles
      */
     public void fillWithNothing(TETile[][] tiles) {
@@ -204,10 +216,13 @@ public class GameOfLife {
     /**
      * Selects a random tile, with a 50% change of it being a CELL
      * and a 50% change of being NOTHING.
+     * 中文：随机选择图块：50% 概率为 CELL，50% 概率为 NOTHING。
      */
     private TETile randomTile() {
         // The following call to nextInt() uses a bound of 3 (this is not a seed!) so
         // the result is bounded between 0, inclusive, and 3, exclusive. (0, 1, or 2)
+        // 中文：下面的 nextInt() 调用使用界限参数（不是随机种子），
+        // 因此返回值位于包含 0、不包含上界的范围内。
         int tileNum = random.nextInt(2);
         return switch (tileNum) {
             case 0 -> Tileset.CELL;
@@ -217,6 +232,7 @@ public class GameOfLife {
 
     /**
      * Returns the current state of the board.
+     * 中文：返回棋盘的当前状态。
      * @return
      */
     public TETile[][] returnCurrentState() {
@@ -229,12 +245,18 @@ public class GameOfLife {
      *  2.Any live cell with two or three neighbors lives on to the next generation.
      *  3.Any live cell with more than three neighbors dies, as if by overpopulation,
      *  4.Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+     * 中文：每个时间步按以下规则转换：
+     *  1. 活细胞的活邻居少于两个时，因人口不足而死亡。
+     *  2. 活细胞有两个或三个活邻居时，存活到下一代。
+     *  3. 活细胞的活邻居多于三个时，因过度拥挤而死亡。
+     *  4. 死细胞恰好有三个活邻居时，因繁殖而变为活细胞。
      * @param tiles
      * @return
      */
     public TETile[][] nextGeneration(TETile[][] tiles) {
         TETile[][] nextGen = new TETile[width][height];
         // The board is filled with Tileset.NOTHING
+        // 中文：先用 Tileset.NOTHING 填充新棋盘。
         fillWithNothing(nextGen);
 
         // TODO: Implement this method so that the described transitions occur.
@@ -254,6 +276,7 @@ public class GameOfLife {
 
     /**
      * Helper method for saveBoard without rendering and running the game.
+     * 中文：在不渲染、不运行游戏的情况下调用 saveBoard 的辅助方法。
      * @param tiles
      */
     public void saveBoard(TETile[][] tiles) {
@@ -268,6 +291,8 @@ public class GameOfLife {
      * Saves the state of the current state of the board into the
      * save.txt file (make sure it's saved into this specific file).
      * 0 represents NOTHING, 1 represents a CELL.
+     * 中文：将当前棋盘状态保存到指定的 save.txt。
+     * 0 表示 NOTHING，1 表示 CELL。
      */
     public void saveBoard() {
         // TODO: Save the dimensions of the board into the first line of the file.
@@ -295,6 +320,8 @@ public class GameOfLife {
     /**
      * Loads the board from filename and returns it in a 2D TETile array.
      * 0 represents NOTHING, 1 represents a CELL.
+     * 中文：从 filename 载入棋盘并以二维 TETile 数组返回。
+     * 0 表示 NOTHING，1 表示 CELL。
      */
     public TETile[][] loadBoard(String filename) {
         // TODO: Read in the file.
@@ -329,11 +356,13 @@ public class GameOfLife {
 
     /**
      * This is where we run the program. DO NOT MODIFY THIS METHOD!
+     * 中文：程序从此处运行。请勿修改此方法！
      * @param args
      */
     public static void main(String[] args) {
         if (args.length == 2) {
             // Read in the board from a file.
+            // 中文：从文件读入棋盘。
             if (args[0].equals("-l")) {
                 GameOfLife g = new GameOfLife(args[1]);
                 g.runGame();
