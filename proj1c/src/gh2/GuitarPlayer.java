@@ -9,6 +9,7 @@ import java.io.InputStream;
 
 /**
  * Plays guitar from MIDI files.
+ * 中文：根据 MIDI 文件播放吉他声音。
  *
  * @author Eli Lipsitz
  */
@@ -87,14 +88,14 @@ public class GuitarPlayer {
             if (msg instanceof MetaMessage) {
                 MetaMessage mm = (MetaMessage) msg;
                 if (mm.getType() == 0x51) {
-                    // set tempo
+                    // set tempo / 中文：设置速度
                     data = mm.getData();
                     int tempo = (data[0] & 0xff) << 16 | (data[1] & 0xff) << 8 | (data[2] & 0xff);
                     bpm = 60000000.0 / tempo;
                     samplesPerTick = StdAudio.SAMPLE_RATE
                         * (60.0 / (sequence.getResolution() * bpm));
                 } else if (mm.getType() == 0x05) {
-                    // lyrics
+                    // lyrics / 中文：歌词事件
                     data = mm.getData();
                     String lyrics = new String(data);
                     lyrics = lyrics.replace("\r", "\r\n");
@@ -117,18 +118,18 @@ public class GuitarPlayer {
                 int s = data[j++] & 0xFF;
 
                 if (s >= 0x80 && s <= 0x8F) {
-                    // note off
+                    // note off / 中文：停止音符
                     int note = data[j++] & 0xFF;
                     int vel = data[j++] & 0xFF;
                     vol[note] = 0.0;
                 } else if (s >= 0x90 && s <= 0x9F) {
-                    // note on?
+                    // note on? / 中文：开始音符？
                     int note = data[j++] & 0xFF;
                     int vel = data[j++] & 0xFF;
                     vol[note] = vel / 127.0;
                     strings[note].pluck();
                 } else {
-                    // status
+                    // status / 中文：状态信息
                     int d = data[j++] & 0xFF;
                     int d2 = data[j++] & 0xFF;
                 }

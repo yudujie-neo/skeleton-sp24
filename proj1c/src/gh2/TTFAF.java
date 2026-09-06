@@ -8,6 +8,7 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * This code does some stuff. Run it (with sound on!) to find out what stuff it does!
+ * 中文：这段代码会做一些有趣的事。打开声音运行它，看看会发生什么！
  *
  * @author Eli Lipsitz
  */
@@ -23,6 +24,7 @@ public class TTFAF {
         }
 
         // You can also do this:
+        // 中文：也可以按下面的方式播放 MIDI 文件：
         // GuitarPlayer player = new GuitarPlayer(new java.io.File("path/to/music.mid"));
         // player.play();
     }
