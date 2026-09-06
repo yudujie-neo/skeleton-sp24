@@ -6,10 +6,12 @@ import org.junit.Test;
 import static com.google.common.truth.Truth.assertThat;
 
 /** Tests of optional parts of lab 7. */
+/** 中文：测试本实验的可选部分。 */
 public class TestBSTMapExtra {
 
     /*
      * Sanity test for keySet, only here because it's optional
+     * 中文：keySet 的基本检查；因为它是可选功能，所以放在此处。
      */
     @Test
     public void sanityKeySetTest() {
@@ -36,6 +38,9 @@ public class TestBSTMapExtra {
      * implementation of remove, but that would require doing
      * things like checking for inorder vs. preorder swaps,
      * and is unnecessary in this simple BST implementation.
+     * 中文：关于 testRemoveRoot，测试只检查 c 是否已被删除，
+     * 因此（也许并不严谨地）假设 remove 会保持 BST 结构。更完整的
+     * remove 测试还需检查中序或前序替换等细节，对这个简单 BST 实现并无必要。
      */
     @Test
     public void testRemoveRoot() {
@@ -57,6 +62,7 @@ public class TestBSTMapExtra {
 
     /* Remove Test 2
      * test the 3 different cases of remove
+     * 中文：测试 remove 的三种不同情况。
      */
     @Test
     public void testRemoveThreeCases() {
@@ -85,6 +91,7 @@ public class TestBSTMapExtra {
     /* Remove Test 3
      *  Checks that remove works correctly on root nodes
      *  when the node has only 1 or 0 children on either side. */
+    /* 中文：检查当根节点只有一个或没有子节点时，remove 是否正确工作。 */
     @Test
     public void testRemoveRootEdge() {
         BSTMap<Character, Integer> rightChild = new BSTMap<>();

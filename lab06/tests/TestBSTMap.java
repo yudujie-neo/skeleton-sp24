@@ -19,12 +19,14 @@ public class TestBSTMap {
     }
 
     // This test assumes put/size/containsKey/get are implemented properly.
+    // 中文：此测试假设 put、size、containsKey 和 get 已正确实现。
     @Test
     public void sanityClearTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
         for (int i = 0; i < 455; i++) {
             b.put("hi" + i, 1+i);
             //make sure put is working via containsKey and get
+            // 中文：通过 containsKey 和 get 确认 put 正常工作。
             assertThat(b.get("hi" + i)).isEqualTo(1 + i);
             assertThat(b.containsKey("hi" + i)).isTrue();
         }
@@ -38,6 +40,7 @@ public class TestBSTMap {
     }
 
     // Assumes `put` is implemented properly.
+    // 中文：假设 `put` 已正确实现。
     @Test
     public void sanityContainsKeyTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
@@ -47,6 +50,7 @@ public class TestBSTMap {
     }
 
     // Assumes `put` is implemented properly.
+    // 中文：假设 `put` 已正确实现。
     @Test
     public void sanityGetTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
@@ -62,6 +66,7 @@ public class TestBSTMap {
     }
 
     // Assumes `put` is implemented properly.
+    // 中文：假设 `put` 已正确实现。
     @Test
     public void sanitySizeTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
@@ -75,6 +80,7 @@ public class TestBSTMap {
     }
 
     // Assumes `get` and `containsKey` are implemented properly.
+    // 中文：假设 `get` 和 `containsKey` 已正确实现。
     @Test
     public void sanityPutTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
@@ -85,6 +91,8 @@ public class TestBSTMap {
 
     // Assumes `put` is implemented properly. This test is a bit tricky - remember that
     // `containsKey` should only care about the keys, not the values!
+    // 中文：假设 `put` 已正确实现。此测试稍微有些容易混淆：请记住，
+    // `containsKey` 只关心键是否存在，不关心对应的值！
     @Test
     public void containsKeyNullTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
