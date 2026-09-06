@@ -8,12 +8,14 @@ public class WorldGenTests {
     @Test
     public void basicTest() {
         // put different seeds here to test different worlds
+        // 中文：在此处填入不同的随机种子，以测试不同世界。
         TETile[][] tiles = AutograderBuddy.getWorldFromInput("n1234567890123456789s");
 
         TERenderer ter = new TERenderer();
         ter.initialize(tiles.length, tiles[0].length);
         ter.renderFrame(tiles);
         StdDraw.pause(5000); // pause for 5 seconds so you can see the output
+        // 中文：暂停 5 秒，便于查看输出。
     }
 
     @Test

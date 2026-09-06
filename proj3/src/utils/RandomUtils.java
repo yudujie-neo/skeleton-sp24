@@ -8,6 +8,8 @@ import java.util.Random;
  * and exponential). Also includes methods for shuffling an array and
  * other randomness related stuff you might want to do. Feel free to
  * modify this file.
+ * 中文：该库提供静态方法，用于从伯努利、均匀、高斯、离散和指数等
+ * 不同分布中生成伪随机数，也包含数组打乱及其他随机化工具。可自由修改此文件。
  * <p>
  * Adapted from https://introcs.cs.princeton.edu/java/22library/StdRandom.java.html
  */

@@ -5,15 +5,18 @@ import java.awt.Color;
 /**
  * Contains constant tile objects, to avoid having to remake the same tiles in different parts of
  * the code.
+ * 中文：包含图块常量，避免在代码的不同位置重复创建相同图块。
  *
  * You are free to (and encouraged to) create and add your own tiles to this file. This file will
  * be turned in with the rest of your code.
+ * 中文：可以且鼓励在本文件中创建、添加自定义图块。此文件会与其他代码一起提交。
  *
  * Ex:
  *      world[x][y] = Tileset.FLOOR;
  *
  * The style checker may crash when you try to style check this file due to use of unicode
  * characters. This is OK.
+ * 中文：由于使用了 Unicode 字符，样式检查器检查此文件时可能崩溃，这没有问题。
  */
 
 public class Tileset {
