@@ -36,6 +36,7 @@ public class TestMyHashMap {
     }
 
     //assumes put/size/containsKey/get work
+    // 中文：假设 put、size、containsKey 和 get 均已正确实现。
     @DisplayName("clear")
     @Test
     public void testClear() {
@@ -71,6 +72,7 @@ public class TestMyHashMap {
         assertThat(b.containsKey("waterYouDoingHere")).isTrue();
 
         // Recall that even with a null value, containsKey should return true
+        // 中文：请记住，即使映射值为 null，containsKey 也应返回 true。
         b.put("hashBrowns", null);
         assertThat(b.containsKey("hashBrowns")).isTrue();
     }
@@ -171,6 +173,8 @@ public class TestMyHashMap {
 
     /** Tests that the backing array is resized when the load factor is exceeded.
      *  In addition, times out if it takes too long (e.g. arithmetically instead of geometrically).
+     *  中文：测试超过装载因子时底层数组是否扩容。如果耗时过长也会超时，
+     *  例如容量按算术级数而非几何级数增长时。
      */
     @DisplayName("resize")
     @Test
@@ -181,6 +185,7 @@ public class TestMyHashMap {
     }
 
     /** Times out after 10 seconds. Note that when debugging this test, you may run into timeout issues. */
+    /** 中文：此测试会在 10 秒后超时；调试时可能遇到超时问题。 */
     public static void sanityResizeTest(MyHashMap<String, Integer> m, int initialCapacity, double loadFactor) {
         assertTimeoutPreemptively(Duration.ofSeconds(10), () -> {
             int backingArrayCapacity = sizeOfBackingArray(m);
@@ -200,6 +205,8 @@ public class TestMyHashMap {
      *  otherwise this will not work properly.
 
      *  Don't worry about knowing how this method works. */
+    /** 中文：返回给定映射的底层数组长度。务必只用一个实例变量
+     *  保存桶数组，否则该方法不能正常工作。不必理解该方法的具体原理。 */
     private static <K, V> int sizeOfBackingArray(MyHashMap<K, V> m) {
         Class<?> clazz = m.getClass();
         if (clazz.getSuperclass().equals(MyHashMap.class)) {
@@ -238,6 +245,9 @@ public class TestMyHashMap {
      * If you're still stuck, walk through the expected behavior by hand.
      * Does your map behave the same way?
      * Note Bee's strange equals and hashCode implementations!
+     * 中文：此测试使用非寻常的 hash 函数和 equals 方法来覆盖哈希冲突边界情况。
+     * 如果卡住，可用调试器查看 Java 内置 HashMap 返回的期望值，再手动推演行为，
+     * 检查你的映射是否一致。特别注意 Bee 奇特的 equals 和 hashCode 实现。
      */
     static void edgeCasesTest(MyHashMap<Bee, Integer> map) {
 

@@ -22,6 +22,8 @@ import static hashmap.MyHashMapFactory.createBucketedMap;
  * This class tests MyHashMap with different bucket types
  * imported from java.util. You should pass the tests in
  * TestMyHashMap before attempting these tests.
+ * 中文：此类使用 java.util 中不同的集合类型作为桶来测试 MyHashMap。
+ * 在尝试这些测试前，你应先通过 TestMyHashMap。
  */
 public class TestMyHashMapBuckets {
 

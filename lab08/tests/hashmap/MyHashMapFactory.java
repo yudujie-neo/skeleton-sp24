@@ -7,6 +7,8 @@ import java.util.Collection;
  * how this works.
  *
  * Please don't modify this class unless you REALLY know what you're doing.
+ * 中文：这个辅助工厂类可用同一组测试检查不同的桶类型，
+ * 你不需要理解其工作原理。除非你非常清楚自己在做什么，请不要修改此类。
  *
  * @author Noah Adhikari, Spring 2023
  */
