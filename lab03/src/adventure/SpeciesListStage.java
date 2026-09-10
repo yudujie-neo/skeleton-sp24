@@ -94,8 +94,14 @@ public class SpeciesListStage implements AdventureStage {
      * If there is no similarity, it should return 0.
      * 中文：计算两个列表的相似度。如果匹配则返回 1；如果完全不匹配则返回 0。
      */
-    public static int arraySimilarity(List<String> listOne, List<String> listTwo) {
-        List<String> copy = new ArrayList<>(listOne);
+    public static double arraySimilarity(List<String> listOne, List<String> listTwo) {
+        // 两个都是空列表，认为完全相同
+        if (listOne.isEmpty()) {
+            return listTwo.isEmpty() ? 1.0 : 0.0;
+        }
+
+        List<String> copy = new ArrayList<>();
+        copy.addAll(listOne);
         int similarObjects = 0;
         for (String o : listTwo) {
             if (copy.contains(o)) {
