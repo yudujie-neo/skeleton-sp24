@@ -1,7 +1,7 @@
 # Discussion 03 — Inheritance / 继承
 
-> UC Berkeley CS 61B, Spring 2024  
-> Regular date: February 5, 2024  
+> UC Berkeley CS 61B, Spring 2024
+> Regular date: February 5, 2024
 > Exam-Level sheet date printed in the PDF: February 6, 2023
 
 ## Regular
@@ -602,6 +602,8 @@ public class DMSList {
 
 #### 官方答案
 
+[Here is a video walkthrough of the solution.](https://youtu.be/0htcCcYbTws)
+
 ```java
 public class DMSList {
     private IntNode sentinel;
@@ -657,6 +659,8 @@ public class DMSList {
 3. `LastIntNode.max()` 覆盖递归版本并直接返回 `0`，递归到此结束。
 
 题目保证插入的数都是正数，所以 `0` 是合适的基准值：空表返回 `0`，非空表中任意实际元素都不会被这个基准错误地压过。若允许负数，固定返回 `0` 就可能给出错误结果，需要更换设计，例如使用负无穷或单独处理空表。
+
+**补充分析（非官方答案）：** 原题明确要求只能填写空白、不得修改给定代码；原题声明是 `class LastIntNode extends IntNode`，但 Solutions PDF 将其写成了 `public class LastIntNode extends IntNode`。上方“官方答案”忠实保留 Solutions 的 `public`，不过这个访问修饰符并不是完成题目所必需的，而且严格来说超出了“只填空”的限制。
 
 #### 考点
 

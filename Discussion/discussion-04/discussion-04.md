@@ -111,6 +111,8 @@ public class OHIterator implements Iterator<OHRequest> {
 }
 ```
 
+Explanation: The `OHRequest` object `queue` passed into `OHIterator`’s constructor represents the first `OHRequest` on the queue. Initializing `curr` to `queue` in the constructor allows our `OHIterator` to start at this first request. Since `OHIterator` implements an `Iterator` over `OHRequest`s, we must provide implementations for the interface methods `hasNext()` and `next()`. The `hasNext()` method handles checking whether there are more `OHRequest`s. However, we only want requests with good (as defined by `isGood`) descriptions, so we must check the descriptions of each `OHRequest` and skip over the ones with bad descriptions before determining whether there are `OHRequest`s left.
+
 #### 解析
 
 `OHIterator` 实现 `Iterator<OHRequest>`，因此必须提供 `hasNext()` 和 `next()`。字段 `curr` 表示下一条尚未返回的候选请求。
@@ -176,6 +178,8 @@ public class OHQueue implements Iterable<OHRequest> {
     }
 }
 ```
+
+Explanation: If we want our `OHQueue` to be `Iterable`, `OHQueue` has to implement the interface `Iterable`. A condition of this is implementing the methods of the interface (which in the case of `Iterable`, is the `iterator()` method). As our `OHQueue` processes `OHRequest` objects, `iterator()` in `OHQueue` should return an `OHIterator` over `OHRequest` objects.
 
 #### 解析
 
@@ -341,9 +345,9 @@ Elana
 - Ashley 的描述长度合格，因此返回。
 - Angel 的描述是 `"help"`，长度小于 5，被 `OHIterator.hasNext()` 跳过。
 - Kevin 和 Mihir 的描述均合格，依次返回。
-- Elana 的描述包含 `"thank u"`，会被返回；`TYIterator` 随后尝试跳过它后面的重复项。本例中它已经是最后一个节点，因此严格执行 1c 的官方实现会再次调用 `super.next()` 并抛出 `NoSuchElementException`。
+- Elana 的描述包含 `"thank u"`。`TYIterator.next()` 先把它暂存在局部变量 `result` 中，随后尝试跳过重复项；但它已经是最后一个节点，第二次 `super.next()` 会在执行 `return result` 之前抛出 `NoSuchElementException`。因此 Elana 不会返回给增强 `for` 循环，也不会被打印。
 
-官方 Solutions PDF 列出的预期打印结果是 Ashley、Kevin、Mihir、Elana。这里存在一个边界条件不一致：要在本例中稳定得到该输出，`TYIterator` 跳过重复项前还应先确认父迭代器确实存在下一项，例如使用 `if (result.description.contains("thank u") && super.hasNext())`。这条补充属于边界分析，不是对官方答案的改写。
+官方 Solutions PDF 列出的预期打印结果是 Ashley、Kevin、Mihir、Elana。这里存在一个边界条件不一致：严格执行官方代码时，实际会依次打印 Ashley、Kevin、Mihir，然后抛出异常。要稳定得到官方列出的四行输出，`TYIterator` 跳过重复项前还应先确认父迭代器确实存在下一项，例如使用 `if (result.description.contains("thank u") && super.hasNext())`。这条补充属于边界分析，不是对官方答案的改写。
 
 #### 考点
 
@@ -422,6 +426,10 @@ public class OHRequestComparator implements Comparator<OHRequest> {
     }
 }
 ```
+
+Explanation: The `compare` method should return a negative integer if `s1` has higher priority than `s2`, zero if the two requests are of equal priority, and a positive integer if `s1` has lower priority than `s2`. We are given that if either (but not both) request has their `isSetUp` set to `true`, the request with the `true` value receives higher priority. The two possible combinations of this scenario are covered in the first two `if` statements. We only check `description` if both or neither requests have `isSetUp` set to `true`, so the `description` checks must come after those of `isSetUp`.
+
+The alternate uses the same idea, but exploits the fact that `Boolean.compare` compares two booleans for us. This allows us to condense the `if`-statements. Note that we use `==` to check for equality on primitives and `.equals` to check for equality on reference types (e.g. `String`).
 
 #### 解析
 
@@ -598,6 +606,8 @@ public class IteratorOfIterators ______________________________ {
 
 #### 官方答案
 
+[Here is a video walkthrough of the solution.](https://youtu.be/2QPNzIClYnw)
+
 ```java
 public class IteratorOfIterators implements Iterator<Integer> {
     LinkedList<Iterator<Integer>> iterators;
@@ -631,7 +641,11 @@ public class IteratorOfIterators implements Iterator<Integer> {
 }
 ```
 
-Official alternate solution:
+Explanation: In the constructor, we make sure the iterator is not empty and add it to our list of possible iterators. For `hasNext`, we make sure that there is an iterator for us to use.
+
+For `next`, we first make sure that there is a possible next element. If so, we get the next element from the current iterator by removing the front of our list. If the iterator still has elements left, we put it back on the end of the list for future iterations.
+
+Alternate Solution: Although this solution provides the right functionality, it is not as efficient as the first one.
 
 ```java
 public class IteratorOfIterators implements Iterator<Integer> {
@@ -662,6 +676,8 @@ public class IteratorOfIterators implements Iterator<Integer> {
     }
 }
 ```
+
+Explanation: This solution is essentially the same as the first, except we preprocess all the elements from all iterators before going into `hasNext` or `next`. This is less efficient because we may not need all these elements; for example, what if there are a million elements but our iterator is only called twice?
 
 #### 解析
 
