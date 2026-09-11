@@ -116,7 +116,7 @@ We should use a Queue. We can push clients to the front of the Queue as they arr
 
 需求是 FIFO（先进先出），因此应使用 `Queue`。标准队列通常把新客户端加入队尾，并从队首移除最早到达者。
 
-官方文字写成“push clients to the front”，如果加入与移除都发生在同一端，就会变成 LIFO；这与题意不符。这里保留官方原文，并把标准队列方向作为补充说明。
+**补充分析（非官方答案）：** 官方文字写成“push clients to the front”，如果加入与移除都发生在同一端，就会变成 LIFO；这与题意不符。这里保留官方原文，并把标准队列方向作为补充说明。
 
 #### 考点
 
@@ -282,7 +282,7 @@ public static void f4(int N) {
 
 `f1` 每次增加常数，迭代次数与 $N$ 成正比；`f2` 每次乘以固定常数，迭代次数为对数；`f3` 的上界与输入无关；`f4` 的内层工作量依次为 $1,2,4,\ldots,2^N$，总和为 $\Theta(2^N)$。
 
-官方 `f2` 解释中的 “in general $\log_i(N)$” 记号容易误导：倍乘常数是 `C`，更准确应写 $\log_C N$。这只是补充记号说明，官方答案代码保持原样。
+**补充分析（非官方答案）：** 官方 `f2` 解释中的 “in general $\log_i(N)$” 记号容易误导：倍乘常数是 `C`，更准确应写 $\log_C N$。这只是补充记号说明，官方答案代码保持原样。
 
 #### 考点
 
@@ -422,7 +422,7 @@ Now we look for the height of our recursive tree. Each time, we halve the length
 
 递推式是 $T(N)=2T(N/2)+\Theta(N)$。递归树每层总复制量为 $\Theta(N)$，共有 $\Theta(\log N)$ 层，所以总时间为 $\Theta(N\log N)$；同时创建的数组总空间也需结合对象生命周期分析。
 
-官方题干把 Java 方法签名写成了 `System.arrayCopy`，但代码中使用的 `System.arraycopy` 才是实际 API 名称。另当数组长度为奇数时，两个长度均为 `floor(N/2)` 的子数组会遗漏最后一个元素；这不改变复杂度结论，但会影响函数的数据语义。两点均属补充分析。
+**补充分析（非官方答案）：** 官方题干把 Java 方法签名写成了 `System.arrayCopy`，但代码中使用的 `System.arraycopy` 才是实际 API 名称。另当数组长度为奇数时，两个长度均为 `floor(N/2)` 的子数组会遗漏最后一个元素；这不改变复杂度结论，但会影响函数的数据语义。两点均属补充分析。
 
 #### 考点
 
@@ -554,7 +554,7 @@ Alternatively, we could insert the keys in descending sorted order, which also r
 
 升序插入时，每个新键都成为前一节点的右孩子，树高为 $N-1$；降序插入则形成全左链。最深位置的查找为 $\Theta(N)$。
 
-题干只要求 $O(N)$，而平衡树的 $O(\log N)$ 也属于 $O(N)$，所以从严格渐进定义看并不能唯一要求线性链。官方显然意在构造最坏查找为线性的 BST；这是题意措辞的补充说明。
+**补充分析（非官方答案）：** 题干只要求 $O(N)$，而平衡树的 $O(\log N)$ 也属于 $O(N)$，所以从严格渐进定义看并不能唯一要求线性链。官方显然意在构造最坏查找为线性的 BST；这是题意措辞的补充说明。
 
 #### 考点
 
@@ -988,9 +988,9 @@ Otherwise, we use the properties of BSTs to bound our subsequent `min` and `max`
 
 辅助函数携带当前节点允许的开区间 `(min, max)`。左子树继承下界并把当前键设为新上界；右子树继承上界并把当前键设为新下界。每个节点访问一次，时间 $\Theta(N)$，递归栈为 $O(H)$，其中 $H$ 是树高。
 
-官方实现有一个整数端点边界问题：顶层使用 `Integer.MIN_VALUE` 和 `Integer.MAX_VALUE`，同时用严格开区间检查，会把键恰好等于这两个合法 `int` 端点的树判为无效。可用 `long min, long max` 并传入 `Long.MIN_VALUE`、`Long.MAX_VALUE` 修复；这属于补充修正，不是官方答案。
+**补充分析（非官方答案）：** 官方实现有一个整数端点边界问题：顶层使用 `Integer.MIN_VALUE` 和 `Integer.MAX_VALUE`，同时用严格开区间检查，会把键恰好等于这两个合法 `int` 端点的树判为无效。可用 `long min, long max` 并传入 `Long.MIN_VALUE`、`Long.MAX_VALUE` 修复；这属于补充修正，不是官方答案。
 
-此外，官方解释末段说左侧必须 “less than or equal to” 当前值，但代码通过 `T.key >= max` 实际要求严格小于；若课程 BST 不允许重复键，代码方向是正确的，文字中的 “or equal to” 不一致。
+**补充分析（非官方答案）：** 此外，官方解释末段说左侧必须 “less than or equal to” 当前值，但代码通过 `T.key >= max` 实际要求严格小于；若课程 BST 不允许重复键，代码方向是正确的，文字中的 “or equal to” 不一致。
 
 #### 考点
 

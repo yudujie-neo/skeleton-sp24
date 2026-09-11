@@ -104,7 +104,7 @@ This example will represent our longest path, which is $2H + 2$ nodes long, mean
 
 2-3 树从根到叶有 $H$ 条边、$H+1$ 个结点。最坏情况下，路径上的每个结点都是包含两个键的三结点；转换成 LLRB 时，每个三结点展开成两个红黑树结点，因此路径最多包含 $2(H+1)=2H+2$ 个结点。搜索每访问一个结点进行一次键比较，所以最多为 $2H+2$ 次。
 
-官方原文中的 “leaf-leaning” 和 “blank link” 应结合上下文理解为 “left-leaning” 与 “black link”；此处保留官方答案措辞，没有静默改写。
+**补充分析（非官方答案）：** 官方原文中的 “leaf-leaning” 和 “blank link” 应结合上下文理解为 “left-leaning” 与 “black link”；此处保留官方答案措辞，没有静默改写。
 
 #### 考点
 

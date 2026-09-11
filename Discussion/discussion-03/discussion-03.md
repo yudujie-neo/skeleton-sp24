@@ -430,7 +430,7 @@ public class SoccerPlayer extends Athlete {
 ```
 
 > [!NOTE]
-> 原 PDF 的 `SoccerPlayer.speakTo` 确实未写 `public`。严格按 Java 规则，这会因降低访问权限而无法编译；下方官方答案显然按它是一个有效 override 的出题意图继续分析。原题在这里保持不变。
+> **补充分析（非官方答案）：** 原 PDF 的 `SoccerPlayer.speakTo` 确实未写 `public`。严格按 Java 规则，这会因降低访问权限而无法编译；下方官方答案显然按它是一个有效 override 的出题意图继续分析。原题在这里保持不变。
 
 Read the code below and fill in the table.
 
@@ -679,7 +679,8 @@ public class DMSList {
 
 - Regular：原题与 Solutions 均包含 Question 1（1a、1b、1c）和 Question 2（2a、2b），题号一一对应。
 - Exam Prep：原题与 Solutions 均包含 Question 1 和 Question 2，题号一一对应。
-- 本 Discussion 无需从 PDF 提取图示；`assets/` 目录保留给后续可能需要的原图。
+- 图片提取情况：本 Discussion 无需从 PDF 提取图示；`assets/` 目录保留给后续可能需要的原图。
+- 官方答案和补充分析的分区情况：Solutions PDF 内容保留在“官方答案”；`SoccerPlayer.speakTo` 的访问权限问题与 `LastIntNode` 的额外 `public` 均在中文“解析”中明确标为补充分析。
 
 ## 官方资料
 

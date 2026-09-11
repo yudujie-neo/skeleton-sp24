@@ -261,7 +261,7 @@ public class TYIterator extends OHIterator {
 
 第一次 `super.next()` 取得应返回的合格请求并推进父类迭代器。如果该请求描述包含 `"thank u"`，第二次 `super.next()` 取出并丢弃下一条合格请求，达到跳过重复项的效果。最后仍返回第一次取得的 `result`。
 
-该实现依赖题目保证：包含 `"thank u"` 的请求后确实存在一个重复项。如果最后一项包含该短语但后面没有元素，第二次 `super.next()` 会抛出 `NoSuchElementException`。
+**补充分析（非官方答案）：** 该实现依赖题目保证：包含 `"thank u"` 的请求后确实存在一个重复项。如果最后一项包含该短语但后面没有元素，第二次 `super.next()` 会抛出 `NoSuchElementException`。
 
 #### 考点
 
@@ -347,7 +347,7 @@ Elana
 - Kevin 和 Mihir 的描述均合格，依次返回。
 - Elana 的描述包含 `"thank u"`。`TYIterator.next()` 先把它暂存在局部变量 `result` 中，随后尝试跳过重复项；但它已经是最后一个节点，第二次 `super.next()` 会在执行 `return result` 之前抛出 `NoSuchElementException`。因此 Elana 不会返回给增强 `for` 循环，也不会被打印。
 
-官方 Solutions PDF 列出的预期打印结果是 Ashley、Kevin、Mihir、Elana。这里存在一个边界条件不一致：严格执行官方代码时，实际会依次打印 Ashley、Kevin、Mihir，然后抛出异常。要稳定得到官方列出的四行输出，`TYIterator` 跳过重复项前还应先确认父迭代器确实存在下一项，例如使用 `if (result.description.contains("thank u") && super.hasNext())`。这条补充属于边界分析，不是对官方答案的改写。
+**补充分析（非官方答案）：** 官方 Solutions PDF 列出的预期打印结果是 Ashley、Kevin、Mihir、Elana。这里存在一个边界条件不一致：严格执行官方代码时，实际会依次打印 Ashley、Kevin、Mihir，然后抛出异常。要稳定得到官方列出的四行输出，`TYIterator` 跳过重复项前还应先确认父迭代器确实存在下一项，例如使用 `if (result.description.contains("thank u") && super.hasNext())`。这条补充属于边界分析，不是对官方答案的改写。
 
 #### 考点
 
@@ -437,11 +437,10 @@ The alternate uses the same idea, but exploits the fact that `Boolean.compare` c
 
 官方主解法先比较优先级更高的 `isSetup` 字段。只有这一步无法区分二者时，才检查描述是否与 `"setup"` 完全相等。使用 `.equals` 是因为 `String` 是引用类型；`==` 比较的是引用身份而不是字符串内容。
 
-需要特别注意：PDF 中的官方备用代码被原样保留，但其 `Boolean.compare(o1Value, o2Value)` 会把 `false` 排在 `true` 前，因为 Java 规定 `false < true`。这与题目要求的“`true` 优先且视为更小”方向相反。若要满足题意，应交换参数：
+**补充分析（非官方答案）：** PDF 中的官方备用代码被原样保留，但其 `Boolean.compare(o1Value, o2Value)` 会把 `false` 排在 `true` 前，因为 Java 规定 `false < true`。这与题目要求的“`true` 优先且视为更小”方向相反。若要满足题意，对应两处可交换参数：
 
 ```java
 return Boolean.compare(isO2DescSetup, isO1DescSetup);
-// 以及
 return Boolean.compare(o2.isSetup, o1.isSetup);
 ```
 
@@ -713,7 +712,7 @@ Explanation: This solution is essentially the same as the first, except we prepr
 - Regular：原题与 Solutions 均包含 Question 1 的 1a、1b、1c、1d、1e，题号一一对应。
 - Exam Prep：原题与 Solutions 均包含 Question 1 和 Question 2，题号一一对应。
 - 四份 PDF 均无必须提取为图片的数据结构图、树、Graph 或内存图；`assets/` 目录保留备用。
-- 官方解答中的代码与本文中文补充分析严格分区；发现的边界条件或方向问题均在“解析”中明确标为非官方补充。
+- 官方答案和补充分析的分区情况：官方解答中的代码与本文中文补充分析严格分区；发现的边界条件或方向问题均在“解析”中明确标为非官方补充。
 
 ## 官方资料
 
