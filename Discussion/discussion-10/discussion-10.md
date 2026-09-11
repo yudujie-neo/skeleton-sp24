@@ -191,7 +191,9 @@ False: this can be disproved with the example below, where we add a constant $c=
 
 #### 解析
 
-一条含 $m$ 条边的路径在每条边加 $c$ 后会增加 $mc$。不同路径的边数不同，所以加法可能改变路径成本的相对顺序。注意题目虽写作 “constant factor”，实际操作与官方示例都是“加上常数”，不是乘法缩放。
+一条含 $m$ 条边的路径在每条边加 $c$ 后会增加 $mc$。不同路径的边数不同，所以加法可能改变路径成本的相对顺序。
+
+**补充分析（非官方答案）：** 题目虽写作 “constant factor”，实际操作与官方示例都是“加上常数”，不是乘法缩放。
 
 #### 考点
 
@@ -397,7 +399,9 @@ For the graph above, it’s possible to visit in the order $A-B-C-D$ (which is n
 
 该伪代码在结点入栈时就标记。A 的邻居 B、C、D 都可能先被标记并入栈；之后访问 B 时，即使 B 有边到 D，也会因 D 已标记而跳过，破坏“沿当前分支尽可能深入”的递归 DFS 行为。
 
-按本题希望模拟递归 DFS 的语义，应在顶点真正从栈中弹出并访问时标记，并允许尚未访问的顶点再次入栈；弹出时若已访问则跳过。另一种标准迭代写法可以在入栈时标记，但必须调整邻居压栈方式才能得到指定的 DFS 访问次序。
+按本题希望模拟递归 DFS 的语义，应在顶点真正从栈中弹出并访问时标记，并允许尚未访问的顶点再次入栈；弹出时若已访问则跳过。
+
+**补充分析（非官方答案）：** 也存在入栈时标记的标准迭代 DFS 写法，但必须正确控制邻居的压栈次序；它不等同于题目中这段会提前阻止 D 再次入栈的实现。
 
 #### 考点
 
@@ -611,7 +615,7 @@ In regard to the added exercise, here is a simple graph G where Prim’s and Kru
 
 整数边权之间若不同，差至少为 1；给每条边加入互不相同且小于 1 的偏移量，不会颠倒原本不同整数权重的先后，只会打破同权边之间的平局。修改后所有边权唯一，因此 MST 唯一，Prim 与 Kruskal 必须返回同一棵树；去掉偏移量后，该树仍是原图的一棵 MST。
 
-伪代码里的 `1 / E` 是数学除法。若直接照搬到 Java 且 `E` 是整数，整数除法会得到 0，必须改用 `1.0 / E`；这是实现语言层面的补充，不属于官方答案。
+**补充分析（非官方答案）：** 官方文字要求每个偏移量严格位于开区间 $(0,1)$，但伪代码从 `offset = 0` 开始，第一条边实际得到偏移量 0。这个字面不一致不影响方案正确性：$0,1/E,\ldots,(E-1)/E$ 仍互不相同且都小于 1。另需注意，伪代码里的 `1 / E` 是数学除法；若直接照搬到 Java 且 `E` 是整数，整数除法会得到 0，必须改用 `1.0 / E`。
 
 #### 考点
 
@@ -895,7 +899,7 @@ Wow, it actually works! Nice work Duncan! However, this algorithm has already be
 
 这是 Kahn 拓扑排序：先把所有零入度顶点入队；每次取出源点并加入结果，随后把其每条出边的终点入度减一，新变为零的顶点再入队。每个顶点入队一次、每条边处理一次，总时间 $O(V+E)$，额外空间 $O(V)$。
 
-**补充分析（非官方答案）：** Solutions PDF 中的官方代码缺少题目模板原有的 `return sorted;`。按 Java 语法，返回类型为 `List<Integer>` 的方法若执行到末尾而没有返回值，会产生编译错误。正确实现应在 `while` 循环之后、方法结束之前保留 `return sorted;`；上面的“官方答案”仍忠实保留了 PDF 中的缺失。
+**补充分析（非官方答案）：** Solutions PDF 中的官方代码缺少题目模板原有的 `return sorted;`。按 Java 语法，返回类型为 `List<Integer>` 的方法若执行到末尾而没有返回值，会产生编译错误。正确实现应在 `while` 循环之后、方法结束之前保留 `return sorted;`；上面的“官方答案”仍忠实保留了 PDF 中的缺失。官方说明中的 “until the set is queue” 也是原文病句，结合代码应理解为“当队列非空时持续处理”。
 
 #### 考点
 
@@ -988,7 +992,7 @@ Runtime: We look at $N^2$ letters. At each letter, we execute eight calls to `lo
 - Regular：Question 1、Question 2（2a-2c）、Question 3（3a-3c）、Question 4（4a-4c，含 Extra）均与 Regular Solutions 对应；代码空白、三组图论反例、课程先修图、二分图示例、DFS 反例和最短环算法均已核对。
 - Exam Prep：Question 1（1a 的两个编号情形、1b、1c）、Question 2（2a、2b 的 1-4）、Question 3 均与 Exam Prep Solutions 对应，无遗漏题目或嵌套小问。
 - 图片提取情况：从四份官方 PDF 的高分辨率渲染页提取 10 张图片，包括 A*/Dijkstra 反例、课程先修图、二分图与 DFS 图、多 MST 示例和单词搜索；没有重新绘制原图。
-- 官方答案和补充分析的分区情况：Solutions PDF 内容保留在“官方答案”；简单图假设、Java 整数除法、官方 `topologicalSort()` 缺少返回语句，以及 `longestPrefixOf` 返回约定和完整键判断问题均在中文“解析”中明确标为补充分析。
+- 官方答案和补充分析的分区情况：Solutions PDF 内容保留在“官方答案”；简单图假设、术语歧义、偏移量开区间与 Java 整数除法、官方 `topologicalSort()` 缺少返回语句及说明病句，以及 `longestPrefixOf` 返回约定和完整键判断问题均在中文“解析”中明确标为补充分析。
 
 ## 官方资料
 
