@@ -470,6 +470,8 @@ Fill in the following blanks related to min-heaps. Let $N$ is the number of elem
 
 #### 解析
 
+**补充分析（非官方答案）：** 本题开头把 $N$ 定义为最小堆中的元素个数，但第 5 题及其提示又用 $N$ 表示完全二叉树的层数。这是官方题面中的符号复用不一致。上方原题与官方答案均按 PDF 原样保留；第 1、2 题中的 $N$ 按元素个数理解，第 5 题中的 $N$ 则按提示解释为层数。
+
 1. 删除根后，若移到根的末尾元素已经满足堆序，操作可为常数时间；最坏需下沉整棵树的高度。
 2. 新元素若不小于父结点，无需上浮；最坏一路上浮到根。
 3. 题目说的是“may output”，不是对任意最小堆都保证有序。若堆的层序数组本身递增，前序或层序可以得到升序；中序和后序不会先输出全局最小的根。
@@ -591,7 +593,7 @@ Reasoning:
 - Regular：Question 1（1a–1c）、Question 2（2a–2b）、Question 3 均与 Regular Solutions 对应；题干、遍历表、邻接矩阵/表、堆状态与 TST 伪代码均已核对。
 - Exam Prep：Question 1（1a–1b）、Question 2、Question 3（3a–3b）均与 Exam Prep Solutions 对应，无遗漏题目或小问。
 - 图片提取情况：从官方 PDF 高分辨率页面提取了 BST、有向图、TST，以及官方解答中的两组堆状态图，共 5 张图片；其余表格已转换为 Markdown Table。
-- 官方答案和补充分析的分区情况：Solutions PDF 内容保留在“官方答案”；DFS 判环复杂度、平行边边界、Java 最小整数取负与 Heap Mystery 索引矛盾均在中文“解析”中明确标为补充分析。
+- 官方答案和补充分析的分区情况：Solutions PDF 内容保留在“官方答案”；DFS 判环复杂度、平行边边界、Java 最小整数取负、填空题中 $N$ 的符号复用，以及 Heap Mystery 索引矛盾均在中文“解析”中明确标为补充分析。
 
 ## 官方资料
 
