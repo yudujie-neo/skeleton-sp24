@@ -144,11 +144,21 @@ Use heapsort to sort the following array (hint: draw out the heap). Draw out the
 
 #### 官方答案
 
-First, we need to heapify our array. We convert the current array to a max heap. Recall that to heapify our array, we bubble down in reverse level order (bottom to top, right to left). Bubbling down `6` (swapping `6` and `7`) and then bubbling down `0` gives the final heap, whose underlying array is `[7, 6, 2, 0, 4]`.
+First, we need to heapify our array. We convert the current array to a max heap:
 
-We then begin popping off the max value from the heap, placing it at the back of the array. The arrays become `[6, 4, 2, 0, 7]`, `[4, 0, 2, 6, 7]`, `[2, 0, 4, 6, 7]`, `[0, 2, 4, 6, 7]`, and finally `[0, 2, 4, 6, 7]`.
+Recall that to heapify our array, we bubble down in reverse level order (bottom to top, right to left). This means we start by bubbling down 4, which in this case gives us the same heap structure. Bubbling down 7, and then 2, leaves the heap unchanged as well. Bubbling down 6 (swapping 6 and 7) then gives us the following:
+
+Bubbling down 0 gives us our final heap:
+
+Note that as we heapify, we also modify the underlying array representation as well. This means that our final array looks like `[7, 6, 2, 0, 4]`. We then begin popping off the max value from the heap, placing it at the back of the array. Note that our underlying array representation doesn’t consider the popped value as part of the heap any more. We start by popping off 7 and bubbling down:
 
 ![Official heapsort diagrams, part 1](assets/question-01d-heapsort-steps-1.png)
+
+Our array now looks like this: $[6, 4, 2, 0, \mathbf{7}]$, where the bolded section is considered sorted and not part of the heap. We the continue by popping off 6:
+
+and the array looks like $[4, 0, 2, \mathbf{6, 7}]$. We then pop off 4:
+
+and our array looks like $[2, 0, \mathbf{4, 6, 7}]$. In a similar fashion, we pop off 2 and 0 from our heap, resulting in $[0, \mathbf{2, 4, 6, 7}]$ and finally our sorted array: $[\mathbf{0, 2, 4, 6, 7}]$.
 
 ![Official heapsort diagrams, part 2](assets/question-01d-heapsort-steps-2.png)
 
