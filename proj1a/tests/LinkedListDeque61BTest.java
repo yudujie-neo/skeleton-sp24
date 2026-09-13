@@ -63,4 +63,104 @@ public class LinkedListDeque61BTest {
 
     // Below, you'll write your own tests for LinkedListDeque61B.
     // 中文：请在下方为 LinkedListDeque61B 编写自己的测试。
+    @Test
+    public void isEmptyAndSizeTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        assertThat(deque.isEmpty()).isTrue();
+        assertThat(deque.size()).isEqualTo(0);
+
+        deque.addLast("item");
+        assertThat(deque.isEmpty()).isFalse();
+        assertThat(deque.size()).isEqualTo(1);
+
+        deque.removeFirst();
+        assertThat(deque.isEmpty()).isTrue();
+        assertThat(deque.size()).isEqualTo(0);
+
+        assertThat(deque.removeLast()).isNull();
+        assertThat(deque.size()).isEqualTo(0);
+    }
+
+    @Test
+    public void getTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        deque.addFirst("first");
+        deque.addLast("second");
+        deque.addLast("third");
+        deque.addLast("fourth");
+
+        assertThat(deque.get(0)).isEqualTo("first");
+        assertThat(deque.get(1)).isEqualTo("second");
+        assertThat(deque.get(2)).isEqualTo("third");
+        assertThat(deque.get(3)).isEqualTo("fourth");
+        assertThat(deque.get(-1)).isNull();
+        assertThat(deque.get(213)).isNull();
+    }
+
+    @Test
+    public void getRecursiveTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        deque.addFirst("first");
+        deque.addLast("second");
+        deque.addLast("third");
+        deque.addLast("fourth");
+
+        assertThat(deque.getRecursive(0)).isEqualTo("first");
+        assertThat(deque.getRecursive(1)).isEqualTo("second");
+        assertThat(deque.getRecursive(2)).isEqualTo("third");
+        assertThat(deque.getRecursive(3)).isEqualTo("fourth");
+        assertThat(deque.getRecursive(-1)).isNull();
+        assertThat(deque.getRecursive(213)).isNull();
+    }
+
+    @Test
+    public void removeFirstToEmptyTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        deque.addLast("first");
+        deque.addLast("second");
+
+        assertThat(deque.removeFirst()).isEqualTo("first");
+        assertThat(deque.toList()).containsExactly("second").inOrder();
+        assertThat(deque.removeFirst()).isEqualTo("second");
+        assertThat(deque.toList()).isEmpty();
+    }
+
+    @Test
+    public void removeLastToEmptyTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        deque.addLast("first");
+        deque.addLast("second");
+
+        assertThat(deque.removeLast()).isEqualTo("second");
+        assertThat(deque.toList()).containsExactly("first").inOrder();
+        assertThat(deque.removeLast()).isEqualTo("first");
+        assertThat(deque.toList()).isEmpty();
+    }
+
+    @Test
+    public void addAfterRemoveToEmptyTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        deque.addLast("old");
+        deque.removeFirst();
+
+        deque.addFirst("front");
+        assertThat(deque.toList()).containsExactly("front").inOrder();
+        assertThat(deque.removeLast()).isEqualTo("front");
+
+        deque.addLast("back");
+        assertThat(deque.toList()).containsExactly("back").inOrder();
+        assertThat(deque.size()).isEqualTo(1);
+    }
+
+    @Test
+    public void toListReturnsIndependentCopyTest() {
+        Deque61B<String> deque = new LinkedListDeque61B<>();
+        deque.addLast("first");
+        deque.addLast("second");
+
+        deque.toList().clear();
+
+        assertThat(deque.toList()).containsExactly("first", "second").inOrder();
+        assertThat(deque.size()).isEqualTo(2);
+    }
 }
