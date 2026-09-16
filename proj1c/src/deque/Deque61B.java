@@ -1,13 +1,15 @@
 package deque;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by hug on 2/4/2017. Methods are provided in the suggested order
  * that they should be completed.
  * 中文：方法按照建议的实现顺序排列。
  */
-public interface Deque61B<T> {
+public interface Deque61B<T> extends Iterable<T> {
 
     /**
      * Add {@code x} to the front of the deque. Assumes {@code x} is never null.
@@ -90,4 +92,22 @@ public interface Deque61B<T> {
      * @return element at {@code index} in the deque 中文：队列中该索引处的元素
      */
     T getRecursive(int index);
+
+    /** Returns whether this deque and {@code other} contain equal items in the same order. */
+    default boolean dequeEquals(Deque61B<?> other) {
+        if (this.size() != other.size()) {
+            return false;
+        }
+
+        Iterator<T> it1 = this.iterator();
+        Iterator<?> it2 = other.iterator();
+
+        while (it1.hasNext()) {
+            if (!Objects.equals(it1.next(), it2.next())) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
