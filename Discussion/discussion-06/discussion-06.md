@@ -1,11 +1,16 @@
 # Discussion 06 — ADTs, Asymptotics II, BSTs / 抽象数据类型、渐近分析 II 与二叉搜索树
 
+> **Java 迁移说明：** 代码题与基于代码的分析题已迁移到 `code/questions/` 与 `code/solutions/`。Java 文件是可在 IntelliJ 中直接练习、编译的权威版本；本页继续保留官方题面、答案、图示与补充分析，便于逐项核对来源。
+
 > UC Berkeley CS 61B, Spring 2024
 > Discussion date: February 26, 2024
 
 ## Regular
 
 ### Question 1 — ADT Matchmaking / ADT 配对
+
+- [Question Java](code/questions/Dis06RegularQ1ADTMatchmaking.java)
+- [Solution Java](code/solutions/Dis06RegularQ1ADTMatchmakingSolution.java)
 
 Match each task to the best Abstract Data Type for the job and justify your answer (ie. explain why other options would be less ideal). The options are `List`, `Map`, `Queue`, `Set`, and `Stack`. Each ADT will be used once.
 
@@ -179,49 +184,19 @@ $$
 
 ### Question 2 — I Am Speed / 我就是速度
 
+- [Question Java](code/questions/Dis06RegularQ2IAmSpeed.java)
+- [Solution Java](code/solutions/Dis06RegularQ2IAmSpeedSolution.java)
+
 #### 2a
 
 For each code block below, fill in the blank(s) so that the function has the desired runtime. Do not use any commas. If the answer is impossible, just write ”impossible” in the blank. Assume that `System.out.println` runs in constant time. You may use Java’s `Math.pow(x, y)` to raise `x` to the power of `y`.
 
 > **中文翻译：** 填写每段代码中的空格，使函数达到指定运行时间。答案中不要使用逗号；若不可能，则在空格中写 `impossible`。假设 `System.out.println` 为常数时间。可以使用 Java 的 `Math.pow(x, y)` 计算 `x` 的 `y` 次幂。
 
-```java
-// Desired Runtime: Θ(N)
-public static void f1(int N) {
-    for (int i = 1; i < N; ____________){
-        System.out.println("hi Dom");
-    }
-}
-```
-
-```java
-// Desired Runtime: Θ(log N)
-public static void f2(int N) {
-    for (int i = 1; i < N; ____________) {
-        System.out.println("howdy Ergun");
-    }
-}
-```
-
-```java
-// Desired Runtime: Θ(1)
-public static void f3(int N) {
-    for (int i = 1; ______________; i += 1) { System.out.println("hello Anniyat"); }
-}
-```
-
-```java
-// Desired Runtime: Θ(2^N)
-// This one is tricky! Hint: think about the dominating term in 1 + 2 + 4 + 8 + ... + f(N)
-public static void f4(int N) {
-    for (int i = 1; ___________________; i *= 2) {
-        for (int j = 0; j < i; j += 1) {
-            System.out.println("what's up Alyssa");
-        }
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 > **代码注释翻译：** 四段代码的目标运行时间依次为 $\Theta(N)$、$\Theta(\log N)$、$\Theta(1)$ 和 $\Theta(2^N)$。第四段提示关注 $1+2+4+8+\cdots+f(N)$ 的主导项。
 
 #### ✍️ My Answer
@@ -233,51 +208,16 @@ public static void f4(int N) {
 
 #### 官方答案
 
-```java
-// Desired Runtime: Θ(N)
-public static void f1(int N) {
-    for (int i = 1; i < N; i += 1){
-        System.out.println("hi Dom");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Note the solution could be `i += C`, where `C` is some constant independent of `N`. This is because even if we did for example, `i += 10`, we would do $N/10$ work in total, which is still $\Theta(N)$.
 
-```java
-// Desired Runtime: Θ(log N)
-public static void f2(int N) {
-    for (int i = 1; i < N; i *= 2) {
-        System.out.println("howdy Ergun");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Here, the solution could be `i *= C`, where `C` is some constant independent of `N`. This is because even if we did for example, `i *= 5`, we would do $\log_5(N)$ work in total, and in general $\log_i(N)$ work, which is still $O(\log n)$.
 
-```java
-// Desired Runtime: Θ(1)
-public static void f3(int N) {
-    for (int i = 1; i < 1000; i += 1) {
-        System.out.println("hello Anniyat");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Again, the solution is actually just `i < C`, where `C` is some constant independent of the input `N`.
 
-```java
-// Desired Runtime: Θ(2^N)
-// This one is tricky! Hint: think about the dominating term in 1 + 2 + 4 + 8 + ... + f(N)
-public static void f4(int N) {
-    for (int i = 1; i < Math.pow(2, N); i *= 2) {
-        for (int j = 0; j < i; j += 1) {
-            System.out.println("what's up Alyssa");
-        }
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### 解析
 
 `f1` 每次增加常数，迭代次数与 $N$ 成正比；`f2` 每次乘以固定常数，迭代次数为对数；`f3` 的上界与输入无关；`f4` 的内层工作量依次为 $1,2,4,\ldots,2^N$，总和为 $\Theta(2^N)$。
@@ -299,18 +239,7 @@ public static void f4(int N) {
 
 > **中文翻译：** **额外练习：** 用 $M$ 和 $N$ 表示下面代码的最坏与最好运行时间。假设 `kachow()` 返回布尔值，且每次运行耗时 $\Theta(N^2)$。
 
-```java
-for (int i = 0; i < N; i += 1) {
-    for (int j = 1; j <= M; ) {
-        if (kachow()) {
-            j += 1;
-        } else {
-            j *= 2;
-        }
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### ✍️ My Answer
 
 > 在这里作答
@@ -339,6 +268,9 @@ To see this, note that in the best case `kachow()` always returns false. Regardl
 
 ### Question 3 — Re-cursed with Asymptotics! / 用递归再做渐近分析
 
+- [Question Java](code/questions/Dis06RegularQ3RecursiveAsymptotics.java)
+- [Solution Java](code/solutions/Dis06RegularQ3RecursiveAsymptoticsSolution.java)
+
 The official Solutions PDF provides a [video walkthrough](https://www.youtube.com/watch?v=iedH3lkY-mQ&list=PLnp31xXvnfRpBCAx-EGDwnOY4YW0zwczO&index=5) for this problem.
 
 #### 3a
@@ -347,16 +279,7 @@ What is the runtime of the code below in terms of `n`?
 
 > **中文翻译：** 用 `n` 表示下面代码的运行时间。
 
-```java
-public static int curse(int n) {
-    if (n <= 0) {
-        return 0;
-    } else {
-        return n + curse(n - 1);
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### ✍️ My Answer
 
 > 在这里作答
@@ -386,25 +309,7 @@ Can you find a runtime bound for the code below? We can assume the `System.array
 
 > **中文翻译：** 求下面代码的运行时间界。假设 `System.arraycopy` 的耗时为 $\Theta(N)$，其中 $N$ 是复制的元素数。`srcPos` 和 `destPos` 分别是源数组与目标数组的起始位置，`length` 是复制长度。
 
-```java
-public static void silly(int[] arr) {
-    if (arr.length <= 1) {
-        System.out.println("You won!");
-        return;
-    }
-
-    int newLen = arr.length / 2;
-    int[] firstHalf = new int[newLen];
-    int[] secondHalf = new int[newLen];
-
-    System.arraycopy(arr, 0, firstHalf, 0, newLen);
-    System.arraycopy(arr, newLen, secondHalf, 0, newLen);
-
-    silly(firstHalf);
-    silly(secondHalf);
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### ✍️ My Answer
 
 > 在这里作答
@@ -439,18 +344,7 @@ Given that `exponentialWork` runs in $\Theta(3^N)$ time with respect to input $N
 
 > **中文翻译：** 已知 `exponentialWork` 关于输入 $N$ 的运行时间为 $\Theta(3^N)$，求 `ronnie` 的运行时间。
 
-```java
-public void ronnie(int N) {
-    if (N <= 1) {
-        return;
-    }
-    ronnie(N - 2);
-    ronnie(N - 2);
-    ronnie(N - 2);
-    exponentialWork(N); // Runs in Θ(3^N) time
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 > **代码注释翻译：** `exponentialWork(N)` 的运行时间为 $\Theta(3^N)$。
 
 #### ✍️ My Answer
@@ -478,25 +372,14 @@ $\Theta(3^N)$. Drawing out the recursive tree, the first level has $\Theta(3^N)$
 
 ### Question 4 — BST Asymptotics / BST 渐近分析
 
+- [Question Java](code/questions/Dis06RegularQ4BSTAsymptotics.java)
+- [Solution Java](code/solutions/Dis06RegularQ4BSTAsymptoticsSolution.java)
+
 Below we define the `find` method of a BST (Binary Search Tree) as in lecture, which returns the BST rooted at the node with key `sk` in our overall BST. In this setup, assume a BST has a key (the value of the tree root) and then pointers to two other child BSTs, `left` and `right`.
 
 > **中文翻译：** 下面定义课堂中的 BST（Binary Search Tree，二叉搜索树）`find` 方法。它返回整棵 BST 中以键 `sk` 所在节点为根的 BST。假设 BST 有一个键以及指向左右子 BST 的 `left`、`right` 指针。
 
-```java
-public static BST find(BST tree, Key sk) {
-    if (tree == null) {
-        return null;
-    }
-    if (sk.compareTo(tree.key) == 0) {
-        return tree;
-    } else if (sk.compareTo(tree.key) < 0) {
-        return find(tree.left, sk);
-    } else {
-        return find(tree.right, sk);
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### 4a
 
 Assume our BST is perfectly bushy. What is the runtime of a single `find` operation in terms of $N$, the number of nodes in the tree? Can we generalize the runtime of `find` to a tight bound?
@@ -569,16 +452,12 @@ Alternatively, we could insert the keys in descending sorted order, which also r
 
 ### Question 1 — Finish the Runtimes / 补全运行时间
 
+- [Question Java](code/questions/Dis06ExamPrepQ1FinishTheRuntimes.java)
+- [Solution Java](code/solutions/Dis06ExamPrepQ1FinishTheRuntimesSolution.java)
+
 Below we see the standard nested for loop, but with missing pieces!
 
-```java
-for (int i = 1; i < ______; i = ______) {
-    for (int j = 1; j < ______; j = ______) {
-        System.out.println("Circle is the best TA");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 For each part below, some of the blanks will be filled in, and a desired runtime will be given. Fill in the remaining blanks to achieve the desired runtime! There may be more than one correct answer.
 
 Hint: You may find `Math.pow` helpful.
@@ -589,14 +468,7 @@ Hint: You may find `Math.pow` helpful.
 
 Desired runtime: $\Theta(N^2)$
 
-```java
-for (int i = 1; i < N; i = i + 1) {
-    for (int j = 1; j < i; j = ______) {
-        System.out.println("This is one is low key hard");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 > **中文翻译：** 补全 `j` 的更新表达式，使运行时间为 $\Theta(N^2)$。
 
 #### ✍️ My Answer
@@ -608,14 +480,7 @@ for (int i = 1; i < N; i = i + 1) {
 
 #### 官方答案
 
-```java
-for (int i = 1; i < N; i = i + 1) {
-    for (int j = 1; j < i; j = j + 1) {
-        System.out.println("This is one is low key hard");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Explanation: Remember the arithmetic series $1+2+3+4+\cdots+N=\Theta(N^2)$. We get this series by incrementing `j` by 1 per inner loop.
 
 #### 解析
@@ -633,14 +498,7 @@ Explanation: Remember the arithmetic series $1+2+3+4+\cdots+N=\Theta(N^2)$. We g
 
 Desired runtime: $\Theta(\log(N))$
 
-```java
-for (int i = 1; i < N; i = i * 2) {
-    for (int j = 1; j < ______; j = j * 2) {
-        System.out.println("This is one is mid key hard");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 > **中文翻译：** 补全内层循环上界，使总运行时间为 $\Theta(\log N)$。
 
 #### ✍️ My Answer
@@ -654,14 +512,7 @@ for (int i = 1; i < N; i = i * 2) {
 
 Any constant would work here, 2 was chosen arbitrarily.
 
-```java
-for (int i = 1; i < N; i = i * 2) {
-    for (int j = 1; j < 2; j = j * 2) {
-        System.out.println("This is one is mid key hard");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Explanation: The outer loop already runs $\log n$ times, since `i` doubles each time. This means the inner loop must do constant work (so any constant `j < k` would work).
 
 #### 解析
@@ -679,14 +530,7 @@ Explanation: The outer loop already runs $\log n$ times, since `i` doubles each 
 
 Desired runtime: $\Theta(2^N)$
 
-```java
-for (int i = 1; i < N; i = i + 1) {
-    for (int j = 1; j < ______; j = j + 1) {
-        System.out.println("This is one is high key hard");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 > **中文翻译：** 补全内层循环上界，使总运行时间为 $\Theta(2^N)$。
 
 #### ✍️ My Answer
@@ -698,14 +542,7 @@ for (int i = 1; i < N; i = i + 1) {
 
 #### 官方答案
 
-```java
-for (int i = 1; i < N; i = i + 1) {
-    for (int j = 1; j < Math.pow(2, i); j = j + 1) {
-        System.out.println("This is one is high key hard");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Explanation: Remember the geometric series $1+2+4+\cdots+2^N=\Theta(2^N)$. We notice that `i` increments by 1 each time, so in order to achieve this $2^N$ runtime, we must run the inner loop $2^i$ times per outer loop iteration.
 
 #### 解析
@@ -723,14 +560,7 @@ Explanation: Remember the geometric series $1+2+4+\cdots+2^N=\Theta(2^N)$. We no
 
 Desired runtime: $\Theta(N^3)$
 
-```java
-for (int i = 1; i < ______; i = i * 2) {
-    for (int j = 1; j < N * N; j = ______) {
-        System.out.println("yikes");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 > **中文翻译：** 补全外层循环上界与内层更新表达式，使总运行时间为 $\Theta(N^3)$。
 
 #### ✍️ My Answer
@@ -742,14 +572,7 @@ for (int i = 1; i < ______; i = i * 2) {
 
 #### 官方答案
 
-```java
-for (int i = 1; i < Math.pow(2, N); i = i * 2) {
-    for (int j = 1; j < N * N; j = j + 1) {
-        System.out.println("yikes");
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 Explanation: One way to get $N^3$ runtime is to have the outer loop run $N$ times, and the inner loop run $N^2$ times per outer loop iteration. To make the outer loop run $N$ times, we need stop after multiplying `i = i * 2` $N$ times, giving us the condition `i < Math.pow(2, N)`. To make the inner loop run $N^2$ times, we can simply increment by 1 each time.
 
 #### 解析
@@ -765,23 +588,16 @@ Explanation: One way to get $N^3$ runtime is to have the outer loop run $N$ time
 
 ### Question 2 — Asymptotics is Fun! / 渐近分析很有趣
 
+- [Question Java](code/questions/Dis06ExamPrepQ2AsymptoticsIsFun.java)
+- [Solution Java](code/solutions/Dis06ExamPrepQ2AsymptoticsIsFunSolution.java)
+
 #### 2a
 
 Using the function `g` defined below, what is the runtime of the following function calls? Write each answer in terms of $N$. Feel free to draw out the recursion tree if it helps.
 
 > **中文翻译：** 使用下面定义的函数 `g`，求所列函数调用的运行时间，并用 $N$ 表示。可以画递归树辅助分析。
 
-```java
-void g(int N, int x) {
-    if (N == 0) {
-        return;
-    }
-    for (int i = 1; i <= x; i++) {
-        g(N - 1, i);
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 `g(N, 1)`: $\Theta(\quad)$
 
 `g(N, 2)`: $\Theta(\quad)$
@@ -825,17 +641,7 @@ Suppose we change line 6 to `g(N - 1, x)` and change the stopping condition in t
 
 > **中文翻译：** 把第 6 行改为 `g(N - 1, x)`，并把循环条件改为 `i <= f(x)`，其中 `f` 随机返回 1 到 `x`（含端点）的整数。求下列调用最紧的 $\Omega$ 与 $O$ 界，可以画递归树。
 
-```java
-void g(int N, int x) {
-    if (N == 0) {
-        return;
-    }
-    for (int i = 1; i <= f(x); i++) {
-        g(N - 1, x);
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 `g(N, 2)`: $\Omega(\quad), O(\quad)$
 
 `g(N, N)`: $\Omega(\quad), O(\quad)$
@@ -873,6 +679,9 @@ Plug in $x=2$ to get $2(1+2+2^2+\cdots+2^{N-1})=O(2^N)$ for our first upper boun
 
 ### Question 3 — Is This a BST? / 这是 BST 吗？
 
+- [Question Java](code/questions/Dis06ExamPrepQ3IsThisABST.java)
+- [Solution Java](code/solutions/Dis06ExamPrepQ3IsThisABSTSolution.java)
+
 In this setup, assume a BST (Binary Search Tree) has a key (the value of the tree root represented as an `int`) and pointers to two other child BSTs, `left` and `right`.
 
 > **中文翻译：** 假设 BST 的键是表示树根值的 `int`，并有指向左右子 BST 的 `left` 与 `right` 指针。
@@ -883,20 +692,7 @@ The following code should check if a given binary tree is a BST. However, for so
 
 > **中文翻译：** 下面代码应检查给定二叉树是否为 BST，但它会对某些树返回错误答案。给出一个使 `brokenIsBST` 失败的二叉树示例。
 
-```java
-public static boolean brokenIsBST(BST tree) {
-    if (tree == null) {
-        return true;
-    } else if (tree.left != null && tree.left.key > tree.key) {
-        return false;
-    } else if (tree.right != null && tree.right.key < tree.key) {
-        return false;
-    } else {
-        return brokenIsBST(tree.left) && brokenIsBST(tree.right);
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### ✍️ My Answer
 
 > 在这里作答
@@ -936,22 +732,7 @@ Hint 2: You want to somehow store information about the keys from previous layer
 
 > **中文翻译：** 编写 `isBST` 修复 3a 的错误。提示：`Integer.MIN_VALUE` 和 `Integer.MAX_VALUE` 会有帮助；需要保存来自之前层级的键信息，而不只是直接父子关系，请思考如何利用给定参数。
 
-```java
-public static boolean isBST(BST T) {
-    return isBSTHelper(____________________________________________);
-}
-
-public static boolean isBSTHelper(BST T, int min, int max) {
-    if (________________________________________) {
-        ______________________________________________
-    } else if (__________________________________________________) {
-        ______________________________________________
-    } else {
-        ______________________________________________
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 #### ✍️ My Answer
 
 > 在这里作答
@@ -961,23 +742,7 @@ public static boolean isBSTHelper(BST T, int min, int max) {
 
 #### 官方答案
 
-```java
-public static boolean isBST(BST T) {
-    return isBSTHelper(T, Integer.MIN_VALUE, Integer.MAX_VALUE);
-}
-
-public static boolean isBSTHelper(BST T, int min, int max) {
-    if (T == null) {
-        return true;
-    } else if (T.key <= min || T.key >= max) {
-        return false;
-    } else {
-        return isBSTHelper(T.left, min, T.key)
-                && isBSTHelper(T.right, T.key, max);
-    }
-}
-```
-
+> Java 代码已迁移：请使用本题标题下方的 Question Java 与 Solution Java 链接。
 A BST is a naturally recursive structure, so it makes sense to use a recursive helper to go through the BST and ensure it is valid. Specifically, our recursive helper will traverse the BST while tracking the minimum and maximum valid values for subsequent nodes along our current path. We can get these minimum and maximum values by remembering the key property of BSTs: nodes to the left of our current node are always less than the current value, and nodes to the right of our current node are always greater than our current value. So for example, if we encounter a node with value 5, anything to the left must be < 5.
 
 In our base case, an empty BST is always valid. Otherwise, we can check the current node. If it doesn’t fall within our precomputed `min`/`max`, we know this is invalid, and return immediately.
