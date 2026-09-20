@@ -7,6 +7,10 @@
 
 ### Question 1 — 2-3 Trees and LLRB’s / 2-3 树与左倾红黑树
 
+> IntelliJ 练习文件：[Question Java](code/questions/Dis07RegularQ1TreesAndLLRB.java) · [Solution Java](code/solutions/Dis07RegularQ1TreesAndLLRBSolution.java)
+>
+> 树形图仍以本节图片为准；Java 文件保存完整双语题干、插入序列、复杂度作答区和可检查的平衡操作序列。
+
 #### 1a
 
 Draw what the following 2-3 tree would look like after inserting 18, 38, 12, 13, and 20.
@@ -166,45 +170,15 @@ Finally, we still have red links on both the left and the right, which can be fi
 
 ### Question 2 — Hashing / 哈希
 
+> IntelliJ 权威版本：[Question Java](code/questions/Dis07RegularQ2Hashing.java) · [Solution Java](code/solutions/Dis07RegularQ2HashingSolution.java)
+
 #### 2a
 
 Here are five potential implementations of the `Integer` class’s `hashCode()` method. Categorize each as (1) invalid, (2) valid but not good, and (3) valid and good. If it is invalid, explain why. If it is valid but not good, point out a flaw or disadvantage. For the 2nd implementation, note that `intValue()` will return that Integer’s number value as an `int`, and assume that Integer’s `equals` method checks for equality of the compared Integers’ `intValue`s.
 
 > **中文翻译：** 下面给出 `Integer` 类的五种潜在 `hashCode()` 实现。把每一种归类为：(1) 无效，(2) 有效但不好，或 (3) 有效且良好。若无效，请解释原因；若有效但不好，请指出缺陷或劣势。对于第二种实现，`intValue()` 返回该 `Integer` 的 `int` 数值，并假设 `Integer.equals` 通过比较双方的 `intValue` 判断相等。
 
-```java
-public int hashCode() {
-    return -1;
-}
-```
-
-```java
-public int hashCode() {
-    return intValue() * intValue();
-}
-```
-
-```java
-public int hashCode() {
-    return super.hashCode(); // Object's hashCode() is based on memory location
-}
-```
-
-> **代码注释翻译：** `Object` 的 `hashCode()` 基于内存位置。
-
-```java
-public int hashCode() {
-    return (int) (new Date()).getTime(); // returns the current time as an int
-}
-```
-
-> **代码注释翻译：** 以 `int` 返回当前时间。
-
-```java
-public int hashCode() {
-    return intValue() + 3;
-}
-```
+五个候选实现已迁移到 Question Java；该文件用明确标注的 `IntegerLike` 编译脚手架包装官方方法体，学生初始状态即可编译，且不包含分类答案。
 
 #### ✍️ My Answer
 
@@ -334,6 +308,8 @@ In our example this would work, because when we do `get(303)` we will still go t
 
 ### Question 3 — A Side of Hash Browns / 一份薯饼配菜
 
+> IntelliJ 权威版本：[Question Java](code/questions/Dis07RegularQ3HashBrowns.java) · [Solution Java](code/solutions/Dis07RegularQ3HashBrownsSolution.java)
+
 We want to map food items to their yumminess. We want to be able to find this information in constant time, so we’ve decided to use Java’s built-in `HashMap` class! Here, the key is an `String` representing the food item and the value is an `int` yumminess rating.
 
 For simplicity, let’s say that here a String’s hashcode is the first letter’s position in the alphabet (`A = 0`, `B = 1`... `Z = 25`). For example, the String `"Hashbrowns"` starts with ”H”, and ”H” is 7th letter in the alphabet (0 indexed), so the `hashCode` would be 7. Note that in reality, a String has a much more complicated `hashCode` implementation.
@@ -348,17 +324,7 @@ Draw what the `HashMap` would look like after the following operations.
 
 > **中文翻译：** 画出执行下面操作后 `HashMap` 的结构。
 
-```java
-HashMap<String, Integer> hm = new HashMap<>();
-hm.put("Hashbrowns", 7);
-hm.put("Dim sum", 10);
-hm.put("Escargot", 5);
-hm.put("Brown bananas", 1);
-hm.put("Burritos", 2);
-hm.put("Buffalo wings", 8);
-hm.put("Banh mi", 9);
-hm.put("Burritos", 10);
-```
+完整操作序列已迁移到 Question Java 的 `runOfficialOperations()`。其中的最小外部链式哈希表脚手架严格采用题设首字母哈希、3/4 扩容阈值和重复键更新规则，但 Question 不包含最终桶数组或答案断言。
 
 #### ✍️ My Answer
 
@@ -436,6 +402,10 @@ A solution to this would be to have a better `hashCode` implementation. A better
 # Exam Prep
 
 ### Question 1 — LLRB Insertions / LLRB 插入
+
+> IntelliJ 练习文件：[Question Java](code/questions/Dis07ExamPrepQ1LLRBInsertions.java) · [Solution Java](code/solutions/Dis07ExamPrepQ1LLRBInsertionsSolution.java)
+>
+> 最终 LLRB 与 2-3 树仍以本节官方图片为准；Java 文件保存完整双语题干和逐步平衡操作作答区。
 
 Given the LLRB below, perform the following insertions and draw the final state of the LLRB. In addition, for each insertion, write the balancing operations needed in the correct order (rotate right, rotate left, or color flip). If no balancing operations are needed, write ”Nothing”. Assume that the link between 5 and 3 is red and all other links are black at the start.
 
@@ -537,29 +507,13 @@ Convert the final LLRB to its corresponding 2-3 Tree.
 
 ### Question 2 — Hashing Gone Crazy / 疯狂哈希
 
+> IntelliJ 权威版本：[Question Java](code/questions/Dis07ExamPrepQ2HashingGoneCrazy.java) · [Solution Java](code/solutions/Dis07ExamPrepQ2HashingGoneCrazySolution.java)
+
 For this question, use the following `TA` class for reference.
 
 > **中文翻译：** 本题使用下面的 `TA` 类作为参考。
 
-```java
-public class TA {
-    int semester;
-    String name;
-    TA(String name, int semester) {
-        this.name = name;
-        this.semester = semester;
-    }
-    @Override
-    public boolean equals(Object o) {
-        TA other = (TA) o;
-        return other.name.charAt(0) == this.name.charAt(0);
-    }
-    @Override
-    public int hashCode() {
-        return semester;
-    }
-}
-```
+官方 `TA` 类已原样迁移到 Question Java，并仅作为嵌套类包装，以保证一个顶层 Question 对应一个可独立编译文件。
 
 Assume that the `hashCode` of a `TA` object returns `semester`, and the `equals` method returns true if and only if two `TA` objects have the same first letter in their name.
 
@@ -567,26 +521,7 @@ Assume that the `ECHashMap` is a `HashMap` implemented with external chaining as
 
 > **中文翻译：** 假设 `TA` 对象的 `hashCode` 返回 `semester`，而且当且仅当两个 `TA` 对象名字的首字母相同时，`equals` 返回 `true`。`ECHashMap` 是课堂中所示、使用外部链式法实现的 `HashMap`。实例初始有 4 个桶，并且为简化问题不会扩容。画出执行下面操作后的 `map` 内容。
 
-```java
-ECHashMap<TA, Integer> map = new ECHashMap<>();
-TA jasmine = new TA("Jasmine the GOAT", 10);
-TA noah = new TA("Noah", 20);
-map.put(jasmine, 1);
-map.put(noah, 2);
-
-noah.semester += 2;
-map.put(noah, 3);
-
-jasmine.name = "Nasmine";
-map.put(noah, 4);
-
-jasmine.semester += 2;
-map.put(jasmine, 5);
-
-jasmine.name = "Jasmine";
-TA cheeseguy = new TA("Sam", 24);
-map.put(cheeseguy, 6);
-```
+完整 18 行操作序列位于 Question Java 的 `runOfficialOperations()`；非官方 `ECHashMap` 编译脚手架固定为 4 桶、外部链式且不扩容，不修正题目刻意设置的可变键与契约问题。
 
 #### ✍️ My Answer
 
@@ -659,50 +594,15 @@ map.put(cheeseguy, 6);
 
 ### Question 3 — Buggy Hash / 有缺陷的哈希
 
+> IntelliJ 权威版本：[Question Java](code/questions/Dis07ExamPrepQ3BuggyHash.java) · [Solution Java](code/solutions/Dis07ExamPrepQ3BuggyHashSolution.java)
+
 The following classes may contain a bug in one of its methods. Identify those errors and briefly explain why they are incorrect and in which situations would the bug cause problems.
 
 > **中文翻译：** 下面的类可能在某个方法中包含缺陷。找出错误，简要解释它为什么不正确，以及在什么情况下会造成问题。
 
-#### Timezone
+`Timezone` 与 `Course` 的完整官方片段已迁移到 Question Java。官方省略号以明确标注的最小编译脚手架替代；其余缺陷保持不变，留给学生分析。
 
-```java
-class Timezone {
-    String timeZone; // "PST", "EST" etc.
-    boolean dayLight;
-    String location;
-    ...
-    public int currentTime() {
-        // return the current time in that time zone
-    }
-    public int hashCode() {
-        return currentTime();
-    }
-    public boolean equals(Object o) {
-        Timezone tz = (Timezone) o;
-        return tz.timeZone.equals(timeZone);
-    }
-}
-```
-
-> **代码注释翻译：** `timeZone` 的示例值包括 `"PST"`、`"EST"` 等；`currentTime()` 返回该时区的当前时间。
-
-#### Course
-
-```java
-class Course {
-    int courseCode;
-    int yearOffered;
-    String[] staff;
-    ...
-    public int hashCode() {
-        return yearOffered + courseCode;
-    }
-    public boolean equals(Object o) {
-        Course c = (Course) o;
-        return c.courseCode == courseCode;
-    }
-}
-```
+> **来源忠实度说明：** Exam-Level Question PDF 第 3 页把 `Timezone.hashCode()` 中的行首渲染成 `rn currentTime();`，而 Exam-Level Solutions PDF 第 5 页完整显示 `return currentTime();`。Java 文件依据完整的 Solutions 版本保留 `return`，并在源码中记录该差异。
 
 #### ✍️ My Answer
 
@@ -744,6 +644,7 @@ The problem with this `hashCode()` is that not all equal objects have the same h
 - Exam Prep：Question 1（1a–1b）、Question 2 和 Question 3 均已与 Exam Prep Solutions 对应；Question 3 的 `Timezone` 与 `Course` 两部分均已保留。
 - 图片提取情况：从四份官方 PDF 的渲染页直接提取 10 张图，涵盖初始树、插入过程、转换结果、最终哈希表；没有重新绘制原图。
 - 官方答案和补充分析的分区情况：Solutions 内容位于“官方答案”，术语不一致、字符串标签差异、数值笔误及额外边界条件均在中文“解析”中明确标为补充分析。
+- Java 迁移情况：Regular Q1–Q3、Exam Prep Q1–Q3 各有独立 Question/Solution 文件；树形图仍在 Markdown/assets，完整代码与操作序列以 Java 文件为权威版本。
 
 ## 官方资料
 
