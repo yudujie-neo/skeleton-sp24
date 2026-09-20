@@ -3,6 +3,20 @@
 > UC Berkeley CS 61B, Spring 2024
 > Discussion date: February 19, 2024
 
+## IntelliJ IDEA Java 练习
+
+代码相关题目已迁移为可直接在 IntelliJ IDEA 中打开、编写并编译的 Java 文件。题目类只包含双语题干、官方给定代码和非泄题的编译脚手架；答案位于独立的 Solution 类中。
+
+| 部分 | 题目文件 | 答案文件 |
+|---|---|---|
+| Regular Question 1 | [Dis05RegularQ1Asymptotics.java](code/questions/Dis05RegularQ1Asymptotics.java) | [Dis05RegularQ1AsymptoticsSolution.java](code/solutions/Dis05RegularQ1AsymptoticsSolution.java) |
+| Regular Question 2 | [Dis05RegularQ2UnionFind.java](code/questions/Dis05RegularQ2UnionFind.java) | [Dis05RegularQ2UnionFindSolution.java](code/solutions/Dis05RegularQ2UnionFindSolution.java) |
+| Exam Prep Question 1 | [Dis05ExamPrepQ1Asymptotics.java](code/questions/Dis05ExamPrepQ1Asymptotics.java) | [Dis05ExamPrepQ1AsymptoticsSolution.java](code/solutions/Dis05ExamPrepQ1AsymptoticsSolution.java) |
+| Exam Prep Question 2 | [Dis05ExamPrepQ2DisjointSetRepresentations.java](code/questions/Dis05ExamPrepQ2DisjointSetRepresentations.java) | [Dis05ExamPrepQ2DisjointSetRepresentationsSolution.java](code/solutions/Dis05ExamPrepQ2DisjointSetRepresentationsSolution.java) |
+| Exam Prep Question 3 | [Dis05ExamPrepQ3WQUAsymptotics.java](code/questions/Dis05ExamPrepQ3WQUAsymptotics.java) | [Dis05ExamPrepQ3WQUAsymptoticsSolution.java](code/solutions/Dis05ExamPrepQ3WQUAsymptoticsSolution.java) |
+
+> **使用方式：** 优先打开 `code/questions/` 中的题目类，在 `TODO` 注释处作答或完成代码；完成后再对照 `code/solutions/`。Markdown 继续保留官方题目结构、解析与必须依赖图片的并查集图示，但不再重复维护 Java 代码块。若 IDEA 提示文件不在 source root 中，请右键 `discussion-05/code`，选择 **Mark Directory as → Sources Root**；`questions` 与 `solutions` 已分别声明为 Java package。
+
 ## Regular
 
 ### Question 1 — Asymptotics / 渐近分析
@@ -47,13 +61,7 @@ Give the worst case and best case runtime in terms of $M$ and $N$. Assume `ping`
 
 > **中文翻译：** 用 $M$ 和 $N$ 表示下面代码的最坏情况与最好情况运行时间。假设 `ping` 的运行时间为 $\Theta(1)$，并返回一个 `int`。
 
-```java
-for (int i = N; i > 0; i--) {
-    for (int j = 0; j <= M; j++) {
-        if (ping(i, j) > 64) { break; }
-    }
-}
-```
+> **IDEA 练习：** 官方代码、双语题干和作答区见 [Dis05RegularQ1Asymptotics.java](code/questions/Dis05RegularQ1Asymptotics.java)；完成后可对照 [Solution](code/solutions/Dis05RegularQ1AsymptoticsSolution.java)。
 
 #### ✍️ My Answer
 
@@ -89,22 +97,7 @@ Below we have a function that returns true if every `int` has a duplicate in the
 
 > **中文翻译：** 下面的函数在数组中的每个 `int` 都有重复项时返回 `true`，只要存在任何唯一的 `int` 就返回 `false`。假设 `sort(array)` 的运行时间为 $\Theta(N\log N)$，并返回排序后的 `array`。
 
-```java
-public static boolean noUniques(int[] array) {
-    array = sort(array);
-    int N = array.length;
-    for (int i = 0; i < N; i += 1) {
-        boolean hasDuplicate = false;
-        for (int j = 0; j < N; j += 1) {
-            if (i != j && array[i] == array[j]) {
-                hasDuplicate = true;
-            }
-        }
-        if (!hasDuplicate) return false;
-    }
-    return true;
-}
-```
+> **IDEA 练习：** `noUniques` 的官方代码已放入 [Dis05RegularQ1Asymptotics.java](code/questions/Dis05RegularQ1Asymptotics.java)，答案与可运行检查位于 [Solution](code/solutions/Dis05RegularQ1AsymptoticsSolution.java)。
 
 Give the worst case and best case runtime where $N=\texttt{array.length}$.
 
@@ -158,19 +151,7 @@ Note: `find(x)` returns the root of the tree for item `x`.
 >
 > 注意：`find(x)` 返回元素 `x` 所在树的根。
 
-```java
-connect(2, 3);
-connect(1, 2);
-connect(5, 7);
-connect(8, 4);
-connect(7, 2);
-find(3);
-connect(0, 6);
-connect(6, 4);
-connect(6, 3);
-find(8);
-find(6);
-```
+> **IDEA 练习：** 操作序列和可编译的 Union Find 接口见 [Dis05RegularQ2UnionFind.java](code/questions/Dis05RegularQ2UnionFind.java)；图形答案仍保留在下方及 `assets/`。
 
 #### ✍️ My Answer
 
@@ -216,17 +197,7 @@ The following implementation of `find` is used for parts 2b and 2c. Given an int
 
 > **中文翻译：** 下面的 `find` 实现用于 2b 和 2c。给定整数 `val`，`find(val)` 返回 `val` 所在集合的根值。辅助方法 `parent(int val)` 返回 `val` 在不相交集合表示中的直接父节点。假设该实现只使用 **QuickUnion**。
 
-```java
-public int find(int val) {
-    int p = parent(val);
-    if (p == -1) {
-        return val;
-    } else {
-        int root = find(p);
-        return root;
-    }
-}
-```
+> **IDEA 练习：** 2b 的原始递归 `find` 与 2c 的单行路径压缩 TODO 已放入 [Dis05RegularQ2UnionFind.java](code/questions/Dis05RegularQ2UnionFind.java)。
 
 #### 2b
 
@@ -283,18 +254,7 @@ Using a function `setParent(int val, int newParent)`, which updates the value of
 
 #### 官方答案
 
-```java
-public int find(int val) {
-    int p = parent(val);
-    if (p == -1) {
-        return val;
-    } else {
-        int root = find(p);
-        setParent(val, root); // sets the val's parent to be the root of the set.
-        return root;
-    }
-}
-```
+> **IDEA 答案：** 官方路径压缩实现位于 [Dis05RegularQ2UnionFindSolution.java](code/solutions/Dis05RegularQ2UnionFindSolution.java)。
 
 > **代码注释翻译：** 将 `val` 的父节点设为该集合的根。
 
@@ -325,19 +285,7 @@ Here’s the structure of the set after one call to `find(0)`:
 
 > **中文翻译：** **额外练习：** 对下面包含 0 到 8 共 9 个元素、带路径压缩的 WeightedQuickUnion，画出树和数组表示。大小相同时选择较小整数作为根。
 
-```java
-connect(2, 3);
-connect(1, 2);
-connect(5, 7);
-connect(8, 4);
-connect(7, 2);
-find(3);
-connect(0, 6);
-connect(7, 4);
-connect(6, 3);
-find(8);
-find(6);
-```
+> **IDEA 练习：** 带路径压缩的操作序列位于 [Dis05RegularQ2UnionFind.java](code/questions/Dis05RegularQ2UnionFind.java)，可运行答案检查位于 [Solution](code/solutions/Dis05RegularQ2UnionFindSolution.java)。
 
 #### ✍️ My Answer
 
@@ -373,29 +321,10 @@ Give the runtime of the following functions in $\Theta$ notation. Your answer sh
 
 > **中文翻译：** 用 $\Theta$ 记号给出下列函数的运行时间。答案应尽可能简洁，不要包含不必要的常数因子或低阶项。
 
-```java
-private void f1(int N) {
-    for (int i = 1; i < N; i++) {
-        for (int j = 1; j < i; j++) {
-            System.out.println("shreyas 1.0");
-        }
-    }
-}
-```
+> **IDEA 练习：** `f1`、`f2` 和双语复杂度作答区见 [Dis05ExamPrepQ1Asymptotics.java](code/questions/Dis05ExamPrepQ1Asymptotics.java)。
 
-$\Theta(\_\_\_)$
-
-```java
-private void f2(int N) {
-    for (int i = 1; i < N; i *= 2) {
-        for (int j = 1; j < i; j++) {
-            System.out.println("shreyas 2.0");
-        }
-    }
-}
-```
-
-$\Theta(\_\_\_)$
+- `f1`: $\Theta(\_\_\_)$
+- `f2`: $\Theta(\_\_\_)$
 
 #### ✍️ My Answer
 
@@ -406,29 +335,10 @@ $\Theta(\_\_\_)$
 
 #### 官方答案
 
-```java
-private void f1(int N) {
-    for (int i = 1; i < N; i++) {
-        for (int j = 1; j < i; j++) {
-            System.out.println("shreyas 1.0");
-        }
-    }
-}
-```
+> **IDEA 答案：** 两个方法及官方复杂度答案见 [Dis05ExamPrepQ1AsymptoticsSolution.java](code/solutions/Dis05ExamPrepQ1AsymptoticsSolution.java)。
 
-$\Theta(N^2)$
-
-```java
-private void f2(int N) {
-    for (int i = 1; i < N; i *= 2) {
-        for (int j = 1; j < i; j++) {
-            System.out.println("shreyas 2.0");
-        }
-    }
-}
-```
-
-$\Theta(N)$
+- `f1`: $\Theta(N^2)$
+- `f2`: $\Theta(N)$
 
 Explanation (1): The inner loop does up to $i$ work each time, and the outer loop increments $i$ each time. Summing over each loop, we get that $1+2+3+4+\cdots+N=\Theta(N^2)$.
 
@@ -575,17 +485,7 @@ Suppose we add the method `addToWQU` to a WQU without path compression. The meth
 
 > **中文翻译：** 假设在不带路径压缩的 WQU 中加入方法 `addToWQU`。该方法接收一个元素列表，以随机顺序连接它们，并在所有元素连通时停止。假设方法调用前所有元素均不连通。
 
-```java
-void addToWQU(int[] elements) {
-    int[][] pairs = pairs(elements);
-    for (int[] pair: pairs) {
-        if (size() == elements.length) {
-            return;
-        }
-        connect(pair[0], pair[1]);
-    }
-}
-```
+> **IDEA 练习：** `addToWQU` 已包装为可编译的抽象练习类，见 [Dis05ExamPrepQ3WQUAsymptotics.java](code/questions/Dis05ExamPrepQ3WQUAsymptotics.java)；答案见 [Solution](code/solutions/Dis05ExamPrepQ3WQUAsymptoticsSolution.java)。
 
 The `pairs` method takes in a list of elements and generates all possible pairs of elements in a random order. For example, `pairs([1, 2, 3])` might return `[[1, 3], [2, 3], [1, 2]]` or `[[1, 2], [1, 3], [2, 3]]`.
 
@@ -685,6 +585,7 @@ $$
 - Exam Prep：原题与 Solutions 均包含 Question 1、Question 2，以及 Question 3 的 3a、3b、3c，题号一一对应。
 - 图片提取：从 Regular Solutions PDF 原页提取 4 张并查集结构图，分别用于 2a 最终树、2b 最坏情况、2c 路径压缩后结构和 2d 最终树；Exam Prep 无需额外图片，数组已转换为 Markdown Table。
 - 官方答案和补充分析严格分区；官方原文中的返回值类型表述、路径压缩复杂度适用条件和元素对迭代次数问题均只在中文“解析”中说明，没有静默修改官方答案。
+- IDEA 代码练习：5 个顶层 Question 均有独立的双语题目类和 Solution 类；Java 代码不再以 Markdown 代码块重复维护。
 
 ## 官方资料
 
