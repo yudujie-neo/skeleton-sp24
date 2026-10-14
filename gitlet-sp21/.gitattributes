@@ -1,0 +1,3 @@
+# Preserve upstream LF text bytes for the starter provenance checks.
+lab6/** text=auto eol=lf
+proj2/** text=auto eol=lf

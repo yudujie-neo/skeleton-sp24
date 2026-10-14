@@ -139,6 +139,43 @@ class OfficialTesterBehaviorTests(unittest.TestCase):
         self.assertTrue(self.tester.correctProgramOutput(["result"], "result\n\n", [], False))
 
 
+class StarterCheckoutTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which("git"), "Git is unavailable")
+    def test_lf_starters_and_binary_data_survive_autocrlf_checkout(self):
+        with TemporaryDirectory(prefix="gitlet-starter-checkout-") as directory:
+            root = Path(directory)
+            repo = root / "repo"
+            repo.mkdir()
+            checkout = root / "checkout"
+            checkout.mkdir()
+            attributes = Path(__file__).resolve().parents[1] / ".gitattributes"
+            shutil.copyfile(attributes, repo / ".gitattributes")
+            fixtures = {
+                "lab6/capers/Main.java": b"package capers;\nclass Main {}\n",
+                "proj2/gitlet/Main.java": b"package gitlet;\nclass Main {}\n",
+                "proj2/testing/src/binary.bin": b"first\n\x00second\n",
+            }
+            for name, data in fixtures.items():
+                path = repo / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+            git = [shutil.which("git"), "-c", "core.autocrlf=true",
+                   "-c", "core.safecrlf=false"]
+            commands = [
+                ["-c", "init.templateDir=", "init", "--quiet"],
+                ["add", "--", ".gitattributes", "lab6", "proj2"],
+                ["checkout-index", "--all", "--prefix=" + checkout.as_posix() + "/"],
+            ]
+            for command in commands:
+                result = subprocess.run(git + command, cwd=repo,
+                                        capture_output=True, timeout=30)
+                self.assertEqual(result.returncode, 0,
+                                 result.stderr.decode(errors="replace"))
+            for name, data in fixtures.items():
+                with self.subTest(path=name):
+                    self.assertEqual((checkout / name).read_bytes(), data)
+
+
 class LauncherFreshCompileTests(unittest.TestCase):
     @unittest.skipUnless(os.name == "nt", "Windows launcher")
     def test_removed_source_cannot_be_satisfied_by_stale_class(self):

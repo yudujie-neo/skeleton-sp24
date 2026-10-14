@@ -49,6 +49,8 @@ gitlet-sp21/
 
 官方 Java 源码、Python 测试器、Makefile 和测试输入来自 [Berkeley-CS61B/skeleton-sp21](https://github.com/Berkeley-CS61B/skeleton-sp21)，固定版本 `160747451c147c59d8e3cbf70a7afee2b73bebdb`。完整路径和 SHA-256 见 [starter-manifest.json](sources/starter-manifest.json)。
 
+本目录的 [.gitattributes](.gitattributes) 为 `lab6/` 和 `proj2/` 中由 Git 识别为文本的文件固定 LF 换行，避免 Windows 检出时自动转换换行导致官方原始字节哈希失配。Git 识别为二进制的文件保持原始字节。
+
 网页、视频、在线测验和 PDF 保留官方链接。视频没有逐段观看；链接列在官方规范中不代表当前一定可播放。2021 年的 Gradescope、教学服务器、snaps 和截止日期是历史课程安排，自学完成情况以你的代码和本地验证为依据。
 
 本次只准备学习资料与未实现骨架。具体检查结果见 [资料核验记录](verification/README.md)。
