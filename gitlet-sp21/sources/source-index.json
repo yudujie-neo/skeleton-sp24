@@ -1,0 +1,522 @@
+{
+  "checked_at": "2026-10-13T18:10:17+08:00",
+  "pages": [
+    {
+      "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2",
+      "final_url": "https://sp21.datastructur.es/materials/proj/proj2/proj2",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 131794,
+      "sha256": "e8bc34b436a23bfbad085c8116cd500f1d68b7603fff2444867fd781b1a6a0ca",
+      "anchor_ids": [
+        "a-note-on-this-spec",
+        "add",
+        "add-remote",
+        "branch",
+        "checkout",
+        "checkpoint-grader",
+        "commit",
+        "content",
+        "content-container",
+        "dealing-with-files",
+        "debugging-integration-tests",
+        "design-document",
+        "detailed-spec-of-behavior",
+        "example-test",
+        "extra-credit",
+        "fetch",
+        "find",
+        "finding-the-right-execution-to-debug",
+        "full-grader",
+        "global-log",
+        "going-remote-extra-credit",
+        "grader-details",
+        "i-things-to-avoid",
+        "init",
+        "internal-structures",
+        "j-acknowledgments",
+        "log",
+        "markdown-toc",
+        "markdown-toc-a-note-on-this-spec",
+        "markdown-toc-add",
+        "markdown-toc-add-remote",
+        "markdown-toc-branch",
+        "markdown-toc-checkout",
+        "markdown-toc-checkpoint-grader",
+        "markdown-toc-commit",
+        "markdown-toc-dealing-with-files",
+        "markdown-toc-debugging-integration-tests",
+        "markdown-toc-design-document",
+        "markdown-toc-detailed-spec-of-behavior",
+        "markdown-toc-example-test",
+        "markdown-toc-extra-credit",
+        "markdown-toc-fetch",
+        "markdown-toc-find",
+        "markdown-toc-finding-the-right-execution-to-debug",
+        "markdown-toc-full-grader",
+        "markdown-toc-global-log",
+        "markdown-toc-going-remote-extra-credit",
+        "markdown-toc-grader-details",
+        "markdown-toc-i-things-to-avoid",
+        "markdown-toc-init",
+        "markdown-toc-internal-structures",
+        "markdown-toc-j-acknowledgments",
+        "markdown-toc-log",
+        "markdown-toc-merge",
+        "markdown-toc-miscellaneous-things-to-know-about-the-project",
+        "markdown-toc-overall-spec",
+        "markdown-toc-overview-of-gitlet",
+        "markdown-toc-pattern-matching-output",
+        "markdown-toc-pull",
+        "markdown-toc-push",
+        "markdown-toc-reset",
+        "markdown-toc-rm",
+        "markdown-toc-rm-branch",
+        "markdown-toc-rm-remote",
+        "markdown-toc-serialization-details",
+        "markdown-toc-setup-for-a-test",
+        "markdown-toc-skeleton",
+        "markdown-toc-snaps-grader",
+        "markdown-toc-status",
+        "markdown-toc-testing",
+        "markdown-toc-testing-conclusion",
+        "markdown-toc-testing-on-the-staff-solution",
+        "markdown-toc-the-commands",
+        "markdown-toc-the-commands-1",
+        "markdown-toc-understanding-integration-tests",
+        "merge",
+        "miscellaneous-things-to-know-about-the-project",
+        "navbar",
+        "navitems",
+        "overall-spec",
+        "overview-of-gitlet",
+        "pattern-matching-output",
+        "pull",
+        "push",
+        "reset",
+        "rm",
+        "rm-branch",
+        "rm-remote",
+        "serialization-details",
+        "setup-for-a-test",
+        "skeleton",
+        "snaps-grader",
+        "status",
+        "testing",
+        "testing-conclusion",
+        "testing-on-the-staff-solution",
+        "the-commands",
+        "the-commands-1",
+        "understanding-integration-tests"
+      ],
+      "links": [
+        {
+          "label": "Main",
+          "url": "https://sp21.datastructur.es/index.html"
+        },
+        {
+          "label": "Course Info",
+          "url": "https://sp21.datastructur.es/about.html"
+        },
+        {
+          "label": "Staff",
+          "url": "https://sp21.datastructur.es/staff.html"
+        },
+        {
+          "label": "Resources",
+          "url": "https://sp21.datastructur.es/resources.html"
+        },
+        {
+          "label": "Exams",
+          "url": "https://sp21.datastructur.es/exams.html"
+        },
+        {
+          "label": "Beacon",
+          "url": "http://beacon.datastructur.es/"
+        },
+        {
+          "label": "Ed",
+          "url": "https://edstem.org/us/courses/3735/discussion/"
+        },
+        {
+          "label": "OH Queue",
+          "url": "https://oh.datastructur.es"
+        },
+        {
+          "label": "A note on this spec",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#a-note-on-this-spec"
+        },
+        {
+          "label": "Overview of Gitlet",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#overview-of-gitlet"
+        },
+        {
+          "label": "Internal Structures",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#internal-structures"
+        },
+        {
+          "label": "Detailed Spec of Behavior",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#detailed-spec-of-behavior"
+        },
+        {
+          "label": "Overall Spec",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#overall-spec"
+        },
+        {
+          "label": "The Commands",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#the-commands"
+        },
+        {
+          "label": "init",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#init"
+        },
+        {
+          "label": "add",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#add"
+        },
+        {
+          "label": "commit",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#commit"
+        },
+        {
+          "label": "rm",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#rm"
+        },
+        {
+          "label": "log",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#log"
+        },
+        {
+          "label": "global-log",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#global-log"
+        },
+        {
+          "label": "find",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#find"
+        },
+        {
+          "label": "status",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#status"
+        },
+        {
+          "label": "checkout",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#checkout"
+        },
+        {
+          "label": "branch",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#branch"
+        },
+        {
+          "label": "rm-branch",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#rm-branch"
+        },
+        {
+          "label": "reset",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#reset"
+        },
+        {
+          "label": "merge",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#merge"
+        },
+        {
+          "label": "Skeleton",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#skeleton"
+        },
+        {
+          "label": "Design Document",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#design-document"
+        },
+        {
+          "label": "Grader Details",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#grader-details"
+        },
+        {
+          "label": "Checkpoint Grader",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#checkpoint-grader"
+        },
+        {
+          "label": "Full Grader",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#full-grader"
+        },
+        {
+          "label": "Snaps Grader",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#snaps-grader"
+        },
+        {
+          "label": "Extra credit",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#extra-credit"
+        },
+        {
+          "label": "Miscellaneous Things to Know about the Project",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#miscellaneous-things-to-know-about-the-project"
+        },
+        {
+          "label": "Dealing with Files",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#dealing-with-files"
+        },
+        {
+          "label": "Serialization Details",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#serialization-details"
+        },
+        {
+          "label": "Testing",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#testing"
+        },
+        {
+          "label": "Testing on the Staff Solution",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#testing-on-the-staff-solution"
+        },
+        {
+          "label": "Understanding Integration Tests",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#understanding-integration-tests"
+        },
+        {
+          "label": "Example test",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#example-test"
+        },
+        {
+          "label": "Setup for a test",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#setup-for-a-test"
+        },
+        {
+          "label": "Pattern matching output",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#pattern-matching-output"
+        },
+        {
+          "label": "Testing conclusion",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#testing-conclusion"
+        },
+        {
+          "label": "Debugging Integration Tests",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#debugging-integration-tests"
+        },
+        {
+          "label": "Finding the right execution to debug",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#finding-the-right-execution-to-debug"
+        },
+        {
+          "label": "Going Remote (Extra Credit)",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#going-remote-extra-credit"
+        },
+        {
+          "label": "The Commands",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#the-commands-1"
+        },
+        {
+          "label": "add-remote",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#add-remote"
+        },
+        {
+          "label": "rm-remote",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#rm-remote"
+        },
+        {
+          "label": "push",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#push"
+        },
+        {
+          "label": "fetch",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#fetch"
+        },
+        {
+          "label": "pull",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#pull"
+        },
+        {
+          "label": "I. Things to Avoid",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#i-things-to-avoid"
+        },
+        {
+          "label": "J. Acknowledgments",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/proj2#j-acknowledgments"
+        },
+        {
+          "label": "Git intro - Part 1",
+          "url": "https://www.youtube.com/watch?v=yWBzCAY_5UI"
+        },
+        {
+          "label": "Git intro - Part 2",
+          "url": "https://www.youtube.com/watch?v=CnMpARAOhFg"
+        },
+        {
+          "label": "Live lecture 12",
+          "url": "https://youtu.be/fvhqn5PeU_Q"
+        },
+        {
+          "label": "Part 1",
+          "url": "https://www.youtube.com/watch?v=-1gE2cNFhPA"
+        },
+        {
+          "label": "Part 2",
+          "url": "https://www.youtube.com/watch?v=GfmH9_8tM5w"
+        },
+        {
+          "label": "Part 3",
+          "url": "https://www.youtube.com/watch?v=dv5VdbIZKF8"
+        },
+        {
+          "label": "Part 4",
+          "url": "https://www.youtube.com/watch?v=k8jwbG8bE7Y"
+        },
+        {
+          "label": "Slides that Itai used",
+          "url": "https://cdn-uploads.piazza.com/attach/k5eevxebzpj25b/jqr7jm9igtc7l5/k97ipfmgmb3n/Gitlet_Slides.pdf"
+        },
+        {
+          "label": "Merge overview and example",
+          "url": "https://www.youtube.com/watch?v=JR3OYCMv9b4&t=929s"
+        },
+        {
+          "label": "Branching overview and example",
+          "url": "https://youtu.be/desB3AS6aZg"
+        },
+        {
+          "label": "Testing",
+          "url": "https://www.youtube.com/watch?v=uMYpuQuHGu0&t=752s"
+        },
+        {
+          "label": "Designing Persistence (written notes)",
+          "url": "https://paper.dropbox.com/doc/Gitlet-Persistence--AyM0lOEaezWrTi7gG_Pt~bXcAg-zEnTGJhtUMtGr8ILYhoab"
+        },
+        {
+          "label": "Part 1",
+          "url": "https://youtu.be/6JVdbNZm0cM"
+        },
+        {
+          "label": "Part 2",
+          "url": "https://youtu.be/1d1yOSoTVAM"
+        },
+        {
+          "label": "Designing Gitlet",
+          "url": "https://youtu.be/G3YU9oY8PcU"
+        },
+        {
+          "label": "Notes",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/gitlet-design-notes.pdf"
+        },
+        {
+          "label": "Merge",
+          "url": "https://youtu.be/l0X5NgzAWYQ"
+        },
+        {
+          "label": "Lab 6: Canine Capers",
+          "url": "https://sp21.datastructur.es/materials/lab/lab6/lab6"
+        },
+        {
+          "label": "Lecture 12: Gitlet",
+          "url": "https://youtu.be/fvhqn5PeU_Q"
+        },
+        {
+          "label": "Conceptual Quiz (without branching)",
+          "url": "https://forms.gle/LSgBK5RAdRwhAqKK8"
+        },
+        {
+          "label": "Conceptual Quiz (with branching)",
+          "url": "https://forms.gle/RHUiRkSrtgysC6En8"
+        },
+        {
+          "label": "Conceptual Quiz (without branching)",
+          "url": "https://forms.gle/mfHLnrU9VX349jnr7"
+        },
+        {
+          "label": "Conceptual Quiz (with branching)",
+          "url": "https://forms.gle/tbZuqDz7x3u41JhM6"
+        },
+        {
+          "label": "here",
+          "url": "https://youtu.be/desB3AS6aZg"
+        },
+        {
+          "label": "here",
+          "url": "https://www.youtube.com/watch?v=JR3OYCMv9b4&t=929s"
+        },
+        {
+          "label": "Conceptual Quiz",
+          "url": "https://forms.gle/Gu4FcFf1kfC7HYBa6"
+        },
+        {
+          "label": "Lab 6: Canine\nCapers",
+          "url": "https://sp21.datastructur.es/materials/lab/lab6/lab6"
+        },
+        {
+          "label": "some guidelines",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/design.html"
+        },
+        {
+          "label": "example from the Capers lab",
+          "url": "https://sp21.datastructur.es/materials/proj/proj2/capers-example"
+        },
+        {
+          "label": "video",
+          "url": "https://www.youtube.com/watch?v=uMYpuQuHGu0&t=752s"
+        },
+        {
+          "label": "here",
+          "url": "https://sp21.datastructur.es/materials/guides/staff-gitlet"
+        },
+        {
+          "label": "capers spec",
+          "url": "https://sp21.datastructur.es/materials/lab/lab6/lab6"
+        },
+        {
+          "label": "Lab 6",
+          "url": "https://sp21.datastructur.es/materials/lab/lab6/lab6"
+        },
+        {
+          "label": "here",
+          "url": "https://stackoverflow.com/questions/5993752/hashmap-serialization-and-deserialization-changes"
+        }
+      ]
+    },
+    {
+      "url": "https://sp21.datastructur.es/materials/lab/lab6/lab6",
+      "final_url": "https://sp21.datastructur.es/materials/lab/lab6/lab6",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 88693,
+      "sha256": "f969a1d509e29073ebf41df05f087f4c6544a072a405e9db6faf99c76870de36"
+    },
+    {
+      "url": "https://sp21.datastructur.es/materials/proj/proj2/design.html",
+      "final_url": "https://sp21.datastructur.es/materials/proj/proj2/design.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 6813,
+      "sha256": "da5635d7f069c3cb15265bb4c7d0c91bd9e0df7d4b168f9d49a0b7e4451853fc"
+    },
+    {
+      "url": "https://sp21.datastructur.es/materials/proj/proj2/capers-example",
+      "final_url": "https://sp21.datastructur.es/materials/proj/proj2/capers-example",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 14257,
+      "sha256": "7822f749990fdf1d152e707fc0fad76e8aedad661f3e6df33516525cfcf869c0"
+    },
+    {
+      "url": "https://sp21.datastructur.es/materials/guides/staff-gitlet",
+      "final_url": "https://sp21.datastructur.es/materials/guides/staff-gitlet",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 12458,
+      "sha256": "c58c7958cc3d42cac61ec42f37ef3772096a325da3d0cc363274dc0af2bb3f3f"
+    },
+    {
+      "url": "https://sp21.datastructur.es/materials/proj/proj2/gitlet-design-notes.pdf",
+      "final_url": "https://sp21.datastructur.es/materials/proj/proj2/gitlet-design-notes.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 3958379,
+      "sha256": "4d1b166872a7a714094f83c58f7a879de83812de8b9e33519754c7ff24a56a6c"
+    },
+    {
+      "url": "https://cdn-uploads.piazza.com/attach/k5eevxebzpj25b/jqr7jm9igtc7l5/k97ipfmgmb3n/Gitlet_Slides.pdf",
+      "final_url": "https://cdn-uploads.piazza.com/attach/k5eevxebzpj25b/jqr7jm9igtc7l5/k97ipfmgmb3n/Gitlet_Slides.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 444189,
+      "sha256": "a663858251a0d0bfee242401cdd2f7bb623eb054706b04947a024bdbb91b715d"
+    }
+  ],
+  "video_playback_checked": false,
+  "forms_checked": false
+}

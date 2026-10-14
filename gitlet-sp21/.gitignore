@@ -1,0 +1,10 @@
+**/*.class
+**/__pycache__/
+**/.gitlet/
+**/.capers/
+proj2/out/
+lab6/out/
+practice/
+verification/*.log
+proj2/testing/*_[0-9]*/
+lab6/testing/*_[0-9]*/

@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-13T18:10:17+08:00",
+  "starter_files_verified": 41,
+  "starter_files_expected": 41,
+  "markdown_files_checked": 12,
+  "local_links_checked": 61,
+  "unique_spec_anchors_referenced": 28,
+  "unique_spec_anchors_checked": 28,
+  "spec_anchor_check_available": true,
+  "core_urls_accessible": 7,
+  "core_urls_validated": 7,
+  "core_urls_checked": 7,
+  "failures": []
+}

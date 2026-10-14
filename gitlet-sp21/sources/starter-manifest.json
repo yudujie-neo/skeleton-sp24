@@ -1,0 +1,294 @@
+{
+  "collected_date": "2026-10-12",
+  "repository": "https://api.github.com/repos/Berkeley-CS61B/skeleton-sp21",
+  "revision": "160747451c147c59d8e3cbf70a7afee2b73bebdb",
+  "files": [
+    {
+      "path": "lab6/Makefile",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/Makefile",
+      "bytes": 1563,
+      "git_blob_sha1": "34371d12b28423efa560727877e02e2e44568e81",
+      "sha256": "856e09589c8f26adc2da35895db5041e58cdbbd31419a6c45577d4669eede20c"
+    },
+    {
+      "path": "lab6/capers/CapersRepository.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/capers/CapersRepository.java",
+      "bytes": 2206,
+      "git_blob_sha1": "ff29ba3e1fcf2efda5651b4313e77516437b302c",
+      "sha256": "01b47767b26da21ecfcce7eaaafcff25d2baf7bbdd486ed7c967b9591179130e"
+    },
+    {
+      "path": "lab6/capers/Dog.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/capers/Dog.java",
+      "bytes": 1682,
+      "git_blob_sha1": "e9ef3b315eb849ed5d4014b11f34296f35f3fdf9",
+      "sha256": "3156be081e89145dabe87538c7fed86a405f7b6fca0b017d4c9937564deb200f"
+    },
+    {
+      "path": "lab6/capers/Main.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/capers/Main.java",
+      "bytes": 2764,
+      "git_blob_sha1": "6d013bd1884fc831ab44503e8b5a86890675f2a7",
+      "sha256": "c16a220d1a287f54b618224b2b4904ccc34219d9f07bc146558eafa2c2c5f471"
+    },
+    {
+      "path": "lab6/capers/Makefile",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/capers/Makefile",
+      "bytes": 2016,
+      "git_blob_sha1": "1a425196919e3a07067eb9ed686bf04291f65924",
+      "sha256": "82423921069960521cf8b2d262b38a1e3d205b5dda7ccc302ec7b07cde1e2f75"
+    },
+    {
+      "path": "lab6/capers/Utils.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/capers/Utils.java",
+      "bytes": 5319,
+      "git_blob_sha1": "d931e3edbf4e3ac6869534bf657fac59597e96ab",
+      "sha256": "c91d1b6939e335291ff6d8908a2e9e10613b672d2326aa133ffdf40b8bf353da"
+    },
+    {
+      "path": "lab6/pom.xml",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/pom.xml",
+      "bytes": 1608,
+      "git_blob_sha1": "b377ce1ce9864644f8773fe6a475c975e6b6f9f6",
+      "sha256": "97538d69eec1e4851a9c903cb0d87b0e4afd719bf0dd5100fe950f5d133f7658"
+    },
+    {
+      "path": "lab6/testing/Makefile",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/Makefile",
+      "bytes": 805,
+      "git_blob_sha1": "a4284190bab492e92ede7ba3c2946e3e9dfc8fdc",
+      "sha256": "ba931e3120b34b460809f72d864d3e2acebdc55077c66a762c919a0dbb112adb"
+    },
+    {
+      "path": "lab6/testing/our/test01-basic-story.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test01-basic-story.in",
+      "bytes": 76,
+      "git_blob_sha1": "6860f0d2e9af3898f74926657b9800b9bee11de4",
+      "sha256": "8f4747f17ff212edf9de9a4fc1f5762e2f203ceabaf2ecf7e4635bb55bf2479b"
+    },
+    {
+      "path": "lab6/testing/our/test02-two-part-story.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test02-two-part-story.in",
+      "bytes": 92,
+      "git_blob_sha1": "8517bf9aa19b9cdaf52742f8b30fdcf06a3b115a",
+      "sha256": "e91ed0a0e5b5246d89452a309e9d1de007dd17ec11b48a809d7b2d909ae4f1de"
+    },
+    {
+      "path": "lab6/testing/our/test03-basic-dog.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test03-basic-dog.in",
+      "bytes": 131,
+      "git_blob_sha1": "71d9e6c4065e97795f745fc6e4d1e156e74b6021",
+      "sha256": "fbecca59d1dc6e4f3528bf9433e010f317b05d7eec7b46020e976ce0b70252d7"
+    },
+    {
+      "path": "lab6/testing/our/test04-dog-birthday.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test04-dog-birthday.in",
+      "bytes": 309,
+      "git_blob_sha1": "5305386cb0c26b50f1d924f489692db42e5d058f",
+      "sha256": "9f24038d4968826a2bf381d5874aba4205f534e81f871d7a56847f702d6c9c1c"
+    },
+    {
+      "path": "lab6/testing/our/test05-two-dogs.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test05-two-dogs.in",
+      "bytes": 240,
+      "git_blob_sha1": "14cd73d3b7fd63f7b05c4db510b14a9aa383afaf",
+      "sha256": "1cc850cff6178215981f4f9fb288967719b0c3e04da8e72f0021a655f9f36aad"
+    },
+    {
+      "path": "lab6/testing/our/test06-two-birthdays.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test06-two-birthdays.in",
+      "bytes": 528,
+      "git_blob_sha1": "6a669387f4312b4bd135449b61d609370e5eb994",
+      "sha256": "9763b400668a412628c540cc1ba3045e28d3de1b5d329637b97a706c017ccfd4"
+    },
+    {
+      "path": "lab6/testing/our/test07-one-dog-two-birthdays.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/our/test07-one-dog-two-birthdays.in",
+      "bytes": 434,
+      "git_blob_sha1": "145905b4c08c63531c64ce23d00f752cfcb8eb86",
+      "sha256": "36fa6c400758827738cc1b8707940d9eec91bc060283e97979f19231121a913a"
+    },
+    {
+      "path": "lab6/testing/runner.py",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/runner.py",
+      "bytes": 18280,
+      "git_blob_sha1": "665099cce58e1de971b24c5a76026bcd59b43239",
+      "sha256": "3816296321451668f474995d158cb5850d9991a4e8155669adab7a938f177b99"
+    },
+    {
+      "path": "lab6/testing/tester.py",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/lab6/testing/tester.py",
+      "bytes": 16410,
+      "git_blob_sha1": "e54b3b4656f3aa889589f32edda608ed8e8dfb66",
+      "sha256": "9fbf96a9096efa778f5ea39fad0893b5754cf89a50063c405f805742263c0f7d"
+    },
+    {
+      "path": "proj2/Makefile",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/Makefile",
+      "bytes": 1455,
+      "git_blob_sha1": "9d2f5174168f4c1b0b44687839ef507b4bef0a87",
+      "sha256": "ff09d2761a1db1c623207b75e2a2a0212530ee9be1333d7de67aa631f585ce00"
+    },
+    {
+      "path": "proj2/gitlet-design.md",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet-design.md",
+      "bytes": 200,
+      "git_blob_sha1": "73e2a8d506dc3a11fef9452e0184bda65225401f",
+      "sha256": "aa2c71fd591c759fd8493ace9a8e1c85785ff20e0475327334c72dfe2b95567f"
+    },
+    {
+      "path": "proj2/gitlet/Commit.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/Commit.java",
+      "bytes": 717,
+      "git_blob_sha1": "929165190b1debcc0e9dc00e620050dc1dedf66c",
+      "sha256": "31d69132983f4c5a649d90a1623b58227646223e924a273e6d1613e6a59ef46f"
+    },
+    {
+      "path": "proj2/gitlet/DumpObj.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/DumpObj.java",
+      "bytes": 1467,
+      "git_blob_sha1": "e3c11332b09a80357f92c1cc9edc909ae4c030f9",
+      "sha256": "5f0104412d53d139fac8896560975c4453d172594839771584d985f6d2911537"
+    },
+    {
+      "path": "proj2/gitlet/Dumpable.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/Dumpable.java",
+      "bytes": 255,
+      "git_blob_sha1": "77c6f07b8150b67f73bed61a200fec1d50a52dc7",
+      "sha256": "c574bdabe15ea7115bfc13099ac1a34bedba9858f6e7a46cd598c4be10519777"
+    },
+    {
+      "path": "proj2/gitlet/GitletException.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/GitletException.java",
+      "bytes": 442,
+      "git_blob_sha1": "43637d26254c0de09918c5b4093783b8b8930b36",
+      "sha256": "07d8252c92a53ae253a7c1024541075f94a0a5ff64408df236045e5dd70259c3"
+    },
+    {
+      "path": "proj2/gitlet/Main.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/Main.java",
+      "bytes": 653,
+      "git_blob_sha1": "6322f977414b5da5e78be9ffd9ddd0bfd086d04b",
+      "sha256": "01928f55e2f7840976e467e085bb539b83f574afdbd4a32caad0069758ffca98"
+    },
+    {
+      "path": "proj2/gitlet/Makefile",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/Makefile",
+      "bytes": 1842,
+      "git_blob_sha1": "e21a40224e5b60d328a43d6cf7e975a4016886bb",
+      "sha256": "a6993034f7e7f086a2b2198c99be71cc6aafdd9ec073d99935608a4ee74c4e21"
+    },
+    {
+      "path": "proj2/gitlet/Repository.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/Repository.java",
+      "bytes": 849,
+      "git_blob_sha1": "2b66acebcf0bcd4ded23291d85ca793e1514bed5",
+      "sha256": "7ba91ab360da2846aee6aa16d141127dc84306c6df4ba25d7f496a793af6e319"
+    },
+    {
+      "path": "proj2/gitlet/Utils.java",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/Utils.java",
+      "bytes": 8590,
+      "git_blob_sha1": "8a931448d887127be4b6cb15f9e12d0023658cef",
+      "sha256": "dc2c7c1cebc3c88d045363dfc0a3610c79255e97ae0af119ebbd7e77c13d9bf4"
+    },
+    {
+      "path": "proj2/gitlet/sentinel",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/gitlet/sentinel",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "proj2/pom.xml",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/pom.xml",
+      "bytes": 1609,
+      "git_blob_sha1": "cca3f10cea67ce8a29b45cd9d24b5eddd9c9efb1",
+      "sha256": "8d70a683063752d9c3c321334046457b3b917eeeb1de124aec607ae3a6be7939"
+    },
+    {
+      "path": "proj2/testing/Makefile",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/Makefile",
+      "bytes": 813,
+      "git_blob_sha1": "65b0ab105ce25d25aa02c65c9809da8a394857c5",
+      "sha256": "fbda5ed8c2092cc3ffdab11ed47ed910b5d0c7729bda5746423b07eb8fc7c5c3"
+    },
+    {
+      "path": "proj2/testing/runner.py",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/runner.py",
+      "bytes": 20135,
+      "git_blob_sha1": "e053b9809248739327b9e1e6671318b08d2c356c",
+      "sha256": "3d6ece16bcae5b257442308eceda63fd6c3fa7e47498addee7cf8a8778a6357a"
+    },
+    {
+      "path": "proj2/testing/samples/definitions.inc",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/samples/definitions.inc",
+      "bytes": 636,
+      "git_blob_sha1": "9c5c7166f2461b4945a7c6da71767f3bc23e325b",
+      "sha256": "af14876555ca03b57817dcc8abfabd7d9a1ee421b87983ef6910e9d3169dc5e3"
+    },
+    {
+      "path": "proj2/testing/samples/test01-init.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/samples/test01-init.in",
+      "bytes": 44,
+      "git_blob_sha1": "4aabd3166e0c49ca354a2bde1e68d127484022f9",
+      "sha256": "4b22e1dada3b4589c17347abc1c435698157ffa7752e77c1f182100f49472111"
+    },
+    {
+      "path": "proj2/testing/samples/test02-basic-checkout.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/samples/test02-basic-checkout.in",
+      "bytes": 219,
+      "git_blob_sha1": "54bcd6db1bea640e11f81a03abd8bf5c4e854e00",
+      "sha256": "fe3305361a390daf58902929447afd037fb735ba4d2a4907b449b0541da781fd"
+    },
+    {
+      "path": "proj2/testing/samples/test03-basic-log.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/samples/test03-basic-log.in",
+      "bytes": 222,
+      "git_blob_sha1": "9c8c6cea34c4287768e0c1015c81de51afc70fb5",
+      "sha256": "d457a0ce09744705df5df7899cf0e92d35a37b385d3f1f6e3fd0b2815dd9d76f"
+    },
+    {
+      "path": "proj2/testing/samples/test04-prev-checkout.in",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/samples/test04-prev-checkout.in",
+      "bytes": 606,
+      "git_blob_sha1": "e3d3bb6156c3036d5f57942e8915d1b58aec246c",
+      "sha256": "3b7f94be9122bc27da02ffccc899c701cc0a8f11b35eb23662afdc470fa83569"
+    },
+    {
+      "path": "proj2/testing/src/notwug.txt",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/src/notwug.txt",
+      "bytes": 19,
+      "git_blob_sha1": "bf0d863ed3dbf4a82758390d7bcdcaedece3893b",
+      "sha256": "a7380cfc7ccf72cab762d0b112da33386534f0555fc7eb9ecb50287ca5ce4306"
+    },
+    {
+      "path": "proj2/testing/src/wug.txt",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/src/wug.txt",
+      "bytes": 15,
+      "git_blob_sha1": "8653052605ddf1d788dbe0499999ecf52fa7ed92",
+      "sha256": "0f1de029e6c4ab5c3f3bd5a2392e8813f2dc89493fabd5f7f7f2b38292f1f550"
+    },
+    {
+      "path": "proj2/testing/staff-runner.py",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/staff-runner.py",
+      "bytes": 17610,
+      "git_blob_sha1": "12eb124460f7054d76a2c08c0750b45349a05431",
+      "sha256": "3987b556ed9a1a916fe2a834d81d3e3a84581c383e0286f24939d7b9d7afe5fb"
+    },
+    {
+      "path": "proj2/testing/student_tests/definitions.inc",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/student_tests/definitions.inc",
+      "bytes": 634,
+      "git_blob_sha1": "1b92349425a33eff900559c834b69117eb7e89c0",
+      "sha256": "13b7001af8e318274eac8af939e474520027cdef58fb8986515d8c026e9e798e"
+    },
+    {
+      "path": "proj2/testing/tester.py",
+      "url": "https://raw.githubusercontent.com/Berkeley-CS61B/skeleton-sp21/160747451c147c59d8e3cbf70a7afee2b73bebdb/proj2/testing/tester.py",
+      "bytes": 16855,
+      "git_blob_sha1": "f3818bce6456099239f3af2e1f429985710cb8a8",
+      "sha256": "9f172531cb9b4ea2b2ae7797c0a4d4bb5890bd2a7319cf33b15df9a1735a5a28"
+    }
+  ]
+}

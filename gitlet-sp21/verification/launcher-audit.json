@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-13",
+  "cases": [
+    {
+      "name": "Help without JDK",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "passed": true,
+      "output_tail": "are\n          its output with LINE1, LINE2, etc., reporting an error if there is\n          \"sufficient\" discrepency.  The <<< delimiter may be followed by\n          an asterisk (*), in which case, the preceding lines are treated as \n          Python regular expressions and matched accordingly. The directory\n          or JAR file containing the gitlet.Main program is assumed to be\n          in directory DIR specifed by --progdir (default is ..).\n   = NAME F\n          Check that the file named NAME is identical to src/F, and report an\n          error if not.\n   * NAME\n          Check that the file NAME does not exist, and report an error if it\n          does.\n   E NAME\n          Check that file or directory NAME exists, and report an error if it\n          does not.\n   D VAR \"VALUE\"\n          Defines the variable VAR to have the literal value VALUE.  VALUE is\n          taken to be a raw Python string (as in r\"VALUE\").  Substitutions are\n          first applied to VALUE.\n\nFor each TEST.in, reports at most one error.  Without the --show option,\nsimply indicates tests passed and failed.  If N is postive, also prints details\nof the first N failing tests. With --show=all, shows details of all failing\ntests.  With --keep, keeps the directories created for the tests (with names\nTEST.dir).\n\nWhen finished, reports number of tests passed and failed, and the number of\nfaulty TEST.in files.\n\n"
+    },
+    {
+      "name": "Compile without Python",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "passed": true,
+      "output_tail": "Compiled Gitlet to E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\proj2\\out\\classes\n\n"
+    },
+    {
+      "name": "Invalid explicit JDK",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "passed": true,
+      "output_tail": "\nInvalid -Jdk directory: missing bin\\java.exe\nAt E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\tools\\check.ps1:29 char:17\n+ ...               throw \"Invalid -Jdk directory: missing bin\\$executable\"\n+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Invalid -Jdk di...ng bin\\java.exe:String) [], RuntimeException\n    + FullyQualifiedErrorId : Invalid -Jdk directory: missing bin\\java.exe\n \n"
+    },
+    {
+      "name": "Unmatched wildcard",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "passed": true,
+      "output_tail": "Compiled Gitlet to E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\proj2\\out\\classes\n\nTest pattern matched no files: samples/no-such-test*.in\nAt E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\tools\\check.ps1:63 char:53\n+ ... ches.Count -eq 0) { throw \"Test pattern matched no files: $pattern\" }\n+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Test pattern ma...o-such-test*.in:String) [], RuntimeException\n    + FullyQualifiedErrorId : Test pattern matched no files: samples/no-such-test*.in\n \n"
+    },
+    {
+      "name": "Mixed valid and unmatched patterns",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "passed": true,
+      "output_tail": "Compiled Gitlet to E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\proj2\\out\\classes\n\nTest pattern matched no files: samples/no-such-test*.in\nAt E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\tools\\check.ps1:63 char:53\n+ ... ches.Count -eq 0) { throw \"Test pattern matched no files: $pattern\" }\n+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Test pattern ma...o-such-test*.in:String) [], RuntimeException\n    + FullyQualifiedErrorId : Test pattern matched no files: samples/no-such-test*.in\n \n"
+    },
+    {
+      "name": "Non-test input",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "passed": true,
+      "output_tail": "Compiled Gitlet to E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\proj2\\out\\classes\n\nOnly .in test files may be selected: samples/definitions.inc\nAt E:\\cs61b\\skeleton-sp24\\gitlet-sp21\\tools\\check.ps1:65 char:29\n+ ...                 throw \"Only .in test files may be selected: $pattern\"\n+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Only .in test f...definitions.inc:String) [], RuntimeException\n    + FullyQualifiedErrorId : Only .in test files may be selected: samples/definitions.inc\n \n"
+    },
+    {
+      "name": "Official starter sample baseline",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "passed": true,
+      "output_tail": "ARBLINE \"[^\\n]*(?=\\n|\\Z)\"\n+ # Zero or more arbitrary full lines of text.\n+ D ARBLINES \"(?:(?:.|\\n)*(?:\\n|\\Z)|\\A|\\Z)\"\n+ > init\n+ + wug.txt wug.txt\n+ > add wug.txt\n+ > commit \"added wug\"\n+ > log\nERROR (incorrect output)\ntest04-prev-checkout:\nTesting directory: test04-prev-checkout_0\n+ # Check that we can check out a previous version.\n+ I definitions.inc\n+ # Standard definitions\n+ D DATE \"Date: \\w\\w\\w \\w\\w\\w \\d+ \\d\\d:\\d\\d:\\d\\d \\d\\d\\d\\d [-+]\\d\\d\\d\\d\"\n+ # A status log header RE.  Captures the commit id in its sole group.\n+ D COMMIT_HEAD \"commit ([a-f0-9]+)[ \\t]*\\n(?:Merge:\\s+[0-9a-f]{7}\\s+[0-9a-f]{7}[ ]  *\\n)?Date: \\w\\w\\w \\w\\w\\w \\d+ \\d\\d:\\d\\d:\\d\\d \\d\\d\\d\\d [-+]\\d\\d\\d\\d\"\n+ # A full log entry.  Captures the entry. Assume logs messages don't contain\n+ # \"===\"\n+ D COMMIT_LOG \"(===[ ]*\\ncommit [a-f0-9]+[ ]*\\n(?:Merge:\\s+[0-9a-f]{7}\\s+[0-9a-f]{7}[ ]*\\n)?Date: \\w\\w\\w \\w\\w\\w \\d+ \\d\\d:\\d\\d:\\d\\d \\d\\d\\d\\d [-+]\\d\\d\\d\\d[ ]*\\n(?:.|\\n)*?(?=\\Z|\\n===))\"\n+ # An arbitrary line of text (works even with ?s)\n+ D ARBLINE \"[^\\n]*(?=\\n|\\Z)\"\n+ # Zero or more arbitrary full lines of text.\n+ D ARBLINES \"(?:(?:.|\\n)*(?:\\n|\\Z)|\\A|\\Z)\"\n+ > init\n+ + wug.txt wug.txt\n+ > add wug.txt\n+ > commit \"version 1 of wug.txt\"\n+ + wug.txt notwug.txt\n+ > add wug.txt\n+ > commit \"version 2 of wug.txt\"\n+ = wug.txt notwug.txt\n+ # Each ${COMMIT_HEAD} captures its commit UID.\n+ > log\nERROR (incorrect output)\n\nRan 4 tests. 0 passed.\n\n",
+      "verified_after_clean_compile_fix": true
+    },
+    {
+      "name": "Tester debug stepping without remote attachment",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "passed": true,
+      "output_tail": "test01-init:\nYou are in debug mode.\n    In this mode, you will be shown each command from the test case.\n    If you would like to step into and debug the command, type 's'. Once you have done so, go back to IntelliJ and click the debug button.\n    If you would like to move on to the next command, type 'n'.\n[line 3]: gitlet init\n>>> ERROR (file or directory .gitlet not present)\n\nRan 1 tests. 0 passed.\n\n"
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "remote_debugger_attached": false
+}
