@@ -1,6 +1,7 @@
 public class UnionFind {
+
     // TODO: Instance variables
-    // 中文：实例变量。
+    private int[] parent;
 
     /* Creates a UnionFind data structure holding N items. Initially, all
        items are in disjoint sets. */
@@ -8,15 +9,18 @@ public class UnionFind {
        所有元素都分别属于互不相交的集合。 */
     public UnionFind(int N) {
         // TODO: YOUR CODE HERE
-        // 中文：在此处编写你的代码。
+        parent = new int[N];
+        for (int i = 0; i < N; i++) {
+            parent[i] = -1;
+        }
     }
 
     /* Returns the size of the set V belongs to. */
     /* 中文：返回 V 所属集合的大小。 */
     public int sizeOf(int v) {
         // TODO: YOUR CODE HERE
-        // 中文：在此处编写你的代码。
-        return -1;
+        find(v);
+        return -parent[find(v)];
     }
 
     /* Returns the parent of V. If V is the root of a tree, returns the
@@ -25,15 +29,19 @@ public class UnionFind {
        则返回以 V 为根的树的节点数的负值。 */
     public int parent(int v) {
         // TODO: YOUR CODE HERE
-        // 中文：在此处编写你的代码。
-        return -1;
+        if (parent[v] < 0) {
+            return parent[v];
+        }
+        return parent[v];
     }
 
     /* Returns true if nodes/vertices V1 and V2 are connected. */
     /* 中文：如果节点（顶点）V1 和 V2 连通，则返回 true。 */
     public boolean connected(int v1, int v2) {
         // TODO: YOUR CODE HERE
-        // 中文：在此处编写你的代码。
+        if (find(v1) == find(v2)) {
+            return true;
+        }
         return false;
     }
 
@@ -44,8 +52,19 @@ public class UnionFind {
        如果传入的元素无效，则抛出 IllegalArgumentException。 */
     public int find(int v) {
         // TODO: YOUR CODE HERE
-        // 中文：在此处编写你的代码。
-        return -1;
+        if (v > parent.length-1 || v < 0) {
+            throw new IllegalArgumentException();
+        }
+        if  (parent[v] < 0) {
+            return v;
+        }
+        /*
+         0  1  2  3  4  5
+        -1  0 -1 -1 -1 -1
+         */
+        parent[v] = find(parent[v]);
+
+        return parent[v];
     }
 
     /* Connects two items V1 and V2 together by connecting their respective
@@ -59,7 +78,19 @@ public class UnionFind {
        元素，都不应改变数据结构。 */
     public void union(int v1, int v2) {
         // TODO: YOUR CODE HERE
-        // 中文：在此处编写你的代码。
+        int p1 = find(v1);
+        int p2 = find(v2);
+        if (p1 == p2) {
+            return;
+        }
+        if (sizeOf(v1) <= sizeOf(v2)) {
+            parent[p2] = parent[p1] + parent[p2];
+            parent[p1] = p2;
+        }
+        else  {
+            parent[p1] = parent[p2] + parent[p1];
+            parent[p2] = p1;
+        }
     }
 
 }
