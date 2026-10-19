@@ -12,9 +12,13 @@ public class DummyHistoryTextHandler extends NgordnetQueryHandler {
         int startYear = q.startYear();
         int endYear = q.endYear();
 
+        // 中文：你在浏览器中输入了以下信息：
         String response = "You entered the following info into the browser:\n";
+        // 中文：单词：
         response += "Words: " + q.words() + "\n";
+        // 中文：起始年份：
         response += "Start Year: " + q.startYear() + "\n";
+        // 中文：结束年份：
         response += "End Year: " + q.endYear() + "\n";
         return response;
     }

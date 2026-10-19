@@ -2,6 +2,7 @@ package utils;
 
 /** A collection of file paths to data files. Make sure your data folder is on the same
  *  level as "src".
+ *  中文：集中保存数据文件的路径。请确保 data 文件夹与 src 文件夹位于同一级目录。
  */
 public class Utils {
     private static final String PREFIX = "./data/ngrams/";

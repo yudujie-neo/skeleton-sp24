@@ -26,6 +26,7 @@ public class PlotDemo {
         System.out.println(s);
 
         // you can also do this to display locally:
+        // 中文：也可以使用下面这行代码，在本机窗口中显示图表：
         // Plotter.displayChart(chart);
 
     }

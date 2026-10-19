@@ -16,6 +16,7 @@ public class Plotter {
 
     public static XYChart generateTimeSeriesChart(List<String> words, List<TimeSeries> lts) {
         if (words.size() != lts.size()) {
+            // 中文：单词列表与时间序列对象列表的长度必须相同。
             throw new IllegalArgumentException("List of words and List of time series objects must be the same length");
         }
 

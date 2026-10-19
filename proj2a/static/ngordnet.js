@@ -39,6 +39,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：错误。
             	console.log("error")
             	console.log(data);
             	plot.src = 'data:image/png;base64,' + data;
@@ -48,6 +49,7 @@ $(function() {
     }
 
     function historyTextButton() {
+        // 中文：调用历史数据（文本）接口。
         console.log("history text call");
         $("#plot").hide();
         $("#textresult").show();
@@ -65,6 +67,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：错误。
             	console.log("error")
             	console.log(data);
             },
@@ -73,6 +76,7 @@ $(function() {
     }
 
     function hyponymsButton() {
+        // 中文：调用下位词接口。
         console.log("hyponyms call");
         $("#plot").hide();
         $("#textresult").show();
@@ -90,6 +94,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：错误。
                 console.log("error")
                 console.log(data);
             },

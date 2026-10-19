@@ -12,6 +12,7 @@ import static com.google.common.truth.Truth.assertThat;
  */
 
 // uncomment this test whenever you are ready!
+// 中文：准备好后，就可以取消下面测试的注释！
 public class HistoryTextHandlerTest {
     /*
     @Test

@@ -9,6 +9,8 @@ import java.util.List;
 import static com.google.common.truth.Truth.assertThat;
 
 /** Unit Tests for the TimeSeries class.
+ *  中文：TimeSeries 类的单元测试。
+ *  作者：Josh Hug。
  *  @author Josh Hug
  */
 public class TimeSeriesTest {
@@ -28,6 +30,7 @@ public class TimeSeriesTest {
         //           1992: 100
         //           1994: 600
         //           1995: 500
+        // 中文：预期结果为：1991 年为 0，1992 年为 100，1994 年为 600，1995 年为 500。
 
         List<Integer> expectedYears = new ArrayList<>
                 (Arrays.asList(1991, 1992, 1994, 1995));

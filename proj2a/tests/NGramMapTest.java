@@ -11,6 +11,8 @@ import static utils.Utils.*;
 import static com.google.common.truth.Truth.assertThat;
 
 /** Unit Tests for the NGramMap class.
+ *  中文：NGramMap 类的单元测试。
+ *  作者：Josh Hug。
  *  @author Josh Hug
  */
 public class NGramMapTest {
@@ -46,10 +48,12 @@ public class NGramMapTest {
     @Test
     public void testOnLargeFile() {
         // creates an NGramMap from a large dataset
+        // 中文：使用一个较大的数据集创建 NGramMap。
         NGramMap ngm = new NGramMap(TOP_14337_WORDS_FILE,
                 TOTAL_COUNTS_FILE);
 
         // returns the count of the number of occurrences of fish per year between 1850 and 1933.
+        // 中文：返回单词 fish 在 1850 到 1933 年之间每年的出现次数。
         TimeSeries fishCount = ngm.countHistory("fish", 1850, 1933);
         assertThat(fishCount.get(1865)).isWithin(1E-10).of(136497.0);
         assertThat(fishCount.get(1922)).isWithin(1E-10).of(444924.0);
@@ -58,6 +62,7 @@ public class NGramMapTest {
         assertThat(totalCounts.get(1865)).isWithin(1E-10).of(2563919231.0);
 
         // returns the relative weight of the word fish in each year between 1850 and 1933.
+        // 中文：返回单词 fish 在 1850 到 1933 年之间每年的相对频率。
         TimeSeries fishWeight = ngm.weightHistory("fish", 1850, 1933);
         assertThat(fishWeight.get(1865)).isWithin(1E-7).of(136497.0/2563919231.0);
 
