@@ -12,8 +12,10 @@ import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 
 /** Tests the case where the list of words is length greater than 1, but k is still zero. */
+// 中文：测试单词列表包含多个单词、但 k 仍为 0 的情况。
 public class TestMultiWordK0Hyponyms {
     // this case doesn't use the NGrams dataset at all, so the choice of files is irrelevant
+    // 中文：此测试完全不使用 NGrams 数据集，因此选择哪些 NGrams 数据文件不影响测试。
     public static final String VERY_SHORT_WORDS_FILE = "data/ngrams/very_short.csv";
     public static final String TOTAL_COUNTS_FILE = "data/ngrams/total_counts.csv";
     public static final String SMALL_SYNSET_FILE = "data/wordnet/synsets16.txt";
@@ -28,6 +30,7 @@ public class TestMultiWordK0Hyponyms {
 
 
     /** This is an example from the spec.*/
+    // 中文：这是项目要求文档中的一个示例。
     @Test
     public void testOccurrenceAndChangeK0() {
         NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(

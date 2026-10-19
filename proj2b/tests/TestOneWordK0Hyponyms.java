@@ -9,8 +9,10 @@ import java.util.List;
 import static com.google.common.truth.Truth.assertThat;
 
 /** Tests the most basic case for Hyponyms where the list of words is one word long, and k = 0.*/
+// 中文：测试下位词查询的最基本情况：单词列表仅包含一个单词，且 k = 0。
 public class TestOneWordK0Hyponyms {
     // this case doesn't use the NGrams dataset at all, so the choice of files is irrelevant
+    // 中文：此测试完全不使用 NGrams 数据集，因此选择哪些 NGrams 数据文件不影响测试。
     public static final String WORDS_FILE = "data/ngrams/very_short.csv";
     public static final String TOTAL_COUNTS_FILE = "data/ngrams/total_counts.csv";
     public static final String SMALL_SYNSET_FILE = "data/wordnet/synsets16.txt";

@@ -6,6 +6,7 @@ $(function() {
 
     //console.log(document.location.hostname);
     /* Set server URIs */
+    /* 中文：设置服务器 URI（各请求接口的地址）。 */
     /*if (document.location.hostname !== 'localhost') {
         host = 'http://' + document.location.host;
     } else {
@@ -58,6 +59,7 @@ $(function() {
             },
             error: function(data) {
                 console.log("error")
+                // 中文：发生错误。
                 console.log(data);
                 plot.src = 'data:image/png;base64,' + data;
             },
@@ -67,6 +69,7 @@ $(function() {
 
     function historyTextButton() {
         console.log("history text call");
+        // 中文：调用历史数据的文本查询。
         $("#plot").hide();
         $("#textresult").show();
 
@@ -84,6 +87,7 @@ $(function() {
             },
             error: function(data) {
                 console.log("error")
+                // 中文：发生错误。
                 console.log(data);
             },
             dataType: 'json'
@@ -92,6 +96,7 @@ $(function() {
 
     function hyponymsButton() {
         console.log("hyponyms call");
+        // 中文：调用下位词查询。
         $("#plot").hide();
         $("#textresult").show();
         ngordnetQueryType = "HYPONYMS";
@@ -109,6 +114,7 @@ $(function() {
             },
             error: function(data) {
                 console.log("error")
+                // 中文：发生错误。
                 console.log(data);
             },
             dataType: 'json'
@@ -118,6 +124,7 @@ $(function() {
 
     function hypohistButton() {
         console.log("hypohist call");
+        // 中文：调用下位词的历史数据查询。
         $("#plot").show();
         $("#textresult").hide();
 
@@ -135,6 +142,7 @@ $(function() {
             },
             error: function(data) {
                 console.log("error")
+                // 中文：发生错误。
                 console.log(data);
                 plot.src = 'data:image/png;base64,' + data;
             },
@@ -144,6 +152,7 @@ $(function() {
 
     function commonAncestorsButton() {
         console.log("common ancestors call");
+        // 中文：调用共同上位词（共同祖先）查询。
         $("#plot").hide();
         $("#textresult").show();
         ngordnetQueryType = "ANCESTORS";
@@ -161,6 +170,7 @@ $(function() {
             },
             error: function(data) {
                 console.log("error")
+                // 中文：发生错误。
                 console.log(data);
             },
             dataType: 'json'
