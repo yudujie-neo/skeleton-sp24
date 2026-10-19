@@ -19,6 +19,8 @@ public class TestCommonAncestors {
 
     /** This is an example from the spec for a common-ancestors query on the word "adjustment".
      * You should add more tests for the other spec examples! */
+    // 中文：这是项目说明中对单词“adjustment”进行共同祖先查询的示例。
+    // 中文：你应该为项目说明中的其他示例添加更多测试！
     @Test
     public void testSpecAdjustment() {
         NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(

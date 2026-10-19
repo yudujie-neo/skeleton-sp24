@@ -6,6 +6,7 @@ $(function() {
 
 	//console.log(document.location.hostname);
     /* Set server URIs */
+    // 中文：设置服务器 URI（请求地址）。
     /*if (document.location.hostname !== 'localhost') {
         host = 'http://' + document.location.host;
     } else {
@@ -57,6 +58,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：请求出错。
             	console.log("error")
             	console.log(data);
             	plot.src = 'data:image/png;base64,' + data;
@@ -66,6 +68,7 @@ $(function() {
     }
 
     function historyTextButton() {
+        // 中文：调用历史数据文本查询。
         console.log("history text call");
         $("#plot").hide();
         $("#textresult").show();
@@ -83,6 +86,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：请求出错。
             	console.log("error")
             	console.log(data);
             },
@@ -91,6 +95,7 @@ $(function() {
     }
 
     function hyponymsButton() {
+        // 中文：调用下位词查询。
         console.log("hyponyms call");
         $("#plot").hide();
         $("#textresult").show();
@@ -108,6 +113,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：请求出错。
                 console.log("error")
                 console.log(data);
             },
@@ -117,6 +123,7 @@ $(function() {
 
 
     function hypohistButton() {
+        // 中文：调用下位词历史数据查询。
         console.log("hypohist call");
         $("#plot").show();
         $("#textresult").hide();
@@ -134,6 +141,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：请求出错。
             	console.log("error")
             	console.log(data);
             	plot.src = 'data:image/png;base64,' + data;
@@ -143,6 +151,7 @@ $(function() {
     }
 
     function commonAncestorsButton() {
+        // 中文：调用共同祖先查询。
         console.log("common ancestors call");
         $("#plot").hide();
         $("#textresult").show();
@@ -160,6 +169,7 @@ $(function() {
 
             },
             error: function(data) {
+                // 中文：请求出错。
                 console.log("error")
                 console.log(data);
             },
