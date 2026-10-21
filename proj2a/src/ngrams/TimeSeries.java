@@ -1,5 +1,6 @@
 package ngrams;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
@@ -37,9 +38,11 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      */
     public TimeSeries(TimeSeries ts, int startYear, int endYear) {
         super();
-        // TODO: Fill in this constructor.
-        // 中文：补全此构造函数。
-
+        for (int year : ts.keySet() ) {
+            if (year >= startYear && year <= endYear) {
+                put(year, ts.get(year));
+            }
+        }
     }
 
     /**
@@ -47,9 +50,7 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      * 中文：返回此 TimeSeries 中的所有年份，顺序不限。
      */
     public List<Integer> years() {
-        // TODO: Fill in this method.
-        // 中文：补全此方法。
-        return null;
+        return new ArrayList<>(this.keySet());
     }
 
     /**
@@ -58,9 +59,7 @@ public class TimeSeries extends TreeMap<Integer, Double> {
      * 中文：返回此 TimeSeries 中的所有数据，顺序不限，但必须与 years() 返回的年份顺序一致。
      */
     public List<Double> data() {
-        // TODO: Fill in this method.
-        // 中文：补全此方法。
-        return null;
+        return new ArrayList<>(this.values());
     }
 
     /**
